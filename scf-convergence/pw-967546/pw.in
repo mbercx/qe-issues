@@ -1,0 +1,50 @@
+&CONTROL
+  calculation = 'scf'
+  etot_conv_thr =   7.0000000000d-05
+  forc_conv_thr =   1.0000000000d-04
+  max_seconds =   3.4200000000d+04
+  outdir = './out/'
+  prefix = 'aiida'
+  pseudo_dir = './pseudo/'
+  tprnfor = .true.
+  tstress = .true.
+  verbosity = 'high'
+/
+&SYSTEM
+  degauss =   1.0000000000d-02
+  ecutrho =   3.2000000000d+02
+  ecutwfc =   4.0000000000d+01
+  ibrav = 0
+  nat = 7
+  nosym = .false.
+  nspin = 2
+  ntyp = 3
+  occupations = 'smearing'
+  smearing = 'cold'
+  starting_magnetization(1) =   1.0000000000d-01
+  starting_magnetization(2) =   3.5714285714d-01
+  starting_magnetization(3) =   1.0000000000d-01
+/
+&ELECTRONS
+  conv_thr =   1.4000000000d-09
+  electron_maxstep = 80
+  mixing_beta =   4.0000000000d-01
+/
+ATOMIC_SPECIES
+Cl     35.453 cl_pbesol_v1.4.uspp.F.UPF
+Cr     51.9961 cr_pbesol_v1.5.uspp.F.UPF
+Rb     85.4678 Rb_ONCV_PBEsol-1.0.upf
+ATOMIC_POSITIONS angstrom
+Rb           2.5710000000       2.5710000000       2.1761220000
+Rb           0.0000000000      -0.0000000000       5.7083780000
+Cr           0.0000000000       0.0000000000       0.0000000000
+Cl           0.0000000000       2.5710000000       5.4497664000
+Cl           2.5710000000       0.0000000000       5.4497664000
+Cl           2.5710000000       0.0000000000       2.4347336000
+Cl           0.0000000000       2.5710000000       2.4347336000
+K_POINTS automatic
+12 12 12 0 0 0
+CELL_PARAMETERS angstrom
+     -2.5710000000       2.5710000000       7.8845000000
+      2.5710000000      -2.5710000000       7.8845000000
+      2.5710000000       2.5710000000      -7.8845000000

@@ -1,0 +1,60 @@
+&CONTROL
+  calculation = 'scf'
+  etot_conv_thr =   1.5000000000d-04
+  forc_conv_thr =   1.0000000000d-04
+  max_seconds =   3.4200000000d+04
+  outdir = './out/'
+  prefix = 'aiida'
+  pseudo_dir = './pseudo/'
+  tprnfor = .true.
+  tstress = .true.
+  verbosity = 'high'
+/
+&SYSTEM
+  degauss =   1.0000000000d-02
+  ecutrho =   4.8000000000d+02
+  ecutwfc =   6.0000000000d+01
+  ibrav = 0
+  nat = 15
+  nosym = .false.
+  nspin = 2
+  ntyp = 4
+  occupations = 'smearing'
+  smearing = 'cold'
+  starting_magnetization(1) =   3.5714285714d-01
+  starting_magnetization(2) =   1.0000000000d-01
+  starting_magnetization(3) =   2.7777777778d-01
+  starting_magnetization(4) =   1.0000000000d-01
+/
+&ELECTRONS
+  conv_thr =   3.0000000000d-09
+  electron_maxstep = 80
+  mixing_beta =   4.0000000000d-01
+/
+ATOMIC_SPECIES
+Cr     51.9961 cr_pbesol_v1.5.uspp.F.UPF
+K      39.0983 K.pbesol-spn-kjpaw_psl.1.0.0.UPF
+Ni     58.6934 ni_pbesol_v1.4.uspp.F.UPF
+O      15.9994 O.pbesol-n-kjpaw_psl.0.1.UPF
+ATOMIC_POSITIONS angstrom
+K            2.7538581516      -0.1270777797       5.0061340945
+K            0.1612822730       3.4206355699       1.7126071409
+Cr           0.0554792143       2.0432044460       5.1942588491
+Cr           2.8596612103       1.2503533442       1.5244823863
+Ni           0.0000000000       0.0000000000       0.0000000000
+O            2.9627677951       4.0580668668       4.7776968925
+O           -0.0476273704      -0.7645090766       1.9410443429
+O            2.7409027986       2.4704261475       2.6317309419
+O            0.1742376260       0.8231316427       4.0870102935
+O            1.4025046822       2.0065846955       6.1570544681
+O            1.5126357424       1.2869730947       0.5616867673
+O            0.0288899442       3.4972653080       4.4639316768
+O            2.8862504804      -0.2037075178       2.2548095586
+O           -1.3559471997       1.8591532090       6.0811326921
+O            4.2710876243       1.4344045813       0.6376085432
+K_POINTS automatic
+9 7 8 0 0 0
+CELL_PARAMETERS angstrom
+     -5.6190000000       0.0000000000       0.0000000000
+      0.8683118148       2.8636647507      -6.7187412354
+      1.8355477606      -6.1572225409       0.0000000000
