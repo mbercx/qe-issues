@@ -109,17 +109,15 @@ def get_files(cj_dir, structure, pw_calc, retrieved, include_pseudos=False):
 
     cj_dir.mkdir(exist_ok=True)
 
-    structure.get_pymatgen().to((cj_dir / f'{structure.get_formula()}.cif').as_posix())
-
     with (cj_dir / 'pw.in').open("w") as handle:
         handle.write(
             pw_calc.base.repository.get_object_content("aiida.in")
         )
 
-    with (cj_dir / 'submit.sh').open("w") as handle:
-        handle.write(
-            pw_calc.base.repository.get_object_content("_aiidasubmit.sh")
-        )
+    # with (cj_dir / 'submit.sh').open("w") as handle:
+    #     handle.write(
+    #         pw_calc.base.repository.get_object_content("_aiidasubmit.sh")
+    #     )
 
     if include_pseudos:
         pseudo_dir = cj_dir / "pseudo"
@@ -171,6 +169,8 @@ def failed(scf_group: str, target_directory: Path, all_iterations: bool = False,
         source_id = structure.extras['source_id']
         structure_dir = target_directory / f'{source_db}-{source_id}'
         structure_dir.mkdir(exist_ok=True)
+
+        structure.get_pymatgen().to((structure_dir / f'{structure.get_formula()}.cif').as_posix())
     
         if all_iterations:
             for link in base_wc.base.links.get_outgoing().all():
@@ -250,19 +250,21 @@ def fixed(ref_group: str, cand_group:str, target_directory: Optional[Path] = Non
                 source_db = structure.extras['source_db']
                 source_id = structure.extras['source_id']
 
-                struc_dir = target_directory / f'{source_db}-{source_id}'
-                struc_dir.mkdir(exist_ok=True)
-                (struc_dir / 'reference').mkdir(exist_ok=True)
-                (struc_dir / 'candidate').mkdir(exist_ok=True)
+                structure_dir = target_directory / f'{source_db}-{source_id}'
+                structure_dir.mkdir(exist_ok=True)
+                structure.get_pymatgen().to((structure_dir / f'{structure.get_formula()}.cif').as_posix())
+
+                (structure_dir / 'reference').mkdir(exist_ok=True)
+                (structure_dir / 'candidate').mkdir(exist_ok=True)
 
                 for link in reference_pwbase.base.links.get_outgoing().all():
                     if isinstance(link.node, orm.CalcJobNode):
-                        cj_dir = struc_dir / 'reference' / link.link_label
+                        cj_dir = structure_dir / 'reference' / link.link_label
                         get_files(cj_dir, structure, link.node, link.node.outputs.retrieved, include_pseudos)
 
                 for link in candidate_pwbase.base.links.get_outgoing().all():
                     if isinstance(link.node, orm.CalcJobNode):
-                        cj_dir = struc_dir / 'candidate' / link.link_label
+                        cj_dir = structure_dir / 'candidate' / link.link_label
                         get_files(cj_dir, structure, link.node, link.node.outputs.retrieved, include_pseudos)
 
                 fig, ax = plt.subplots(2, 1, figsize=(6, 4), sharex=True)
@@ -272,7 +274,7 @@ def fixed(ref_group: str, cand_group:str, target_directory: Optional[Path] = Non
 
                 ax[1].set_xlabel('Iteration')
 
-                fig.savefig(struc_dir / 'scf_acc_comparison.png', dpi=300)
+                fig.savefig(structure_dir / 'scf_acc_comparison.png', dpi=300)
 
         try:
             nstep_dict['reference'] += get_total_nsteps(reference_pwbase)
