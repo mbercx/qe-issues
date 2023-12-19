@@ -1,0 +1,55 @@
+&CONTROL
+  calculation = 'scf'
+  etot_conv_thr =   1.0000000000d-04
+  forc_conv_thr =   1.0000000000d-04
+  max_seconds =   3.4200000000d+04
+  outdir = './out/'
+  prefix = 'aiida'
+  pseudo_dir = './pseudo/'
+  tprnfor = .true.
+  tstress = .true.
+  verbosity = 'high'
+/
+&SYSTEM
+  degauss =   1.0000000000d-02
+  ecutrho =   5.6000000000d+02
+  ecutwfc =   7.0000000000d+01
+  ibrav = 0
+  nat = 10
+  nosym = .false.
+  nspin = 2
+  ntyp = 4
+  occupations = 'smearing'
+  smearing = 'cold'
+  starting_magnetization(1) =   1.0000000000d-01
+  starting_magnetization(2) =   1.0000000000d-01
+  starting_magnetization(3) =   1.0000000000d-01
+  starting_magnetization(4) =   1.0000000000d-01
+/
+&ELECTRONS
+  conv_thr =   2.0000000000d-09
+  electron_maxstep = 80
+  mixing_beta =   4.0000000000d-01
+/
+ATOMIC_SPECIES
+Ba     137.327 Ba.pbesol-spn-kjpaw_psl.1.0.0.UPF
+Ga     69.723 Ga.pbesol-dn-kjpaw_psl.1.0.0.UPF
+Ge     72.64 ge_pbesol_v1.4.uspp.F.UPF
+N      14.0067 N.pbesol-theos.UPF
+ATOMIC_POSITIONS angstrom
+Ba          -1.4193320136       1.0525000000       8.4749822721
+Ba           5.6559794620       3.1575000000       0.3384352322
+Ba           0.2186834785       1.0525000000       3.3728948789
+Ba           4.0179639699       3.1575000000       5.4405226254
+Ga           1.6378270171       1.0525000000       6.6417914312
+Ga           2.5988204313       3.1575000000       2.1716260731
+Ge           3.8887015332       1.0525000000       2.6140596318
+Ge           0.3479459152       3.1575000000       6.1993578725
+N            3.4197317924       1.0525000000       7.2798828585
+N            0.8169156560       3.1575000000       1.5335346457
+K_POINTS automatic
+7 10 5 0 0 0
+CELL_PARAMETERS angstrom
+      7.2490000000       0.0000000000       0.0000000000
+      0.0000000000       4.2100000000       0.0000000000
+     -3.0123525516       0.0000000000       8.8134175043

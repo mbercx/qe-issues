@@ -1,0 +1,4313 @@
+
+     Program PWSCF v.7.2 starts on 23Oct2023 at 17:43:53 
+
+     This program is part of the open-source Quantum ESPRESSO suite
+     for quantum simulation of materials; please cite
+         "P. Giannozzi et al., J. Phys.:Condens. Matter 21 395502 (2009);
+         "P. Giannozzi et al., J. Phys.:Condens. Matter 29 465901 (2017);
+         "P. Giannozzi et al., J. Chem. Phys. 152 154105 (2020);
+          URL http://www.quantum-espresso.org", 
+     in publications or presentations arising from this work. More details at
+     http://www.quantum-espresso.org/quote
+
+     Parallel version (MPI & OpenMP), running on      12 processor cores
+     Number of MPI processes:                 1
+     Threads/MPI process:                    12
+
+     MPI processes distributed on     1 nodes
+     60519 MiB available memory on the printing compute node when the environment starts
+ 
+     Reading input from aiida.in
+
+     Current dimensions of program PWSCF are:
+     Max number of different atomic species (ntypx) = 10
+     Max number of k-points (npk) =  40000
+     Max angular momentum in pseudopotentials (lmaxx) =  4
+     file Nb.pbesol-spn-kjpaw_psl.0.3.0.UPF: wavefunction(s)  4S 4P renormalized
+     Message from routine setup:
+     using ibrav=0 with symmetry is DISCOURAGED, use correct ibrav instead
+ 
+     Subspace diagonalization in iterative solution of the eigenvalue problem:
+     a serial algorithm will be used
+
+ 
+     G-vector sticks info
+     --------------------
+     sticks:   dense  smooth     PW     G-vecs:    dense   smooth      PW
+     Sum       12669    6325   1751               556503   196733   28557
+ 
+     Using Slab Decomposition
+ 
+
+
+     bravais-lattice index     =            0
+     lattice parameter (alat)  =      26.6984  a.u.
+     unit-cell volume          =    5756.6582 (a.u.)^3
+     number of atoms/cell      =           14
+     number of atomic types    =            1
+     number of electrons       =       182.00
+     number of Kohn-Sham states=          109
+     kinetic-energy cutoff     =      40.0000  Ry
+     charge density cutoff     =     320.0000  Ry
+     scf convergence threshold =      2.8E-09
+     mixing beta               =       0.4000
+     number of iterations used =            8  plain     mixing
+     Exchange-correlation= SLA  PW   PSX  PSC
+                           (   1   4  10   8   0   0   0)
+
+     GPU acceleration is ACTIVE.
+
+
+     GPU used by master process:
+
+        Device Number: 0
+        Device name: Tesla P100-PCIE-16GB
+        Compute capability : 60
+        Ratio of single to double precision performance  : 2
+        Memory Clock Rate (KHz): 715000
+        Memory Bus Width (bits): 4096
+        Peak Memory Bandwidth (GB/s): 732.16
+
+     celldm(1)=  26.698429  celldm(2)=   0.000000  celldm(3)=   0.000000
+     celldm(4)=   0.000000  celldm(5)=   0.000000  celldm(6)=   0.000000
+
+     crystal axes: (cart. coord. in units of alat)
+               a(1) = (   0.102029   0.162587  -0.981405 )  
+               a(2) = (   0.199052  -0.674583   0.000000 )  
+               a(3) = (  -0.456909   0.000000   0.000000 )  
+
+     reciprocal axes: (cart. coord. in units 2 pi/alat)
+               b(1) = ( -0.000000 -0.000000 -1.018947 )  
+               b(2) = ( -0.000000 -1.482397 -0.245585 )  
+               b(3) = ( -2.188620 -0.645807 -0.334522 )  
+
+
+     PseudoPot. # 1 for Nb read from file:
+     ./pseudo/Nb.pbesol-spn-kjpaw_psl.0.3.0.UPF
+     MD5 check sum: 3501bca1474143575298708b2d32ca28
+     Pseudo is Projector augmented-wave + core cor, Zval = 13.0
+     Generated using "atomic" code by A. Dal Corso  v.6.0 svn rev. 13079
+     Shape of augmentation charge: PSQ
+     Using radial grid of 1227 points,  6 beta functions with: 
+                l(1) =   0
+                l(2) =   0
+                l(3) =   1
+                l(4) =   1
+                l(5) =   2
+                l(6) =   2
+     Q(r) pseudized with 0 coefficients 
+
+
+     atomic species   valence    mass     pseudopotential
+        Nb            13.00    92.90638     Nb( 1.00)
+
+     Starting magnetic structure 
+     atomic species   magnetization
+        Nb           0.385
+
+      2 Sym. Ops., with inversion, found
+
+
+                                    s                        frac. trans.
+
+      isym =  1     identity                                     
+
+ cryst.   s( 1) = (     1          0          0      )
+                  (     0          1          0      )
+                  (     0          0          1      )
+
+ cart.    s( 1) = (  1.0000000  0.0000000 -0.0000000 )
+                  (  0.0000000  1.0000000  0.0000000 )
+                  (  0.0000000  0.0000000  1.0000000 )
+
+
+      isym =  2     inversion                                    
+
+ cryst.   s( 2) = (    -1          0          0      )
+                  (     0         -1          0      )
+                  (     0          0         -1      )
+
+ cart.    s( 2) = ( -1.0000000 -0.0000000  0.0000000 )
+                  (  0.0000000 -1.0000000 -0.0000000 )
+                  (  0.0000000  0.0000000 -1.0000000 )
+
+
+   Cartesian axes
+
+     site n.     atom                  positions (alat units)
+         1           Nb  tau(   1) = (   0.0176389   0.3292752   0.5044421  )
+         2           Nb  tau(   2) = (   0.1381889   0.1827210   0.4769628  )
+         3           Nb  tau(   3) = (  -0.0198515   0.0985082   0.3582128  )
+         4           Nb  tau(   4) = (   0.1756793   0.4134880   0.6231921  )
+         5           Nb  tau(   5) = (   0.1825742   0.1430994   0.2600723  )
+         6           Nb  tau(   6) = (  -0.0267464   0.3688968   0.7213326  )
+         7           Nb  tau(   7) = (   0.2669081   0.5325066   0.2060950  )
+         8           Nb  tau(   8) = (  -0.1110803  -0.0205104   0.7753099  )
+         9           Nb  tau(   9) = (   0.1315842  -0.0720100   0.8744318  )
+        10           Nb  tau(  10) = (   0.0242436   0.5840062   0.1069731  )
+        11           Nb  tau(  11) = (   0.2232188   0.3823835   0.4200413  )
+        12           Nb  tau(  12) = (  -0.0673910   0.1296127   0.5613636  )
+        13           Nb  tau(  13) = (   0.2294401   0.3154595   0.0422004  )
+        14           Nb  tau(  14) = (  -0.0736123   0.1965367   0.9392045  )
+
+   Crystallographic axes
+
+     site n.     atom                  positions (cryst. coord.)
+         1           Nb  tau(   1) = ( -0.5140000 -0.6120000 -0.4200000  )
+         2           Nb  tau(   2) = ( -0.4860000 -0.3880000 -0.5800000  )
+         3           Nb  tau(   3) = ( -0.3650000 -0.2340000 -0.1400000  )
+         4           Nb  tau(   4) = ( -0.6350000 -0.7660000 -0.8600000  )
+         5           Nb  tau(   5) = ( -0.2650000 -0.2760000 -0.5790000  )
+         6           Nb  tau(   6) = ( -0.7350000 -0.7240000 -0.4210000  )
+         7           Nb  tau(   7) = ( -0.2100000 -0.8400000 -0.9970000  )
+         8           Nb  tau(   8) = ( -0.7900000 -0.1600000 -0.0030000  )
+         9           Nb  tau(   9) = ( -0.8910000 -0.1080000 -0.5340000  )
+        10           Nb  tau(  10) = ( -0.1090000 -0.8920000 -0.4660000  )
+        11           Nb  tau(  11) = ( -0.4280000 -0.6700000 -0.8760000  )
+        12           Nb  tau(  12) = ( -0.5720000 -0.3300000 -0.1240000  )
+        13           Nb  tau(  13) = ( -0.0430000 -0.4780000 -0.7200000  )
+        14           Nb  tau(  14) = ( -0.9570000 -0.5220000 -0.2800000  )
+
+     number of k points=    71  Marzari-Vanderbilt smearing, width (Ry)=  0.0100
+                       cart. coord. in units 2pi/alat
+        k(    1) = (  -0.0000000  -0.0000000  -0.0000000), wk =   0.0071429
+        k(    2) = (  -0.3126600  -0.0922581  -0.0477889), wk =   0.0142857
+        k(    3) = (  -0.6253201  -0.1845162  -0.0955777), wk =   0.0142857
+        k(    4) = (  -0.9379801  -0.2767743  -0.1433666), wk =   0.0142857
+        k(    5) = (  -0.0000000  -0.2964794  -0.0491170), wk =   0.0142857
+        k(    6) = (  -0.3126600  -0.3887375  -0.0969059), wk =   0.0142857
+        k(    7) = (  -0.6253201  -0.4809955  -0.1446948), wk =   0.0142857
+        k(    8) = (  -0.9379801  -0.5732536  -0.1924836), wk =   0.0142857
+        k(    9) = (   0.9379801  -0.0197051   0.0942496), wk =   0.0142857
+        k(   10) = (   0.6253201  -0.1119632   0.0464607), wk =   0.0142857
+        k(   11) = (   0.3126600  -0.2042213  -0.0013281), wk =   0.0142857
+        k(   12) = (  -0.0000000  -0.5929588  -0.0982340), wk =   0.0142857
+        k(   13) = (  -0.3126600  -0.6852168  -0.1460229), wk =   0.0142857
+        k(   14) = (  -0.6253201  -0.7774749  -0.1938118), wk =   0.0142857
+        k(   15) = (  -0.9379801  -0.8697330  -0.2416006), wk =   0.0142857
+        k(   16) = (   0.9379801  -0.3161845   0.0451326), wk =   0.0142857
+        k(   17) = (   0.6253201  -0.4084426  -0.0026563), wk =   0.0142857
+        k(   18) = (   0.3126600  -0.5007007  -0.0504451), wk =   0.0142857
+        k(   19) = (  -0.0000000  -0.0000000  -0.2547368), wk =   0.0142857
+        k(   20) = (  -0.3126600  -0.0922581  -0.3025257), wk =   0.0142857
+        k(   21) = (  -0.6253201  -0.1845162  -0.3503146), wk =   0.0142857
+        k(   22) = (  -0.9379801  -0.2767743  -0.3981035), wk =   0.0142857
+        k(   23) = (   0.9379801   0.2767743  -0.1113702), wk =   0.0142857
+        k(   24) = (   0.6253201   0.1845162  -0.1591591), wk =   0.0142857
+        k(   25) = (   0.3126600   0.0922581  -0.2069480), wk =   0.0142857
+        k(   26) = (  -0.0000000  -0.2964794  -0.3038539), wk =   0.0142857
+        k(   27) = (  -0.3126600  -0.3887375  -0.3516427), wk =   0.0142857
+        k(   28) = (  -0.6253201  -0.4809955  -0.3994316), wk =   0.0142857
+        k(   29) = (  -0.9379801  -0.5732536  -0.4472205), wk =   0.0142857
+        k(   30) = (   0.9379801  -0.0197051  -0.1604872), wk =   0.0142857
+        k(   31) = (   0.6253201  -0.1119632  -0.2082761), wk =   0.0142857
+        k(   32) = (   0.3126600  -0.2042213  -0.2560650), wk =   0.0142857
+        k(   33) = (  -0.0000000  -0.5929588  -0.3529709), wk =   0.0142857
+        k(   34) = (  -0.3126600  -0.6852168  -0.4007597), wk =   0.0142857
+        k(   35) = (  -0.6253201  -0.7774749  -0.4485486), wk =   0.0142857
+        k(   36) = (  -0.9379801  -0.8697330  -0.4963375), wk =   0.0142857
+        k(   37) = (   0.9379801  -0.3161845  -0.2096043), wk =   0.0142857
+        k(   38) = (   0.6253201  -0.4084426  -0.2573931), wk =   0.0142857
+        k(   39) = (   0.3126600  -0.5007007  -0.3051820), wk =   0.0142857
+        k(   40) = (   0.0000000   0.5929588  -0.1565028), wk =   0.0142857
+        k(   41) = (  -0.3126600   0.5007007  -0.2042917), wk =   0.0142857
+        k(   42) = (  -0.6253201   0.4084426  -0.2520806), wk =   0.0142857
+        k(   43) = (  -0.9379801   0.3161845  -0.2998694), wk =   0.0142857
+        k(   44) = (   0.9379801   0.8697330  -0.0131362), wk =   0.0142857
+        k(   45) = (   0.6253201   0.7774749  -0.0609251), wk =   0.0142857
+        k(   46) = (   0.3126600   0.6852168  -0.1087140), wk =   0.0142857
+        k(   47) = (   0.0000000   0.2964794  -0.2056198), wk =   0.0142857
+        k(   48) = (  -0.3126600   0.2042213  -0.2534087), wk =   0.0142857
+        k(   49) = (  -0.6253201   0.1119632  -0.3011976), wk =   0.0142857
+        k(   50) = (  -0.9379801   0.0197051  -0.3489865), wk =   0.0142857
+        k(   51) = (   0.9379801   0.5732536  -0.0622532), wk =   0.0142857
+        k(   52) = (   0.6253201   0.4809955  -0.1100421), wk =   0.0142857
+        k(   53) = (   0.3126600   0.3887375  -0.1578310), wk =   0.0142857
+        k(   54) = (   0.0000000   0.0000000   0.5094737), wk =   0.0071429
+        k(   55) = (  -0.3126600  -0.0922581   0.4616848), wk =   0.0142857
+        k(   56) = (  -0.6253201  -0.1845162   0.4138960), wk =   0.0142857
+        k(   57) = (  -0.9379801  -0.2767743   0.3661071), wk =   0.0142857
+        k(   58) = (   0.0000000  -0.2964794   0.4603567), wk =   0.0142857
+        k(   59) = (  -0.3126600  -0.3887375   0.4125678), wk =   0.0142857
+        k(   60) = (  -0.6253201  -0.4809955   0.3647789), wk =   0.0142857
+        k(   61) = (  -0.9379801  -0.5732536   0.3169901), wk =   0.0142857
+        k(   62) = (   0.9379801  -0.0197051   0.6037233), wk =   0.0142857
+        k(   63) = (   0.6253201  -0.1119632   0.5559344), wk =   0.0142857
+        k(   64) = (   0.3126600  -0.2042213   0.5081456), wk =   0.0142857
+        k(   65) = (   0.0000000  -0.5929588   0.4112397), wk =   0.0142857
+        k(   66) = (  -0.3126600  -0.6852168   0.3634508), wk =   0.0142857
+        k(   67) = (  -0.6253201  -0.7774749   0.3156619), wk =   0.0142857
+        k(   68) = (  -0.9379801  -0.8697330   0.2678731), wk =   0.0142857
+        k(   69) = (   0.9379801  -0.3161845   0.5546063), wk =   0.0142857
+        k(   70) = (   0.6253201  -0.4084426   0.5068174), wk =   0.0142857
+        k(   71) = (   0.3126600  -0.5007007   0.4590285), wk =   0.0142857
+
+                       cryst. coord.
+        k(    1) = (   0.0000000   0.0000000   0.0000000), wk =   0.0071429
+        k(    2) = (   0.0000000   0.0000000   0.1428571), wk =   0.0142857
+        k(    3) = (   0.0000000   0.0000000   0.2857143), wk =   0.0142857
+        k(    4) = (   0.0000000   0.0000000   0.4285714), wk =   0.0142857
+        k(    5) = (   0.0000000   0.2000000   0.0000000), wk =   0.0142857
+        k(    6) = (   0.0000000   0.2000000   0.1428571), wk =   0.0142857
+        k(    7) = (  -0.0000000   0.2000000   0.2857143), wk =   0.0142857
+        k(    8) = (   0.0000000   0.2000000   0.4285714), wk =   0.0142857
+        k(    9) = (  -0.0000000   0.2000000  -0.4285714), wk =   0.0142857
+        k(   10) = (  -0.0000000   0.2000000  -0.2857143), wk =   0.0142857
+        k(   11) = (   0.0000000   0.2000000  -0.1428571), wk =   0.0142857
+        k(   12) = (   0.0000000   0.4000000   0.0000000), wk =   0.0142857
+        k(   13) = (   0.0000000   0.4000000   0.1428571), wk =   0.0142857
+        k(   14) = (   0.0000000   0.4000000   0.2857143), wk =   0.0142857
+        k(   15) = (   0.0000000   0.4000000   0.4285714), wk =   0.0142857
+        k(   16) = (  -0.0000000   0.4000000  -0.4285714), wk =   0.0142857
+        k(   17) = (   0.0000000   0.4000000  -0.2857143), wk =   0.0142857
+        k(   18) = (   0.0000000   0.4000000  -0.1428571), wk =   0.0142857
+        k(   19) = (   0.2500000   0.0000000   0.0000000), wk =   0.0142857
+        k(   20) = (   0.2500000   0.0000000   0.1428571), wk =   0.0142857
+        k(   21) = (   0.2500000   0.0000000   0.2857143), wk =   0.0142857
+        k(   22) = (   0.2500000   0.0000000   0.4285714), wk =   0.0142857
+        k(   23) = (   0.2500000  -0.0000000  -0.4285714), wk =   0.0142857
+        k(   24) = (   0.2500000  -0.0000000  -0.2857143), wk =   0.0142857
+        k(   25) = (   0.2500000  -0.0000000  -0.1428571), wk =   0.0142857
+        k(   26) = (   0.2500000   0.2000000   0.0000000), wk =   0.0142857
+        k(   27) = (   0.2500000   0.2000000   0.1428571), wk =   0.0142857
+        k(   28) = (   0.2500000   0.2000000   0.2857143), wk =   0.0142857
+        k(   29) = (   0.2500000   0.2000000   0.4285714), wk =   0.0142857
+        k(   30) = (   0.2500000   0.2000000  -0.4285714), wk =   0.0142857
+        k(   31) = (   0.2500000   0.2000000  -0.2857143), wk =   0.0142857
+        k(   32) = (   0.2500000   0.2000000  -0.1428571), wk =   0.0142857
+        k(   33) = (   0.2500000   0.4000000   0.0000000), wk =   0.0142857
+        k(   34) = (   0.2500000   0.4000000   0.1428571), wk =   0.0142857
+        k(   35) = (   0.2500000   0.4000000   0.2857143), wk =   0.0142857
+        k(   36) = (   0.2500000   0.4000000   0.4285714), wk =   0.0142857
+        k(   37) = (   0.2500000   0.4000000  -0.4285714), wk =   0.0142857
+        k(   38) = (   0.2500000   0.4000000  -0.2857143), wk =   0.0142857
+        k(   39) = (   0.2500000   0.4000000  -0.1428571), wk =   0.0142857
+        k(   40) = (   0.2500000  -0.4000000   0.0000000), wk =   0.0142857
+        k(   41) = (   0.2500000  -0.4000000   0.1428571), wk =   0.0142857
+        k(   42) = (   0.2500000  -0.4000000   0.2857143), wk =   0.0142857
+        k(   43) = (   0.2500000  -0.4000000   0.4285714), wk =   0.0142857
+        k(   44) = (   0.2500000  -0.4000000  -0.4285714), wk =   0.0142857
+        k(   45) = (   0.2500000  -0.4000000  -0.2857143), wk =   0.0142857
+        k(   46) = (   0.2500000  -0.4000000  -0.1428571), wk =   0.0142857
+        k(   47) = (   0.2500000  -0.2000000   0.0000000), wk =   0.0142857
+        k(   48) = (   0.2500000  -0.2000000   0.1428571), wk =   0.0142857
+        k(   49) = (   0.2500000  -0.2000000   0.2857143), wk =   0.0142857
+        k(   50) = (   0.2500000  -0.2000000   0.4285714), wk =   0.0142857
+        k(   51) = (   0.2500000  -0.2000000  -0.4285714), wk =   0.0142857
+        k(   52) = (   0.2500000  -0.2000000  -0.2857143), wk =   0.0142857
+        k(   53) = (   0.2500000  -0.2000000  -0.1428571), wk =   0.0142857
+        k(   54) = (  -0.5000000   0.0000000   0.0000000), wk =   0.0071429
+        k(   55) = (  -0.5000000   0.0000000   0.1428571), wk =   0.0142857
+        k(   56) = (  -0.5000000   0.0000000   0.2857143), wk =   0.0142857
+        k(   57) = (  -0.5000000   0.0000000   0.4285714), wk =   0.0142857
+        k(   58) = (  -0.5000000   0.2000000   0.0000000), wk =   0.0142857
+        k(   59) = (  -0.5000000   0.2000000   0.1428571), wk =   0.0142857
+        k(   60) = (  -0.5000000   0.2000000   0.2857143), wk =   0.0142857
+        k(   61) = (  -0.5000000   0.2000000   0.4285714), wk =   0.0142857
+        k(   62) = (  -0.5000000   0.2000000  -0.4285714), wk =   0.0142857
+        k(   63) = (  -0.5000000   0.2000000  -0.2857143), wk =   0.0142857
+        k(   64) = (  -0.5000000   0.2000000  -0.1428571), wk =   0.0142857
+        k(   65) = (  -0.5000000   0.4000000   0.0000000), wk =   0.0142857
+        k(   66) = (  -0.5000000   0.4000000   0.1428571), wk =   0.0142857
+        k(   67) = (  -0.5000000   0.4000000   0.2857143), wk =   0.0142857
+        k(   68) = (  -0.5000000   0.4000000   0.4285714), wk =   0.0142857
+        k(   69) = (  -0.5000000   0.4000000  -0.4285714), wk =   0.0142857
+        k(   70) = (  -0.5000000   0.4000000  -0.2857143), wk =   0.0142857
+        k(   71) = (  -0.5000000   0.4000000  -0.1428571), wk =   0.0142857
+
+     Dense  grid:   556503 G-vectors     FFT dimensions: ( 160, 108,  72)
+
+     Smooth grid:   196733 G-vectors     FFT dimensions: ( 108,  75,  50)
+
+     Dynamical RAM for                 wfc:      40.90 MB
+
+     Dynamical RAM for     wfc (w. buffer):    5849.17 MB
+
+     Dynamical RAM for           str. fact:       8.49 MB
+
+     Dynamical RAM for           local pot:       0.00 MB
+
+     Dynamical RAM for          nlocal pot:      94.57 MB
+
+     Dynamical RAM for                qrad:       1.44 MB
+
+     Dynamical RAM for          rho,v,vnew:     107.90 MB
+
+     Dynamical RAM for               rhoin:      35.97 MB
+
+     Dynamical RAM for            rho*nmix:     271.73 MB
+
+     Dynamical RAM for           G-vectors:      33.34 MB
+
+     Dynamical RAM for          h,s,v(r/c):       2.18 MB
+
+     Dynamical RAM for          <psi|beta>:       0.42 MB
+
+     Dynamical RAM for                 psi:      81.81 MB
+
+     Dynamical RAM for                hpsi:      81.81 MB
+
+     Dynamical RAM for                spsi:      81.81 MB
+
+     Dynamical RAM for      wfcinit/wfcrot:     105.52 MB
+
+     Dynamical RAM for           addusdens:    1706.80 MB
+
+     Dynamical RAM for          addusforce:    1927.69 MB
+
+     Dynamical RAM for         addusstress:    1719.54 MB
+
+     Estimated static dynamical RAM per process >       6.06 GB
+
+     Estimated max dynamical RAM per process >       8.21 GB
+
+     Check: negative core charge=   -0.000002
+     Generating pointlists ...
+     new r_m :   0.0791 (alat units)  2.1117 (a.u.) for type    1
+
+     Initial potential from superposition of free atoms
+
+     starting charge     181.9730, renormalised to     182.0000
+     Starting wfcs are  140 randomized atomic wfcs
+     Checking if some PAW data can be deallocated... 
+
+     total cpu time spent up to now is       35.3 secs
+
+     Self-consistent Calculation
+[tb_dev] Currently allocated     2.38E+01 Mbytes, locked:    0 /  14
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration #  1     ecut=    40.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          7685 MiB given to the printing process from OS
+         -1363 MiB allocation reported by mallinfo(arena+hblkhd)
+         52198 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 2328 / 13952 / 16280
+------------------
+     ethr =  1.00E-02,  avg # of iterations =  2.0
+
+     total cpu time spent up to now is       68.5 secs
+
+     total energy              =   -4612.01863174 Ry
+     estimated scf accuracy    <       6.74160772 Ry
+
+     total magnetization       =    36.01 Bohr mag/cell
+     absolute magnetization    =    36.02 Bohr mag/cell
+[tb_dev] Currently allocated     2.38E+01 Mbytes, locked:    0 /  12
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration #  2     ecut=    40.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          7895 MiB given to the printing process from OS
+         -1216 MiB allocation reported by mallinfo(arena+hblkhd)
+         52046 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 4830 / 11450 / 16280
+------------------
+     ethr =  3.70E-03,  avg # of iterations =  8.6
+
+     total cpu time spent up to now is      127.5 secs
+
+     total energy              =   -4607.69372391 Ry
+     estimated scf accuracy    <     309.45642106 Ry
+
+     total magnetization       =    10.99 Bohr mag/cell
+     absolute magnetization    =    11.34 Bohr mag/cell
+[tb_dev] Currently allocated     2.38E+01 Mbytes, locked:    0 /  12
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration #  3     ecut=    40.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          7961 MiB given to the printing process from OS
+         -1172 MiB allocation reported by mallinfo(arena+hblkhd)
+         52004 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 5012 / 11268 / 16280
+------------------
+     ethr =  3.70E-03,  avg # of iterations =  9.3
+
+     total cpu time spent up to now is      183.7 secs
+
+     total energy              =   -4613.29734056 Ry
+     estimated scf accuracy    <      24.13387940 Ry
+
+     total magnetization       =    34.34 Bohr mag/cell
+     absolute magnetization    =    34.35 Bohr mag/cell
+[tb_dev] Currently allocated     2.38E+01 Mbytes, locked:    0 /  12
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration #  4     ecut=    40.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          8012 MiB given to the printing process from OS
+         -1121 MiB allocation reported by mallinfo(arena+hblkhd)
+         51957 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 5012 / 11268 / 16280
+------------------
+     ethr =  3.70E-03,  avg # of iterations =  5.2
+
+     total cpu time spent up to now is      223.9 secs
+
+     total energy              =   -4614.17454462 Ry
+     estimated scf accuracy    <       4.58609466 Ry
+
+     total magnetization       =    33.23 Bohr mag/cell
+     absolute magnetization    =    33.26 Bohr mag/cell
+[tb_dev] Currently allocated     2.38E+01 Mbytes, locked:    0 /  12
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration #  5     ecut=    40.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          8050 MiB given to the printing process from OS
+         -1080 MiB allocation reported by mallinfo(arena+hblkhd)
+         51913 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 5012 / 11268 / 16280
+------------------
+     ethr =  2.52E-03,  avg # of iterations =  7.8
+
+     total cpu time spent up to now is      269.9 secs
+
+     total energy              =   -4615.25780433 Ry
+     estimated scf accuracy    <       2.90941736 Ry
+
+     total magnetization       =    35.75 Bohr mag/cell
+     absolute magnetization    =    35.77 Bohr mag/cell
+[tb_dev] Currently allocated     2.38E+01 Mbytes, locked:    0 /  12
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration #  6     ecut=    40.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          8096 MiB given to the printing process from OS
+         -1033 MiB allocation reported by mallinfo(arena+hblkhd)
+         51868 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 5012 / 11268 / 16280
+------------------
+     ethr =  1.60E-03,  avg # of iterations =  6.4
+
+     total cpu time spent up to now is      314.1 secs
+
+     total energy              =   -4615.43418843 Ry
+     estimated scf accuracy    <       8.55184327 Ry
+
+     total magnetization       =    32.63 Bohr mag/cell
+     absolute magnetization    =    32.67 Bohr mag/cell
+[tb_dev] Currently allocated     2.38E+01 Mbytes, locked:    0 /  12
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration #  7     ecut=    40.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          8143 MiB given to the printing process from OS
+          -986 MiB allocation reported by mallinfo(arena+hblkhd)
+         51821 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 5012 / 11268 / 16280
+------------------
+     ethr =  1.60E-03,  avg # of iterations =  2.2
+
+     total cpu time spent up to now is      346.8 secs
+
+     total energy              =   -4615.40143126 Ry
+     estimated scf accuracy    <       4.68405990 Ry
+
+     total magnetization       =    31.60 Bohr mag/cell
+     absolute magnetization    =    31.63 Bohr mag/cell
+[tb_dev] Currently allocated     2.38E+01 Mbytes, locked:    0 /  12
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration #  8     ecut=    40.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          8191 MiB given to the printing process from OS
+          -939 MiB allocation reported by mallinfo(arena+hblkhd)
+         51774 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 5012 / 11268 / 16280
+------------------
+     ethr =  1.60E-03,  avg # of iterations =  1.3
+
+     total cpu time spent up to now is      377.6 secs
+
+     total energy              =   -4615.29720445 Ry
+     estimated scf accuracy    <       3.32601059 Ry
+
+     total magnetization       =    32.84 Bohr mag/cell
+     absolute magnetization    =    32.87 Bohr mag/cell
+[tb_dev] Currently allocated     2.38E+01 Mbytes, locked:    0 /  12
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration #  9     ecut=    40.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          8233 MiB given to the printing process from OS
+          -898 MiB allocation reported by mallinfo(arena+hblkhd)
+         51732 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 5012 / 11268 / 16280
+------------------
+     ethr =  1.60E-03,  avg # of iterations =  2.9
+
+     total cpu time spent up to now is      411.1 secs
+
+     total energy              =   -4615.35644923 Ry
+     estimated scf accuracy    <       0.70732099 Ry
+
+     total magnetization       =    32.53 Bohr mag/cell
+     absolute magnetization    =    32.55 Bohr mag/cell
+[tb_dev] Currently allocated     2.38E+01 Mbytes, locked:    0 /  12
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 10     ecut=    40.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          8279 MiB given to the printing process from OS
+          -851 MiB allocation reported by mallinfo(arena+hblkhd)
+         51683 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 5012 / 11268 / 16280
+------------------
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     ethr =  3.89E-04,  avg # of iterations = 10.2
+
+     total cpu time spent up to now is      464.6 secs
+
+     total energy              =   -4615.59356908 Ry
+     estimated scf accuracy    <       1.08781368 Ry
+
+     total magnetization       =    34.24 Bohr mag/cell
+     absolute magnetization    =    34.32 Bohr mag/cell
+[tb_dev] Currently allocated     2.38E+01 Mbytes, locked:    0 /  12
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 11     ecut=    40.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          8308 MiB given to the printing process from OS
+          -822 MiB allocation reported by mallinfo(arena+hblkhd)
+         51656 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 5012 / 11268 / 16280
+------------------
+     ethr =  3.89E-04,  avg # of iterations =  1.4
+
+     total cpu time spent up to now is      495.6 secs
+
+     total energy              =   -4615.58587664 Ry
+     estimated scf accuracy    <       0.74292937 Ry
+
+     total magnetization       =    34.48 Bohr mag/cell
+     absolute magnetization    =    34.61 Bohr mag/cell
+[tb_dev] Currently allocated     2.38E+01 Mbytes, locked:    0 /  12
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 12     ecut=    40.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          8342 MiB given to the printing process from OS
+          -793 MiB allocation reported by mallinfo(arena+hblkhd)
+         51629 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 5012 / 11268 / 16280
+------------------
+     ethr =  3.89E-04,  avg # of iterations =  1.0
+
+     total cpu time spent up to now is      525.9 secs
+
+     total energy              =   -4615.56947665 Ry
+     estimated scf accuracy    <       0.47741007 Ry
+
+     total magnetization       =    34.23 Bohr mag/cell
+     absolute magnetization    =    34.42 Bohr mag/cell
+[tb_dev] Currently allocated     2.38E+01 Mbytes, locked:    0 /  12
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 13     ecut=    40.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          8371 MiB given to the printing process from OS
+          -764 MiB allocation reported by mallinfo(arena+hblkhd)
+         51599 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 5012 / 11268 / 16280
+------------------
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     ethr =  2.62E-04,  avg # of iterations =  1.6
+
+     total cpu time spent up to now is      557.3 secs
+
+     total energy              =   -4615.56961671 Ry
+     estimated scf accuracy    <       0.17174447 Ry
+
+     total magnetization       =    33.99 Bohr mag/cell
+     absolute magnetization    =    34.39 Bohr mag/cell
+[tb_dev] Currently allocated     2.38E+01 Mbytes, locked:    0 /  12
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 14     ecut=    40.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          8401 MiB given to the printing process from OS
+          -735 MiB allocation reported by mallinfo(arena+hblkhd)
+         51568 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 5012 / 11268 / 16280
+------------------
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     ethr =  9.44E-05,  avg # of iterations = 14.3
+
+     total cpu time spent up to now is      616.4 secs
+
+     total energy              =   -4615.59868297 Ry
+     estimated scf accuracy    <       0.04334137 Ry
+
+     total magnetization       =    33.91 Bohr mag/cell
+     absolute magnetization    =    34.57 Bohr mag/cell
+[tb_dev] Currently allocated     2.38E+01 Mbytes, locked:    0 /  12
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 15     ecut=    40.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          8430 MiB given to the printing process from OS
+          -706 MiB allocation reported by mallinfo(arena+hblkhd)
+         51539 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 5012 / 11268 / 16280
+------------------
+     c_bands:  3 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     ethr =  2.38E-05,  avg # of iterations =  7.8
+
+     total cpu time spent up to now is      662.4 secs
+
+     total energy              =   -4615.60760982 Ry
+     estimated scf accuracy    <       0.10538418 Ry
+
+     total magnetization       =    34.01 Bohr mag/cell
+     absolute magnetization    =    34.69 Bohr mag/cell
+[tb_dev] Currently allocated     2.38E+01 Mbytes, locked:    0 /  12
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 16     ecut=    40.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          8465 MiB given to the printing process from OS
+          -677 MiB allocation reported by mallinfo(arena+hblkhd)
+         51509 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 5012 / 11268 / 16280
+------------------
+     ethr =  2.38E-05,  avg # of iterations =  1.2
+
+     total cpu time spent up to now is      693.2 secs
+
+     total energy              =   -4615.60105063 Ry
+     estimated scf accuracy    <       0.10489789 Ry
+
+     total magnetization       =    33.93 Bohr mag/cell
+     absolute magnetization    =    34.68 Bohr mag/cell
+[tb_dev] Currently allocated     2.38E+01 Mbytes, locked:    0 /  12
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 17     ecut=    40.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          8493 MiB given to the printing process from OS
+          -648 MiB allocation reported by mallinfo(arena+hblkhd)
+         51481 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 5012 / 11268 / 16280
+------------------
+     ethr =  2.38E-05,  avg # of iterations =  1.4
+
+     total cpu time spent up to now is      724.3 secs
+
+     total energy              =   -4615.60034666 Ry
+     estimated scf accuracy    <       0.05896556 Ry
+
+     total magnetization       =    34.17 Bohr mag/cell
+     absolute magnetization    =    34.86 Bohr mag/cell
+[tb_dev] Currently allocated     2.38E+01 Mbytes, locked:    0 /  12
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 18     ecut=    40.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          8528 MiB given to the printing process from OS
+          -619 MiB allocation reported by mallinfo(arena+hblkhd)
+         51452 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 5012 / 11268 / 16280
+------------------
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     ethr =  2.38E-05,  avg # of iterations =  2.7
+
+     total cpu time spent up to now is      757.5 secs
+
+     total energy              =   -4615.60112018 Ry
+     estimated scf accuracy    <       0.02407453 Ry
+
+     total magnetization       =    34.28 Bohr mag/cell
+     absolute magnetization    =    35.02 Bohr mag/cell
+[tb_dev] Currently allocated     2.38E+01 Mbytes, locked:    0 /  12
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 19     ecut=    40.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          8552 MiB given to the printing process from OS
+          -591 MiB allocation reported by mallinfo(arena+hblkhd)
+         51423 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 5012 / 11268 / 16280
+------------------
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     ethr =  1.32E-05,  avg # of iterations = 15.5
+
+     total cpu time spent up to now is      825.7 secs
+
+     total energy              =   -4615.60889984 Ry
+     estimated scf accuracy    <       0.11191470 Ry
+
+     total magnetization       =    34.36 Bohr mag/cell
+     absolute magnetization    =    35.50 Bohr mag/cell
+[tb_dev] Currently allocated     2.38E+01 Mbytes, locked:    0 /  12
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 20     ecut=    40.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          8581 MiB given to the printing process from OS
+          -562 MiB allocation reported by mallinfo(arena+hblkhd)
+         51397 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 5012 / 11268 / 16280
+------------------
+     c_bands:  1 eigenvalues not converged
+     ethr =  1.32E-05,  avg # of iterations =  2.9
+
+     total cpu time spent up to now is      859.2 secs
+
+     total energy              =   -4615.60738173 Ry
+     estimated scf accuracy    <       0.06092473 Ry
+
+     total magnetization       =    34.35 Bohr mag/cell
+     absolute magnetization    =    35.52 Bohr mag/cell
+[tb_dev] Currently allocated     2.38E+01 Mbytes, locked:    0 /  12
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 21     ecut=    40.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          8609 MiB given to the printing process from OS
+          -533 MiB allocation reported by mallinfo(arena+hblkhd)
+         51365 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 5012 / 11268 / 16280
+------------------
+     ethr =  1.32E-05,  avg # of iterations =  4.7
+
+     total cpu time spent up to now is      896.0 secs
+
+     total energy              =   -4615.60922500 Ry
+     estimated scf accuracy    <       0.02136505 Ry
+
+     total magnetization       =    34.32 Bohr mag/cell
+     absolute magnetization    =    35.54 Bohr mag/cell
+[tb_dev] Currently allocated     2.38E+01 Mbytes, locked:    0 /  12
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 22     ecut=    40.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          8644 MiB given to the printing process from OS
+          -504 MiB allocation reported by mallinfo(arena+hblkhd)
+         51338 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 5012 / 11268 / 16280
+------------------
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     ethr =  1.17E-05,  avg # of iterations = 11.6
+
+     total cpu time spent up to now is      947.0 secs
+
+     total energy              =   -4615.61178724 Ry
+     estimated scf accuracy    <       0.00794374 Ry
+
+     total magnetization       =    34.48 Bohr mag/cell
+     absolute magnetization    =    35.92 Bohr mag/cell
+[tb_dev] Currently allocated     2.38E+01 Mbytes, locked:    0 /  12
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 23     ecut=    40.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          8672 MiB given to the printing process from OS
+          -475 MiB allocation reported by mallinfo(arena+hblkhd)
+         51308 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 5012 / 11268 / 16280
+------------------
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     ethr =  4.36E-06,  avg # of iterations =  7.8
+
+     total cpu time spent up to now is      989.9 secs
+
+     total energy              =   -4615.61194397 Ry
+     estimated scf accuracy    <       0.01342964 Ry
+
+     total magnetization       =    34.46 Bohr mag/cell
+     absolute magnetization    =    35.81 Bohr mag/cell
+[tb_dev] Currently allocated     2.38E+01 Mbytes, locked:    0 /  12
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 24     ecut=    40.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          8709 MiB given to the printing process from OS
+          -446 MiB allocation reported by mallinfo(arena+hblkhd)
+         51278 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 5012 / 11268 / 16280
+------------------
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     ethr =  4.36E-06,  avg # of iterations =  7.6
+
+     total cpu time spent up to now is     1032.7 secs
+
+     total energy              =   -4615.61319907 Ry
+     estimated scf accuracy    <       0.00095707 Ry
+
+     total magnetization       =    34.37 Bohr mag/cell
+     absolute magnetization    =    35.80 Bohr mag/cell
+[tb_dev] Currently allocated     2.38E+01 Mbytes, locked:    0 /  12
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 25     ecut=    40.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          8743 MiB given to the printing process from OS
+          -417 MiB allocation reported by mallinfo(arena+hblkhd)
+         51252 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 5012 / 11268 / 16280
+------------------
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     ethr =  5.26E-07,  avg # of iterations = 14.2
+
+     total cpu time spent up to now is     1101.7 secs
+
+     total energy              =   -4615.61415966 Ry
+     estimated scf accuracy    <       0.00310808 Ry
+
+     total magnetization       =    34.36 Bohr mag/cell
+     absolute magnetization    =    35.92 Bohr mag/cell
+[tb_dev] Currently allocated     2.38E+01 Mbytes, locked:    0 /  12
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 26     ecut=    40.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          8771 MiB given to the printing process from OS
+          -388 MiB allocation reported by mallinfo(arena+hblkhd)
+         51220 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 5012 / 11268 / 16280
+------------------
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     ethr =  5.26E-07,  avg # of iterations =  2.3
+
+     total cpu time spent up to now is     1133.9 secs
+
+     total energy              =   -4615.61428396 Ry
+     estimated scf accuracy    <       0.00277414 Ry
+
+     total magnetization       =    34.37 Bohr mag/cell
+     absolute magnetization    =    35.92 Bohr mag/cell
+[tb_dev] Currently allocated     2.38E+01 Mbytes, locked:    0 /  12
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 27     ecut=    40.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          8802 MiB given to the printing process from OS
+          -359 MiB allocation reported by mallinfo(arena+hblkhd)
+         51191 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 5012 / 11268 / 16280
+------------------
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     ethr =  5.26E-07,  avg # of iterations =  6.0
+
+     total cpu time spent up to now is     1172.8 secs
+
+     total energy              =   -4615.61421409 Ry
+     estimated scf accuracy    <       0.00174040 Ry
+
+     total magnetization       =    34.38 Bohr mag/cell
+     absolute magnetization    =    35.96 Bohr mag/cell
+[tb_dev] Currently allocated     2.38E+01 Mbytes, locked:    0 /  12
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 28     ecut=    40.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          8836 MiB given to the printing process from OS
+          -330 MiB allocation reported by mallinfo(arena+hblkhd)
+         51163 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 5012 / 11268 / 16280
+------------------
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     ethr =  5.26E-07,  avg # of iterations = 10.6
+
+     total cpu time spent up to now is     1228.4 secs
+
+     total energy              =   -4615.61464342 Ry
+     estimated scf accuracy    <       0.00273830 Ry
+
+     total magnetization       =    34.39 Bohr mag/cell
+     absolute magnetization    =    36.04 Bohr mag/cell
+[tb_dev] Currently allocated     2.38E+01 Mbytes, locked:    0 /  12
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 29     ecut=    40.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          8865 MiB given to the printing process from OS
+          -301 MiB allocation reported by mallinfo(arena+hblkhd)
+         51133 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 5012 / 11268 / 16280
+------------------
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     ethr =  5.26E-07,  avg # of iterations =  9.1
+
+     total cpu time spent up to now is     1276.5 secs
+
+     total energy              =   -4615.61504782 Ry
+     estimated scf accuracy    <       0.00076308 Ry
+
+     total magnetization       =    34.31 Bohr mag/cell
+     absolute magnetization    =    36.06 Bohr mag/cell
+[tb_dev] Currently allocated     2.38E+01 Mbytes, locked:    0 /  12
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 30     ecut=    40.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          8899 MiB given to the printing process from OS
+          -272 MiB allocation reported by mallinfo(arena+hblkhd)
+         51091 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 5012 / 11268 / 16280
+------------------
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     ethr =  4.19E-07,  avg # of iterations =  6.6
+
+     total cpu time spent up to now is     1320.8 secs
+
+     total energy              =   -4615.61499775 Ry
+     estimated scf accuracy    <       0.00268351 Ry
+
+     total magnetization       =    34.36 Bohr mag/cell
+     absolute magnetization    =    36.12 Bohr mag/cell
+[tb_dev] Currently allocated     2.38E+01 Mbytes, locked:    0 /  12
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 31     ecut=    40.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          8934 MiB given to the printing process from OS
+          -244 MiB allocation reported by mallinfo(arena+hblkhd)
+         51063 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 5012 / 11268 / 16280
+------------------
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     ethr =  4.19E-07,  avg # of iterations =  6.5
+
+     total cpu time spent up to now is     1364.3 secs
+
+     total energy              =   -4615.61523216 Ry
+     estimated scf accuracy    <       0.00028380 Ry
+
+     total magnetization       =    34.30 Bohr mag/cell
+     absolute magnetization    =    36.07 Bohr mag/cell
+[tb_dev] Currently allocated     2.38E+01 Mbytes, locked:    0 /  12
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 32     ecut=    40.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          8964 MiB given to the printing process from OS
+          -215 MiB allocation reported by mallinfo(arena+hblkhd)
+         51038 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 5012 / 11268 / 16280
+------------------
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     ethr =  1.56E-07,  avg # of iterations =  5.3
+
+     total cpu time spent up to now is     1402.5 secs
+
+     total energy              =   -4615.61527451 Ry
+     estimated scf accuracy    <       0.00011204 Ry
+
+     total magnetization       =    34.28 Bohr mag/cell
+     absolute magnetization    =    36.07 Bohr mag/cell
+[tb_dev] Currently allocated     2.38E+01 Mbytes, locked:    0 /  12
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 33     ecut=    40.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          8999 MiB given to the printing process from OS
+          -186 MiB allocation reported by mallinfo(arena+hblkhd)
+         51012 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 5012 / 11268 / 16280
+------------------
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     ethr =  6.16E-08,  avg # of iterations = 14.0
+
+     total cpu time spent up to now is     1472.5 secs
+
+     total energy              =   -4615.61591931 Ry
+     estimated scf accuracy    <       0.00124362 Ry
+
+     total magnetization       =    34.12 Bohr mag/cell
+     absolute magnetization    =    36.04 Bohr mag/cell
+[tb_dev] Currently allocated     2.38E+01 Mbytes, locked:    0 /  12
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 34     ecut=    40.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          9027 MiB given to the printing process from OS
+          -157 MiB allocation reported by mallinfo(arena+hblkhd)
+         50987 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 5012 / 11268 / 16280
+------------------
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     ethr =  6.16E-08,  avg # of iterations =  2.6
+
+     total cpu time spent up to now is     1505.3 secs
+
+     total energy              =   -4615.61600691 Ry
+     estimated scf accuracy    <       0.00103484 Ry
+
+     total magnetization       =    34.10 Bohr mag/cell
+     absolute magnetization    =    36.02 Bohr mag/cell
+[tb_dev] Currently allocated     2.38E+01 Mbytes, locked:    0 /  12
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 35     ecut=    40.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          9056 MiB given to the printing process from OS
+          -128 MiB allocation reported by mallinfo(arena+hblkhd)
+         50958 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 5012 / 11268 / 16280
+------------------
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     ethr =  6.16E-08,  avg # of iterations =  7.1
+
+     total cpu time spent up to now is     1547.6 secs
+
+     total energy              =   -4615.61608155 Ry
+     estimated scf accuracy    <       0.00085690 Ry
+
+     total magnetization       =    34.07 Bohr mag/cell
+     absolute magnetization    =    36.00 Bohr mag/cell
+[tb_dev] Currently allocated     2.38E+01 Mbytes, locked:    0 /  12
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 36     ecut=    40.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          9084 MiB given to the printing process from OS
+           -80 MiB allocation reported by mallinfo(arena+hblkhd)
+         50930 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 5012 / 11268 / 16280
+------------------
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     ethr =  6.16E-08,  avg # of iterations = 11.6
+
+     total cpu time spent up to now is     1606.4 secs
+
+     total energy              =   -4615.61621302 Ry
+     estimated scf accuracy    <       0.00038062 Ry
+
+     total magnetization       =    34.06 Bohr mag/cell
+     absolute magnetization    =    36.00 Bohr mag/cell
+[tb_dev] Currently allocated     2.38E+01 Mbytes, locked:    0 /  12
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 37     ecut=    40.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          9084 MiB given to the printing process from OS
+           -51 MiB allocation reported by mallinfo(arena+hblkhd)
+         50900 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 5012 / 11268 / 16280
+------------------
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     ethr =  6.16E-08,  avg # of iterations =  9.6
+
+     total cpu time spent up to now is     1658.6 secs
+
+     total energy              =   -4615.61628101 Ry
+     estimated scf accuracy    <       0.00097665 Ry
+
+     total magnetization       =    34.05 Bohr mag/cell
+     absolute magnetization    =    35.99 Bohr mag/cell
+[tb_dev] Currently allocated     2.38E+01 Mbytes, locked:    0 /  12
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 38     ecut=    40.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          9102 MiB given to the printing process from OS
+           -22 MiB allocation reported by mallinfo(arena+hblkhd)
+         50865 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 5012 / 11268 / 16280
+------------------
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     ethr =  6.16E-08,  avg # of iterations =  8.6
+
+     total cpu time spent up to now is     1706.8 secs
+
+     total energy              =   -4615.61635108 Ry
+     estimated scf accuracy    <       0.00037376 Ry
+
+     total magnetization       =    34.03 Bohr mag/cell
+     absolute magnetization    =    35.99 Bohr mag/cell
+[tb_dev] Currently allocated     2.38E+01 Mbytes, locked:    0 /  12
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 39     ecut=    40.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          9136 MiB given to the printing process from OS
+             6 MiB allocation reported by mallinfo(arena+hblkhd)
+         50837 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 5012 / 11268 / 16280
+------------------
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     ethr =  6.16E-08,  avg # of iterations =  7.1
+
+     total cpu time spent up to now is     1751.2 secs
+
+     total energy              =   -4615.61636666 Ry
+     estimated scf accuracy    <       0.00027850 Ry
+
+     total magnetization       =    33.99 Bohr mag/cell
+     absolute magnetization    =    35.94 Bohr mag/cell
+[tb_dev] Currently allocated     2.38E+01 Mbytes, locked:    0 /  12
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 40     ecut=    40.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          9165 MiB given to the printing process from OS
+            35 MiB allocation reported by mallinfo(arena+hblkhd)
+         50794 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 5012 / 11268 / 16280
+------------------
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     ethr =  6.16E-08,  avg # of iterations = 13.6
+
+     total cpu time spent up to now is     1821.0 secs
+
+     total energy              =   -4615.61670521 Ry
+     estimated scf accuracy    <       0.00067335 Ry
+
+     total magnetization       =    33.83 Bohr mag/cell
+     absolute magnetization    =    35.87 Bohr mag/cell
+[tb_dev] Currently allocated     2.38E+01 Mbytes, locked:    0 /  12
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 41     ecut=    40.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          9193 MiB given to the printing process from OS
+            64 MiB allocation reported by mallinfo(arena+hblkhd)
+         50776 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 5012 / 11268 / 16280
+------------------
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     ethr =  6.16E-08,  avg # of iterations =  6.8
+
+     total cpu time spent up to now is     1866.7 secs
+
+     total energy              =   -4615.61652980 Ry
+     estimated scf accuracy    <       0.00094147 Ry
+
+     total magnetization       =    33.89 Bohr mag/cell
+     absolute magnetization    =    35.90 Bohr mag/cell
+[tb_dev] Currently allocated     2.38E+01 Mbytes, locked:    0 /  12
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 42     ecut=    40.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          9228 MiB given to the printing process from OS
+            92 MiB allocation reported by mallinfo(arena+hblkhd)
+         50749 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 5012 / 11268 / 16280
+------------------
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     ethr =  6.16E-08,  avg # of iterations =  7.5
+
+     total cpu time spent up to now is     1914.5 secs
+
+     total energy              =   -4615.61651150 Ry
+     estimated scf accuracy    <       0.00084207 Ry
+
+     total magnetization       =    33.94 Bohr mag/cell
+     absolute magnetization    =    35.91 Bohr mag/cell
+[tb_dev] Currently allocated     2.38E+01 Mbytes, locked:    0 /  12
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 43     ecut=    40.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          9265 MiB given to the printing process from OS
+           131 MiB allocation reported by mallinfo(arena+hblkhd)
+         50709 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 5012 / 11268 / 16280
+------------------
+     c_bands:  5 eigenvalues not converged
+     ethr =  6.16E-08,  avg # of iterations =  2.4
+
+     total cpu time spent up to now is     1947.4 secs
+
+     total energy              =   -4615.61665768 Ry
+     estimated scf accuracy    <       0.00097589 Ry
+
+     total magnetization       =    33.96 Bohr mag/cell
+     absolute magnetization    =    35.93 Bohr mag/cell
+[tb_dev] Currently allocated     2.38E+01 Mbytes, locked:    0 /  12
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 44     ecut=    40.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          9299 MiB given to the printing process from OS
+           160 MiB allocation reported by mallinfo(arena+hblkhd)
+         50680 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 5012 / 11268 / 16280
+------------------
+     c_bands:  1 eigenvalues not converged
+     ethr =  6.16E-08,  avg # of iterations =  4.9
+
+     total cpu time spent up to now is     1986.4 secs
+
+     total energy              =   -4615.61679652 Ry
+     estimated scf accuracy    <       0.00049489 Ry
+
+     total magnetization       =    33.92 Bohr mag/cell
+     absolute magnetization    =    35.90 Bohr mag/cell
+[tb_dev] Currently allocated     2.38E+01 Mbytes, locked:    0 /  12
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 45     ecut=    40.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          9328 MiB given to the printing process from OS
+           189 MiB allocation reported by mallinfo(arena+hblkhd)
+         50650 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 5012 / 11268 / 16280
+------------------
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     ethr =  6.16E-08,  avg # of iterations = 13.0
+
+     total cpu time spent up to now is     2051.0 secs
+
+     total energy              =   -4615.61724955 Ry
+     estimated scf accuracy    <       0.00072617 Ry
+
+     total magnetization       =    33.81 Bohr mag/cell
+     absolute magnetization    =    35.83 Bohr mag/cell
+[tb_dev] Currently allocated     2.38E+01 Mbytes, locked:    0 /  12
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 46     ecut=    40.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          9356 MiB given to the printing process from OS
+           218 MiB allocation reported by mallinfo(arena+hblkhd)
+         50625 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 5012 / 11268 / 16280
+------------------
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     ethr =  6.16E-08,  avg # of iterations = 11.5
+
+     total cpu time spent up to now is     2108.4 secs
+
+     total energy              =   -4615.61666478 Ry
+     estimated scf accuracy    <       0.00074480 Ry
+
+     total magnetization       =    33.75 Bohr mag/cell
+     absolute magnetization    =    35.83 Bohr mag/cell
+[tb_dev] Currently allocated     2.38E+01 Mbytes, locked:    0 /  12
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 47     ecut=    40.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          9385 MiB given to the printing process from OS
+           254 MiB allocation reported by mallinfo(arena+hblkhd)
+         50592 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 5012 / 11268 / 16280
+------------------
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     ethr =  6.16E-08,  avg # of iterations = 12.4
+
+     total cpu time spent up to now is     2170.9 secs
+
+     total energy              =   -4615.61645553 Ry
+     estimated scf accuracy    <       0.00118485 Ry
+
+     total magnetization       =    33.87 Bohr mag/cell
+     absolute magnetization    =    35.86 Bohr mag/cell
+[tb_dev] Currently allocated     2.38E+01 Mbytes, locked:    0 /  12
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 48     ecut=    40.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          9415 MiB given to the printing process from OS
+           285 MiB allocation reported by mallinfo(arena+hblkhd)
+         50559 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 5012 / 11268 / 16280
+------------------
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  5 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     ethr =  6.16E-08,  avg # of iterations = 14.4
+
+     total cpu time spent up to now is     2243.7 secs
+
+     total energy              =   -4615.60910835 Ry
+     estimated scf accuracy    <       0.00187235 Ry
+
+     total magnetization       =    33.62 Bohr mag/cell
+     absolute magnetization    =    35.79 Bohr mag/cell
+[tb_dev] Currently allocated     2.38E+01 Mbytes, locked:    0 /  12
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 49     ecut=    40.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          9456 MiB given to the printing process from OS
+           314 MiB allocation reported by mallinfo(arena+hblkhd)
+         50529 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 5012 / 11268 / 16280
+------------------
+     c_bands:  5 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  5 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  5 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  5 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  5 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  5 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  5 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  5 eigenvalues not converged
+     c_bands:  5 eigenvalues not converged
+     c_bands:  5 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  5 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  5 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  5 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  5 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  5 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  5 eigenvalues not converged
+     c_bands:  5 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  5 eigenvalues not converged
+     ethr =  6.16E-08,  avg # of iterations = 18.3
+
+     total cpu time spent up to now is     2333.7 secs
+
+     total energy              =   -4615.61591894 Ry
+     estimated scf accuracy    <       0.00095211 Ry
+
+     total magnetization       =    34.15 Bohr mag/cell
+     absolute magnetization    =    36.09 Bohr mag/cell
+[tb_dev] Currently allocated     2.38E+01 Mbytes, locked:    0 /  12
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 50     ecut=    40.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          9485 MiB given to the printing process from OS
+           343 MiB allocation reported by mallinfo(arena+hblkhd)
+         50500 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 5012 / 11268 / 16280
+------------------
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     ethr =  6.16E-08,  avg # of iterations =  9.5
+
+     total cpu time spent up to now is     2378.4 secs
+
+     total energy              =   -4615.61602150 Ry
+     estimated scf accuracy    <       0.00054532 Ry
+
+     total magnetization       =    34.12 Bohr mag/cell
+     absolute magnetization    =    36.07 Bohr mag/cell
+[tb_dev] Currently allocated     2.38E+01 Mbytes, locked:    0 /  12
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 51     ecut=    40.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          9513 MiB given to the printing process from OS
+           381 MiB allocation reported by mallinfo(arena+hblkhd)
+         50459 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 5012 / 11268 / 16280
+------------------
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     ethr =  6.16E-08,  avg # of iterations =  8.9
+
+     total cpu time spent up to now is     2427.5 secs
+
+     total energy              =   -4615.61506821 Ry
+     estimated scf accuracy    <       0.00064481 Ry
+
+     total magnetization       =    34.09 Bohr mag/cell
+     absolute magnetization    =    36.06 Bohr mag/cell
+[tb_dev] Currently allocated     2.38E+01 Mbytes, locked:    0 /  12
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 52     ecut=    40.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          9542 MiB given to the printing process from OS
+           419 MiB allocation reported by mallinfo(arena+hblkhd)
+         50422 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 5012 / 11268 / 16280
+------------------
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     ethr =  6.16E-08,  avg # of iterations = 13.6
+
+     total cpu time spent up to now is     2495.9 secs
+
+     total energy              =   -4615.61421051 Ry
+     estimated scf accuracy    <       0.00045612 Ry
+
+     total magnetization       =    34.24 Bohr mag/cell
+     absolute magnetization    =    36.19 Bohr mag/cell
+[tb_dev] Currently allocated     2.38E+01 Mbytes, locked:    0 /  12
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 53     ecut=    40.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          9576 MiB given to the printing process from OS
+           448 MiB allocation reported by mallinfo(arena+hblkhd)
+         50395 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 5012 / 11268 / 16280
+------------------
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     ethr =  6.16E-08,  avg # of iterations = 13.2
+
+     total cpu time spent up to now is     2564.5 secs
+
+     total energy              =   -4615.61328267 Ry
+     estimated scf accuracy    <       0.00033207 Ry
+
+     total magnetization       =    34.38 Bohr mag/cell
+     absolute magnetization    =    36.34 Bohr mag/cell
+[tb_dev] Currently allocated     2.38E+01 Mbytes, locked:    0 /  12
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 54     ecut=    40.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          9613 MiB given to the printing process from OS
+           476 MiB allocation reported by mallinfo(arena+hblkhd)
+         50363 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 5012 / 11268 / 16280
+------------------
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     ethr =  6.16E-08,  avg # of iterations = 13.7
+
+     total cpu time spent up to now is     2634.0 secs
+
+     total energy              =   -4615.61424052 Ry
+     estimated scf accuracy    <       0.00077343 Ry
+
+     total magnetization       =    34.55 Bohr mag/cell
+     absolute magnetization    =    36.56 Bohr mag/cell
+[tb_dev] Currently allocated     2.38E+01 Mbytes, locked:    0 /  12
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 55     ecut=    40.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          9641 MiB given to the printing process from OS
+           505 MiB allocation reported by mallinfo(arena+hblkhd)
+         50337 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 5012 / 11268 / 16280
+------------------
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     ethr =  6.16E-08,  avg # of iterations =  9.6
+
+     total cpu time spent up to now is     2688.8 secs
+
+     total energy              =   -4615.61302863 Ry
+     estimated scf accuracy    <       0.00058656 Ry
+
+     total magnetization       =    34.49 Bohr mag/cell
+     absolute magnetization    =    36.47 Bohr mag/cell
+[tb_dev] Currently allocated     2.38E+01 Mbytes, locked:    0 /  12
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 56     ecut=    40.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          9670 MiB given to the printing process from OS
+           534 MiB allocation reported by mallinfo(arena+hblkhd)
+         50308 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 5012 / 11268 / 16280
+------------------
+     c_bands:  5 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  5 eigenvalues not converged
+     c_bands:  5 eigenvalues not converged
+     c_bands:  5 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  5 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  5 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  5 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  5 eigenvalues not converged
+     c_bands:  5 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  5 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  5 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  5 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  5 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  5 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  5 eigenvalues not converged
+     c_bands:  5 eigenvalues not converged
+     c_bands:  5 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  5 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  5 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  5 eigenvalues not converged
+     c_bands:  5 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  5 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     ethr =  6.16E-08,  avg # of iterations = 16.1
+
+     total cpu time spent up to now is     2771.4 secs
+
+     total energy              =   -4615.61571351 Ry
+     estimated scf accuracy    <       0.00029519 Ry
+
+     total magnetization       =    34.13 Bohr mag/cell
+     absolute magnetization    =    36.04 Bohr mag/cell
+[tb_dev] Currently allocated     2.38E+01 Mbytes, locked:    0 /  12
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 57     ecut=    40.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          9698 MiB given to the printing process from OS
+           563 MiB allocation reported by mallinfo(arena+hblkhd)
+         50277 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 5012 / 11268 / 16280
+------------------
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     ethr =  6.16E-08,  avg # of iterations = 10.3
+
+     total cpu time spent up to now is     2818.1 secs
+
+     total energy              =   -4615.61585711 Ry
+     estimated scf accuracy    <       0.00056301 Ry
+
+     total magnetization       =    34.17 Bohr mag/cell
+     absolute magnetization    =    36.09 Bohr mag/cell
+[tb_dev] Currently allocated     2.38E+01 Mbytes, locked:    0 /  12
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 58     ecut=    40.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          9730 MiB given to the printing process from OS
+           599 MiB allocation reported by mallinfo(arena+hblkhd)
+         50243 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 5012 / 11268 / 16280
+------------------
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     ethr =  6.16E-08,  avg # of iterations =  8.1
+
+     total cpu time spent up to now is     2860.0 secs
+
+     total energy              =   -4615.61590846 Ry
+     estimated scf accuracy    <       0.00032672 Ry
+
+     total magnetization       =    34.13 Bohr mag/cell
+     absolute magnetization    =    36.05 Bohr mag/cell
+[tb_dev] Currently allocated     2.38E+01 Mbytes, locked:    0 /  12
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 59     ecut=    40.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          9767 MiB given to the printing process from OS
+           628 MiB allocation reported by mallinfo(arena+hblkhd)
+         50212 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 5012 / 11268 / 16280
+------------------
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     ethr =  6.16E-08,  avg # of iterations = 13.2
+
+     total cpu time spent up to now is     2928.9 secs
+
+     total energy              =   -4615.61620911 Ry
+     estimated scf accuracy    <       0.00066028 Ry
+
+     total magnetization       =    33.99 Bohr mag/cell
+     absolute magnetization    =    35.95 Bohr mag/cell
+[tb_dev] Currently allocated     2.38E+01 Mbytes, locked:    0 /  12
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 60     ecut=    40.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          9801 MiB given to the printing process from OS
+           665 MiB allocation reported by mallinfo(arena+hblkhd)
+         50176 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 5012 / 11268 / 16280
+------------------
+     c_bands:  3 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  5 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     ethr =  6.16E-08,  avg # of iterations = 14.1
+
+     total cpu time spent up to now is     3000.6 secs
+
+     total energy              =   -4615.61538465 Ry
+     estimated scf accuracy    <       0.00092479 Ry
+
+     total magnetization       =    33.79 Bohr mag/cell
+     absolute magnetization    =    35.86 Bohr mag/cell
+[tb_dev] Currently allocated     2.38E+01 Mbytes, locked:    0 /  12
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 61     ecut=    40.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          9830 MiB given to the printing process from OS
+           694 MiB allocation reported by mallinfo(arena+hblkhd)
+         50146 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 5012 / 11268 / 16280
+------------------
+     c_bands:  3 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  5 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  5 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  5 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  5 eigenvalues not converged
+     c_bands:  5 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  5 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  5 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  5 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  5 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  5 eigenvalues not converged
+     c_bands:  5 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  5 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  5 eigenvalues not converged
+     c_bands:  5 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  5 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  5 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     ethr =  6.16E-08,  avg # of iterations = 16.0
+
+     total cpu time spent up to now is     3081.4 secs
+
+     total energy              =   -4615.61870503 Ry
+     estimated scf accuracy    <       0.00140248 Ry
+
+     total magnetization       =    33.44 Bohr mag/cell
+     absolute magnetization    =    35.85 Bohr mag/cell
+[tb_dev] Currently allocated     2.38E+01 Mbytes, locked:    0 /  12
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 62     ecut=    40.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          9858 MiB given to the printing process from OS
+           723 MiB allocation reported by mallinfo(arena+hblkhd)
+         50108 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 5012 / 11268 / 16280
+------------------
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     ethr =  6.16E-08,  avg # of iterations = 10.3
+
+     total cpu time spent up to now is     3127.2 secs
+
+     total energy              =   -4615.61883196 Ry
+     estimated scf accuracy    <       0.00138054 Ry
+
+     total magnetization       =    33.43 Bohr mag/cell
+     absolute magnetization    =    35.85 Bohr mag/cell
+[tb_dev] Currently allocated     2.38E+01 Mbytes, locked:    0 /  12
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 63     ecut=    40.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          9887 MiB given to the printing process from OS
+           752 MiB allocation reported by mallinfo(arena+hblkhd)
+         50079 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 5012 / 11268 / 16280
+------------------
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     ethr =  6.16E-08,  avg # of iterations = 10.6
+
+     total cpu time spent up to now is     3179.7 secs
+
+     total energy              =   -4615.61876175 Ry
+     estimated scf accuracy    <       0.00149499 Ry
+
+     total magnetization       =    33.40 Bohr mag/cell
+     absolute magnetization    =    35.86 Bohr mag/cell
+[tb_dev] Currently allocated     2.38E+01 Mbytes, locked:    0 /  12
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 64     ecut=    40.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          9920 MiB given to the printing process from OS
+           788 MiB allocation reported by mallinfo(arena+hblkhd)
+         50050 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 5012 / 11268 / 16280
+------------------
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     ethr =  6.16E-08,  avg # of iterations = 13.8
+
+     total cpu time spent up to now is     3249.9 secs
+
+     total energy              =   -4615.61848400 Ry
+     estimated scf accuracy    <       0.00175906 Ry
+
+     total magnetization       =    33.24 Bohr mag/cell
+     absolute magnetization    =    35.93 Bohr mag/cell
+[tb_dev] Currently allocated     2.38E+01 Mbytes, locked:    0 /  12
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 65     ecut=    40.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          9955 MiB given to the printing process from OS
+           817 MiB allocation reported by mallinfo(arena+hblkhd)
+         50023 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 5012 / 11268 / 16280
+------------------
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     ethr =  6.16E-08,  avg # of iterations = 12.8
+
+     total cpu time spent up to now is     3318.1 secs
+
+     total energy              =   -4615.61909362 Ry
+     estimated scf accuracy    <       0.00149298 Ry
+
+     total magnetization       =    33.37 Bohr mag/cell
+     absolute magnetization    =    35.84 Bohr mag/cell
+[tb_dev] Currently allocated     2.38E+01 Mbytes, locked:    0 /  12
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 66     ecut=    40.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          9989 MiB given to the printing process from OS
+           854 MiB allocation reported by mallinfo(arena+hblkhd)
+         49987 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 5012 / 11268 / 16280
+------------------
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     ethr =  6.16E-08,  avg # of iterations = 13.4
+
+     total cpu time spent up to now is     3386.0 secs
+
+     total energy              =   -4615.56240774 Ry
+     estimated scf accuracy    <       0.00187764 Ry
+
+     total magnetization       =    33.24 Bohr mag/cell
+     absolute magnetization    =    35.90 Bohr mag/cell
+[tb_dev] Currently allocated     2.38E+01 Mbytes, locked:    0 /  12
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 67     ecut=    40.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+         10018 MiB given to the printing process from OS
+           883 MiB allocation reported by mallinfo(arena+hblkhd)
+         49959 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 5012 / 11268 / 16280
+------------------
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     ethr =  6.16E-08,  avg # of iterations = 29.1
+
+     total cpu time spent up to now is     3522.7 secs
+
+     total energy              =   -4615.61237290 Ry
+     estimated scf accuracy    <       0.00116870 Ry
+
+     total magnetization       =    34.64 Bohr mag/cell
+     absolute magnetization    =    36.53 Bohr mag/cell
+[tb_dev] Currently allocated     2.38E+01 Mbytes, locked:    0 /  12
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 68     ecut=    40.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+         10046 MiB given to the printing process from OS
+           912 MiB allocation reported by mallinfo(arena+hblkhd)
+         49935 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 5012 / 11268 / 16280
+------------------
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     ethr =  6.16E-08,  avg # of iterations = 14.1
+
+     total cpu time spent up to now is     3589.6 secs
+
+     total energy              =   -4615.61294970 Ry
+     estimated scf accuracy    <       0.00163125 Ry
+
+     total magnetization       =    34.73 Bohr mag/cell
+     absolute magnetization    =    36.66 Bohr mag/cell
+[tb_dev] Currently allocated     2.38E+01 Mbytes, locked:    0 /  12
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 69     ecut=    40.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+         10077 MiB given to the printing process from OS
+           941 MiB allocation reported by mallinfo(arena+hblkhd)
+         49898 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 5012 / 11268 / 16280
+------------------
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     ethr =  6.16E-08,  avg # of iterations = 14.8
+
+     total cpu time spent up to now is     3662.9 secs
+
+     total energy              =   -4615.61274907 Ry
+     estimated scf accuracy    <       0.00141887 Ry
+
+     total magnetization       =    34.51 Bohr mag/cell
+     absolute magnetization    =    36.46 Bohr mag/cell
+[tb_dev] Currently allocated     2.38E+01 Mbytes, locked:    0 /  12
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 70     ecut=    40.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+         10109 MiB given to the printing process from OS
+           976 MiB allocation reported by mallinfo(arena+hblkhd)
+         49866 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 5012 / 11268 / 16280
+------------------
+     c_bands:  5 eigenvalues not converged
+     c_bands:  5 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  5 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  5 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  5 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  5 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  5 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  5 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  5 eigenvalues not converged
+     c_bands:  5 eigenvalues not converged
+     c_bands:  5 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  5 eigenvalues not converged
+     c_bands:  5 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  5 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  5 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  5 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  5 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  5 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     ethr =  6.16E-08,  avg # of iterations = 16.3
+
+     total cpu time spent up to now is     3745.9 secs
+
+     total energy              =   -4615.61584979 Ry
+     estimated scf accuracy    <       0.00021570 Ry
+
+     total magnetization       =    34.16 Bohr mag/cell
+     absolute magnetization    =    36.15 Bohr mag/cell
+[tb_dev] Currently allocated     2.38E+01 Mbytes, locked:    0 /  12
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 71     ecut=    40.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+         10143 MiB given to the printing process from OS
+          1014 MiB allocation reported by mallinfo(arena+hblkhd)
+         49829 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 5012 / 11268 / 16280
+------------------
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     ethr =  6.16E-08,  avg # of iterations = 13.8
+
+     total cpu time spent up to now is     3814.2 secs
+
+     total energy              =   -4615.61604876 Ry
+     estimated scf accuracy    <       0.00031069 Ry
+
+     total magnetization       =    34.04 Bohr mag/cell
+     absolute magnetization    =    36.05 Bohr mag/cell
+[tb_dev] Currently allocated     2.38E+01 Mbytes, locked:    0 /  12
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 72     ecut=    40.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+         10172 MiB given to the printing process from OS
+          1043 MiB allocation reported by mallinfo(arena+hblkhd)
+         49797 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 5012 / 11268 / 16280
+------------------
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     ethr =  6.16E-08,  avg # of iterations = 11.7
+
+     total cpu time spent up to now is     3872.2 secs
+
+     total energy              =   -4615.61623085 Ry
+     estimated scf accuracy    <       0.00064709 Ry
+
+     total magnetization       =    34.06 Bohr mag/cell
+     absolute magnetization    =    36.06 Bohr mag/cell
+[tb_dev] Currently allocated     2.38E+01 Mbytes, locked:    0 /  12
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 73     ecut=    40.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+         10206 MiB given to the printing process from OS
+          1072 MiB allocation reported by mallinfo(arena+hblkhd)
+         49769 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 5012 / 11268 / 16280
+------------------
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     ethr =  6.16E-08,  avg # of iterations = 12.3
+
+     total cpu time spent up to now is     3934.5 secs
+
+     total energy              =   -4615.61615454 Ry
+     estimated scf accuracy    <       0.00025553 Ry
+
+     total magnetization       =    33.97 Bohr mag/cell
+     absolute magnetization    =    36.01 Bohr mag/cell
+[tb_dev] Currently allocated     2.38E+01 Mbytes, locked:    0 /  12
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 74     ecut=    40.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+         10235 MiB given to the printing process from OS
+          1100 MiB allocation reported by mallinfo(arena+hblkhd)
+         49741 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 5012 / 11268 / 16280
+------------------
+     c_bands:  2 eigenvalues not converged
+     c_bands:  5 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     ethr =  6.16E-08,  avg # of iterations = 14.4
+
+     total cpu time spent up to now is     4006.4 secs
+
+     total energy              =   -4615.61371606 Ry
+     estimated scf accuracy    <       0.00012409 Ry
+
+     total magnetization       =    33.76 Bohr mag/cell
+     absolute magnetization    =    35.87 Bohr mag/cell
+[tb_dev] Currently allocated     2.38E+01 Mbytes, locked:    0 /  12
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 75     ecut=    40.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+         10264 MiB given to the printing process from OS
+          1129 MiB allocation reported by mallinfo(arena+hblkhd)
+         49712 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 5012 / 11268 / 16280
+------------------
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  5 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  5 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  5 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  5 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  5 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     ethr =  6.16E-08,  avg # of iterations = 15.1
+
+     total cpu time spent up to now is     4082.1 secs
+
+     total energy              =   -4615.61514486 Ry
+     estimated scf accuracy    <       0.00015410 Ry
+
+     total magnetization       =    34.07 Bohr mag/cell
+     absolute magnetization    =    36.03 Bohr mag/cell
+[tb_dev] Currently allocated     2.38E+01 Mbytes, locked:    0 /  12
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 76     ecut=    40.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+         10304 MiB given to the printing process from OS
+          1165 MiB allocation reported by mallinfo(arena+hblkhd)
+         49678 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 5012 / 11268 / 16280
+------------------
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     ethr =  6.16E-08,  avg # of iterations = 13.6
+
+     total cpu time spent up to now is     4150.3 secs
+
+     total energy              =   -4615.61526144 Ry
+     estimated scf accuracy    <       0.00024180 Ry
+
+     total magnetization       =    34.21 Bohr mag/cell
+     absolute magnetization    =    36.18 Bohr mag/cell
+[tb_dev] Currently allocated     2.38E+01 Mbytes, locked:    0 /  12
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 77     ecut=    40.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+         10332 MiB given to the printing process from OS
+          1202 MiB allocation reported by mallinfo(arena+hblkhd)
+         49638 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 5012 / 11268 / 16280
+------------------
+     c_bands:  3 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     ethr =  6.16E-08,  avg # of iterations = 14.0
+
+     total cpu time spent up to now is     4220.1 secs
+
+     total energy              =   -4615.61640304 Ry
+     estimated scf accuracy    <       0.00026369 Ry
+
+     total magnetization       =    33.98 Bohr mag/cell
+     absolute magnetization    =    35.99 Bohr mag/cell
+[tb_dev] Currently allocated     2.38E+01 Mbytes, locked:    0 /  12
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 78     ecut=    40.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+         10361 MiB given to the printing process from OS
+          1231 MiB allocation reported by mallinfo(arena+hblkhd)
+         49610 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 5012 / 11268 / 16280
+------------------
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     ethr =  6.16E-08,  avg # of iterations = 11.3
+
+     total cpu time spent up to now is     4277.5 secs
+
+     total energy              =   -4615.61475185 Ry
+     estimated scf accuracy    <       0.00069318 Ry
+
+     total magnetization       =    33.98 Bohr mag/cell
+     absolute magnetization    =    36.00 Bohr mag/cell
+[tb_dev] Currently allocated     2.38E+01 Mbytes, locked:    0 /  12
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 79     ecut=    40.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+         10395 MiB given to the printing process from OS
+          1260 MiB allocation reported by mallinfo(arena+hblkhd)
+         49582 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 5012 / 11268 / 16280
+------------------
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     ethr =  6.16E-08,  avg # of iterations = 13.5
+
+     total cpu time spent up to now is     4346.6 secs
+
+     total energy              =   -4615.61581790 Ry
+     estimated scf accuracy    <       0.00013925 Ry
+
+     total magnetization       =    34.18 Bohr mag/cell
+     absolute magnetization    =    36.14 Bohr mag/cell
+[tb_dev] Currently allocated     2.38E+01 Mbytes, locked:    0 /  12
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 80     ecut=    40.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+         10424 MiB given to the printing process from OS
+          1289 MiB allocation reported by mallinfo(arena+hblkhd)
+         49554 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 5012 / 11268 / 16280
+------------------
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     c_bands:  1 eigenvalues not converged
+     ethr =  6.16E-08,  avg # of iterations =  7.0
+
+     total cpu time spent up to now is     4393.5 secs
+
+     total energy              =   -4615.61376787 Ry
+     estimated scf accuracy    <       0.00007868 Ry
+
+     total magnetization       =    34.13 Bohr mag/cell
+     absolute magnetization    =    36.11 Bohr mag/cell
+
+     End of self-consistent calculation
+
+     convergence NOT achieved after  80 iterations: stopping
+
+     Writing config to output data dir ./out/aiida.save/
+ 
+     init_run     :     98.34s CPU     34.86s WALL (       1 calls)
+     electrons    :   8364.02s CPU   4358.38s WALL (       1 calls)
+
+     Called by init_run:
+     wfcinit      :     19.99s CPU     25.29s WALL (       1 calls)
+                                       25.29s GPU  (       1 calls)
+     wfcinit:atom :      0.09s CPU      0.19s WALL (     142 calls)
+                                        0.19s GPU  (     142 calls)
+     wfcinit:wfcr :     10.15s CPU     11.09s WALL (     142 calls)
+                                       11.09s GPU  (     142 calls)
+     potinit      :     63.36s CPU      5.78s WALL (       1 calls)
+     hinit0       :      7.80s CPU      2.58s WALL (       1 calls)
+
+     Called by electrons:
+     c_bands      :   3415.97s CPU   3530.86s WALL (      80 calls)
+     sum_band     :    400.26s CPU    413.47s WALL (      80 calls)
+     v_of_rho     :     86.26s CPU      7.79s WALL (      81 calls)
+     v_h          :     17.40s CPU      1.56s WALL (      81 calls)
+     v_xc         :     68.85s CPU      6.23s WALL (      81 calls)
+     newd         :     82.92s CPU      7.79s WALL (      81 calls)
+                                        7.79s GPU  (      81 calls)
+     PAW_pot      :   4291.24s CPU    388.49s WALL (      81 calls)
+     mix_rho      :    107.70s CPU     11.75s WALL (      80 calls)
+
+     Called by c_bands:
+     init_us_2    :     47.81s CPU     63.19s WALL (   22862 calls)
+     init_us_2:gp :     47.34s CPU     62.74s WALL (   22862 calls)
+     cegterg      :   3039.94s CPU   3167.49s WALL (   11460 calls)
+
+     Called by sum_band:
+     sum_band:wei :      1.58s CPU      1.58s WALL (      80 calls)
+                                        1.58s GPU  (      80 calls)
+     sum_band:loo :    385.03s CPU    398.11s WALL (      80 calls)
+                                      398.11s GPU  (      80 calls)
+     sum_band:buf :    150.82s CPU    151.93s WALL (   11360 calls)
+                                      151.85s GPU  (   11360 calls)
+     sum_band:ini :     22.44s CPU     28.36s WALL (   11360 calls)
+                                       28.29s GPU  (   11360 calls)
+     sum_band:cal :      0.50s CPU     21.49s WALL (   11360 calls)
+                                       17.96s GPU  (   11360 calls)
+     sum_band:bec :      4.62s CPU      4.84s WALL (   11360 calls)
+                                        4.61s GPU  (   11360 calls)
+     addusdens    :      6.38s CPU      6.48s WALL (      80 calls)
+                                        6.48s GPU  (      80 calls)
+     addusd:skk   :      0.08s CPU      0.08s WALL (      80 calls)
+                                        0.08s GPU  (      80 calls)
+
+     Called by *egterg:
+     cdiaghg      :   1030.64s CPU   1162.34s WALL (  121032 calls)
+                                     1161.52s GPU  (  121032 calls)
+     cegterg:over :    100.03s CPU    103.04s WALL (  109572 calls)
+     cegterg:upda :    113.57s CPU    116.84s WALL (  109572 calls)
+     cegterg:last :    108.67s CPU    109.58s WALL (   33961 calls)
+     h_psi        :   1496.32s CPU   1489.01s WALL (  121174 calls)
+                                     1486.43s GPU  (  121174 calls)
+     s_psi        :     26.99s CPU    115.01s WALL (  121174 calls)
+                                      107.96s GPU  (  121174 calls)
+     g_psi        :      0.79s CPU      9.27s WALL (  109572 calls)
+                                        8.56s GPU  (  109572 calls)
+
+     Called by h_psi:
+     h_psi:calbec :      4.19s CPU     90.58s WALL (  121174 calls)
+                                       89.81s GPU  (  121174 calls)
+     vloc_psi     :   1268.89s CPU   1261.12s WALL (  121174 calls)
+                                     1260.36s GPU  (  121174 calls)
+     add_vuspsi   :     40.39s CPU    121.56s WALL (  121174 calls)
+                                      120.78s GPU  (  121174 calls)
+
+     General routines
+     calbec       :      3.52s CPU      3.62s WALL (  132534 calls)
+     fft          :      3.64s CPU      0.92s WALL (    2023 calls)
+                                        0.70s GPU  (    1861 calls)
+     ffts         :      0.31s CPU      0.10s WALL (     322 calls)
+                                        0.02s GPU  (     160 calls)
+     fftw         :     16.70s CPU   1075.44s WALL (  727570 calls)
+                                     1067.57s GPU  (  727570 calls)
+     interpolate  :     15.06s CPU      1.33s WALL (     162 calls)
+     davcio       :      0.29s CPU      4.31s WALL (     160 calls)
+ 
+     Parallel routines
+
+     PAW routines
+     PAW_pot      :   4291.24s CPU    388.49s WALL (      81 calls)
+     PAW_symme    :      0.48s CPU      0.08s WALL (     161 calls)
+ 
+     PWSCF        :      2h21m CPU      1h13m WALL
+
+ 
+   This run was terminated on:  18:57:12  23Oct2023            
+
+=------------------------------------------------------------------------------=
+   JOB DONE.
+=------------------------------------------------------------------------------=

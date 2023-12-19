@@ -1,0 +1,58 @@
+&CONTROL
+  calculation = 'scf'
+  etot_conv_thr =   1.2000000000d-04
+  forc_conv_thr =   1.0000000000d-04
+  max_seconds =   3.4200000000d+04
+  outdir = './out/'
+  prefix = 'aiida'
+  pseudo_dir = './pseudo/'
+  restart_mode = 'restart'
+  tprnfor = .true.
+  tstress = .true.
+  verbosity = 'high'
+/
+&SYSTEM
+  degauss =   1.0000000000d-02
+  ecutrho =   4.8000000000d+02
+  ecutwfc =   6.0000000000d+01
+  ibrav = 0
+  nat = 12
+  nosym = .false.
+  nspin = 2
+  ntyp = 4
+  occupations = 'smearing'
+  smearing = 'cold'
+  starting_magnetization(1) =   1.0000000000d-01
+  starting_magnetization(2) =   1.0000000000d-01
+  starting_magnetization(3) =   1.0000000000d-01
+  starting_magnetization(4) =   1.0000000000d-01
+/
+&ELECTRONS
+  conv_thr =   2.4000000000d-09
+  electron_maxstep = 80
+  mixing_beta =   1.0000000000d-01
+/
+ATOMIC_SPECIES
+Ba     137.327 Ba.pbesol-spn-kjpaw_psl.1.0.0.UPF
+Cd     112.411 Cd.pbesol-dn-rrkjus_psl.0.3.1.UPF
+K      39.0983 K.pbesol-spn-kjpaw_psl.1.0.0.UPF
+Sb     121.76 sb_pbesol_v1.4.uspp.F.UPF
+ATOMIC_POSITIONS angstrom
+K            2.5183000000       5.6622136100       4.0712565600
+K            2.5183000000       4.1560863900       8.3174565600
+K            0.0000000000       6.4751688500       1.3256636400
+K            0.0000000000       3.3431311500       5.5718636400
+Ba           0.0000000000       9.3313123200       4.2462000000
+Ba           0.0000000000       0.4869876800       0.0000000000
+Cd           2.5183000000       8.0814427300       7.1837211600
+Cd           2.5183000000       1.7368572700       2.9375211600
+Sb           2.5183000000       8.7068684400       1.7935948800
+Sb           2.5183000000       1.1114315600       6.0397948800
+Sb           0.0000000000       3.1281103800       2.2233103200
+Sb           0.0000000000       6.6901896200       6.4695103200
+K_POINTS automatic
+9 5 5 0 0 0
+CELL_PARAMETERS angstrom
+      5.0366000000       0.0000000000       0.0000000000
+      0.0000000000       9.8183000000       0.0000000000
+      0.0000000000       0.0000000000       8.4924000000

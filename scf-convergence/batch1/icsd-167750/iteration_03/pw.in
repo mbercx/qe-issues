@@ -1,0 +1,61 @@
+&CONTROL
+  calculation = 'scf'
+  etot_conv_thr =   1.5000000000d-04
+  forc_conv_thr =   1.0000000000d-04
+  max_seconds =   3.4200000000d+04
+  outdir = './out/'
+  prefix = 'aiida'
+  pseudo_dir = './pseudo/'
+  restart_mode = 'restart'
+  tprnfor = .true.
+  tstress = .true.
+  verbosity = 'high'
+/
+&SYSTEM
+  degauss =   1.0000000000d-02
+  ecutrho =   4.8000000000d+02
+  ecutwfc =   6.0000000000d+01
+  ibrav = 0
+  nat = 15
+  nosym = .false.
+  nspin = 2
+  ntyp = 4
+  occupations = 'smearing'
+  smearing = 'cold'
+  starting_magnetization(1) =   1.0000000000d-01
+  starting_magnetization(2) =   1.0000000000d-01
+  starting_magnetization(3) =   1.0000000000d-01
+  starting_magnetization(4) =   3.1250000000d-01
+/
+&ELECTRONS
+  conv_thr =   3.0000000000d-09
+  electron_maxstep = 80
+  mixing_beta =   1.0000000000d-01
+/
+ATOMIC_SPECIES
+Cl     35.453 cl_pbesol_v1.4.uspp.F.UPF
+N      14.0067 N.pbesol-theos.UPF
+O      15.9994 O.pbesol-n-kjpaw_psl.0.1.UPF
+Ru     101.07 Ru_ONCV_PBEsol-1.0.upf
+ATOMIC_POSITIONS angstrom
+Ru          -0.0000000000       0.0000000000       1.4075027200
+N            0.0000000000      -0.0000000000       3.3923344000
+N            6.0845908600       6.0830746400       1.4264660800
+N            5.2870591400       5.2885753600       6.6940660800
+N            5.2885753600       2.2940408600       6.6940660800
+N            6.0830746400       1.4965091400       1.4264660800
+N            3.7905500000       0.0000000000       4.0497308800
+N            0.0000000000       3.7905500000       4.0497308800
+Cl           0.0000000000      -0.0000000000       9.6239052000
+O            3.7905500000       0.0000000000       2.8118448800
+O            0.0000000000       3.7905500000       2.8118448800
+O            6.5212622200       2.2743300000       9.9768344000
+O            4.8503877800       1.5162200000       4.7092344000
+O            1.5162200000       2.7307122200       4.7092344000
+O            2.2743300000       1.0598377800       9.9768344000
+K_POINTS automatic
+8 8 8 0 0 0
+CELL_PARAMETERS angstrom
+     -3.7905500000       3.7905500000       5.2676000000
+      3.7905500000      -3.7905500000       5.2676000000
+      3.7905500000       3.7905500000      -5.2676000000

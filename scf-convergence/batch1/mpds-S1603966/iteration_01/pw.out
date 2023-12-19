@@ -1,0 +1,2628 @@
+
+     Program PWSCF v.7.2 starts on 23Oct2023 at 20:28:31 
+
+     This program is part of the open-source Quantum ESPRESSO suite
+     for quantum simulation of materials; please cite
+         "P. Giannozzi et al., J. Phys.:Condens. Matter 21 395502 (2009);
+         "P. Giannozzi et al., J. Phys.:Condens. Matter 29 465901 (2017);
+         "P. Giannozzi et al., J. Chem. Phys. 152 154105 (2020);
+          URL http://www.quantum-espresso.org", 
+     in publications or presentations arising from this work. More details at
+     http://www.quantum-espresso.org/quote
+
+     Parallel version (MPI & OpenMP), running on      12 processor cores
+     Number of MPI processes:                 1
+     Threads/MPI process:                    12
+
+     MPI processes distributed on     1 nodes
+     50993 MiB available memory on the printing compute node when the environment starts
+ 
+     Reading input from aiida.in
+
+     Current dimensions of program PWSCF are:
+     Max number of different atomic species (ntypx) = 10
+     Max number of k-points (npk) =  40000
+     Max angular momentum in pseudopotentials (lmaxx) =  4
+     file Ba.pbesol-spn-kjpaw_psl.1.0.0.UPF: wavefunction(s)  5S 6S renormalized
+     file Cd.pbesol-dn-rrkjus_psl.0.3.1.UPF: wavefunction(s)  4D renormalized
+     file K.pbesol-spn-kjpaw_psl.1.0.0.UPF: wavefunction(s)  3S renormalized
+     Message from routine setup:
+     using ibrav=0 with symmetry is DISCOURAGED, use correct ibrav instead
+ 
+     Subspace diagonalization in iterative solution of the eigenvalue problem:
+     a serial algorithm will be used
+
+ 
+     G-vector sticks info
+     --------------------
+     sticks:   dense  smooth     PW     G-vecs:    dense   smooth      PW
+     Sum        6751    3381    923               503241   177935   25475
+ 
+     Using Slab Decomposition
+ 
+
+
+     bravais-lattice index     =            0
+     lattice parameter (alat)  =       9.5178  a.u.
+     unit-cell volume          =    2834.0062 (a.u.)^3
+     number of atoms/cell      =           12
+     number of atomic types    =            4
+     number of electrons       =       140.00
+     number of Kohn-Sham states=           84
+     kinetic-energy cutoff     =      60.0000  Ry
+     charge density cutoff     =     480.0000  Ry
+     scf convergence threshold =      2.4E-09
+     mixing beta               =       0.4000
+     number of iterations used =            8  plain     mixing
+     Exchange-correlation= SLA  PW   PSX  PSC
+                           (   1   4  10   8   0   0   0)
+
+     GPU acceleration is ACTIVE.
+
+
+     GPU used by master process:
+
+        Device Number: 0
+        Device name: Tesla P100-PCIE-16GB
+        Compute capability : 60
+        Ratio of single to double precision performance  : 2
+        Memory Clock Rate (KHz): 715000
+        Memory Bus Width (bits): 4096
+        Peak Memory Bandwidth (GB/s): 732.16
+
+     celldm(1)=   9.517795  celldm(2)=   0.000000  celldm(3)=   0.000000
+     celldm(4)=   0.000000  celldm(5)=   0.000000  celldm(6)=   0.000000
+
+     crystal axes: (cart. coord. in units of alat)
+               a(1) = (   1.000000   0.000000   0.000000 )  
+               a(2) = (   0.000000   1.949390   0.000000 )  
+               a(3) = (   0.000000   0.000000   1.686137 )  
+
+     reciprocal axes: (cart. coord. in units 2 pi/alat)
+               b(1) = (  1.000000  0.000000  0.000000 )  
+               b(2) = (  0.000000  0.512981  0.000000 )  
+               b(3) = (  0.000000  0.000000  0.593071 )  
+
+
+     PseudoPot. # 1 for Ba read from file:
+     ./pseudo/Ba.pbesol-spn-kjpaw_psl.1.0.0.UPF
+     MD5 check sum: f28c4a63d325c1a0d00fd3a4f19b8d73
+     Pseudo is Projector augmented-wave + core cor, Zval = 10.0
+     Generated using "atomic" code by A. Dal Corso  v.6.0 svn rev. 13079
+     Shape of augmentation charge: PSQ
+     Using radial grid of 1251 points,  7 beta functions with: 
+                l(1) =   0
+                l(2) =   0
+                l(3) =   0
+                l(4) =   1
+                l(5) =   1
+                l(6) =   2
+                l(7) =   2
+     Q(r) pseudized with 0 coefficients 
+
+
+     PseudoPot. # 2 for Cd read from file:
+     ./pseudo/Cd.pbesol-dn-rrkjus_psl.0.3.1.UPF
+     MD5 check sum: 1f02951eb1ebb2be2329879281757063
+     Pseudo is Ultrasoft + core correction, Zval = 12.0
+     Generated using "atomic" code by A. Dal Corso  v.6.0 svn rev. 13079
+     Using radial grid of 1239 points,  6 beta functions with: 
+                l(1) =   0
+                l(2) =   0
+                l(3) =   1
+                l(4) =   1
+                l(5) =   2
+                l(6) =   2
+     Q(r) pseudized with 0 coefficients 
+
+
+     PseudoPot. # 3 for K  read from file:
+     ./pseudo/K.pbesol-spn-kjpaw_psl.1.0.0.UPF
+     MD5 check sum: b302bede38c4f5fe00638ceae66f121b
+     Pseudo is Projector augmented-wave + core cor, Zval =  9.0
+     Generated using "atomic" code by A. Dal Corso  v.6.0 svn rev. 13079
+     Shape of augmentation charge: PSQ
+     Using radial grid of 1165 points,  6 beta functions with: 
+                l(1) =   0
+                l(2) =   0
+                l(3) =   1
+                l(4) =   1
+                l(5) =   2
+                l(6) =   2
+     Q(r) pseudized with 0 coefficients 
+
+
+     PseudoPot. # 4 for Sb read from file:
+     ./pseudo/sb_pbesol_v1.4.uspp.F.UPF
+     MD5 check sum: b66a27f2c95be5fc87b0bb5ef8c6d7fd
+     Pseudo is Ultrasoft + core correction, Zval = 15.0
+     Generated by new atomic code, or converted to UPF format
+     Using radial grid of  891 points,  6 beta functions with: 
+                l(1) =   0
+                l(2) =   0
+                l(3) =   1
+                l(4) =   1
+                l(5) =   2
+                l(6) =   2
+     Q(r) pseudized with  8 coefficients,  rinner =    1.350   1.350   1.350
+                                                       1.350   1.350
+
+     atomic species   valence    mass     pseudopotential
+        Ba            10.00   137.32700     Ba( 1.00)
+        Cd            12.00   112.41100     Cd( 1.00)
+        K              9.00    39.09830     K ( 1.00)
+        Sb            15.00   121.76000     Sb( 1.00)
+
+     Starting magnetic structure 
+     atomic species   magnetization
+        Ba           0.100
+        Cd           0.100
+        K            0.100
+        Sb           0.100
+
+      4 Sym. Ops. (no inversion) found ( 2 have fractional translation)
+
+
+                                    s                        frac. trans.
+
+      isym =  1     identity                                     
+
+ cryst.   s( 1) = (     1          0          0      )
+                  (     0          1          0      )
+                  (     0          0          1      )
+
+ cart.    s( 1) = (  1.0000000  0.0000000  0.0000000 )
+                  (  0.0000000  1.0000000  0.0000000 )
+                  (  0.0000000  0.0000000  1.0000000 )
+
+
+      isym =  2     180 deg rotation - cart. axis [0,0,1]        
+
+ cryst.   s( 2) = (    -1          0          0      )    f =(  0.0000000 )
+                  (     0         -1          0      )       (  0.0000000 )
+                  (     0          0          1      )       ( -0.5000000 )
+
+ cart.    s( 2) = ( -1.0000000  0.0000000  0.0000000 )    f =(  0.0000000 )
+                  (  0.0000000 -1.0000000  0.0000000 )       (  0.0000000 )
+                  (  0.0000000  0.0000000  1.0000000 )       ( -0.8430687 )
+
+
+      isym =  3     inv. 180 deg rotation - cart. axis [0,1,0]   
+
+ cryst.   s( 3) = (     1          0          0      )    f =(  0.0000000 )
+                  (     0         -1          0      )       (  0.0000000 )
+                  (     0          0          1      )       ( -0.5000000 )
+
+ cart.    s( 3) = (  1.0000000  0.0000000  0.0000000 )    f =(  0.0000000 )
+                  (  0.0000000 -1.0000000  0.0000000 )       (  0.0000000 )
+                  (  0.0000000  0.0000000  1.0000000 )       ( -0.8430687 )
+
+
+      isym =  4     inv. 180 deg rotation - cart. axis [1,0,0]   
+
+ cryst.   s( 4) = (    -1          0          0      )
+                  (     0          1          0      )
+                  (     0          0          1      )
+
+ cart.    s( 4) = ( -1.0000000  0.0000000  0.0000000 )
+                  (  0.0000000  1.0000000  0.0000000 )
+                  (  0.0000000  0.0000000  1.0000000 )
+
+
+   Cartesian axes
+
+     site n.     atom                  positions (alat units)
+         1           K   tau(   1) = (   0.5000000   1.1242135   0.8083343  )
+         2           K   tau(   2) = (   0.5000000   0.8251770   1.6514030  )
+         3           K   tau(   3) = (   0.0000000   1.2856230   0.2632061  )
+         4           K   tau(   4) = (   0.0000000   0.6637675   1.1062748  )
+         5           Ba  tau(   5) = (   0.0000000   1.8527007   0.8430687  )
+         6           Ba  tau(   6) = (   0.0000000   0.0966898   0.0000000  )
+         7           Cd  tau(   7) = (   0.5000000   1.6045433   1.4263037  )
+         8           Cd  tau(   8) = (   0.5000000   0.3448472   0.5832350  )
+         9           Sb  tau(   9) = (   0.5000000   1.7287195   0.3561122  )
+        10           Sb  tau(  10) = (   0.5000000   0.2206710   1.1991810  )
+        11           Sb  tau(  11) = (   0.0000000   0.6210758   0.4414308  )
+        12           Sb  tau(  12) = (   0.0000000   1.3283147   1.2844995  )
+
+   Crystallographic axes
+
+     site n.     atom                  positions (cryst. coord.)
+         1           K   tau(   1) = (  0.5000000  0.5767000  0.4794000  )
+         2           K   tau(   2) = (  0.5000000  0.4233000  0.9794000  )
+         3           K   tau(   3) = (  0.0000000  0.6595000  0.1561000  )
+         4           K   tau(   4) = (  0.0000000  0.3405000  0.6561000  )
+         5           Ba  tau(   5) = (  0.0000000  0.9504000  0.5000000  )
+         6           Ba  tau(   6) = (  0.0000000  0.0496000  0.0000000  )
+         7           Cd  tau(   7) = (  0.5000000  0.8231000  0.8459000  )
+         8           Cd  tau(   8) = (  0.5000000  0.1769000  0.3459000  )
+         9           Sb  tau(   9) = (  0.5000000  0.8868000  0.2112000  )
+        10           Sb  tau(  10) = (  0.5000000  0.1132000  0.7112000  )
+        11           Sb  tau(  11) = (  0.0000000  0.3186000  0.2618000  )
+        12           Sb  tau(  12) = (  0.0000000  0.6814000  0.7618000  )
+
+     number of k points=    45  Marzari-Vanderbilt smearing, width (Ry)=  0.0100
+                       cart. coord. in units 2pi/alat
+        k(    1) = (   0.0000000   0.0000000   0.0000000), wk =   0.0044444
+        k(    2) = (   0.0000000   0.0000000   0.1186143), wk =   0.0088889
+        k(    3) = (   0.0000000   0.0000000   0.2372286), wk =   0.0088889
+        k(    4) = (   0.0000000   0.1025962   0.0000000), wk =   0.0088889
+        k(    5) = (   0.0000000   0.1025962   0.1186143), wk =   0.0177778
+        k(    6) = (   0.0000000   0.1025962   0.2372286), wk =   0.0177778
+        k(    7) = (   0.0000000   0.2051923   0.0000000), wk =   0.0088889
+        k(    8) = (   0.0000000   0.2051923   0.1186143), wk =   0.0177778
+        k(    9) = (   0.0000000   0.2051923   0.2372286), wk =   0.0177778
+        k(   10) = (   0.1111111   0.0000000   0.0000000), wk =   0.0088889
+        k(   11) = (   0.1111111   0.0000000   0.1186143), wk =   0.0177778
+        k(   12) = (   0.1111111   0.0000000   0.2372286), wk =   0.0177778
+        k(   13) = (   0.1111111   0.1025962   0.0000000), wk =   0.0177778
+        k(   14) = (   0.1111111   0.1025962   0.1186143), wk =   0.0355556
+        k(   15) = (   0.1111111   0.1025962   0.2372286), wk =   0.0355556
+        k(   16) = (   0.1111111   0.2051923   0.0000000), wk =   0.0177778
+        k(   17) = (   0.1111111   0.2051923   0.1186143), wk =   0.0355556
+        k(   18) = (   0.1111111   0.2051923   0.2372286), wk =   0.0355556
+        k(   19) = (   0.2222222   0.0000000   0.0000000), wk =   0.0088889
+        k(   20) = (   0.2222222   0.0000000   0.1186143), wk =   0.0177778
+        k(   21) = (   0.2222222   0.0000000   0.2372286), wk =   0.0177778
+        k(   22) = (   0.2222222   0.1025962   0.0000000), wk =   0.0177778
+        k(   23) = (   0.2222222   0.1025962   0.1186143), wk =   0.0355556
+        k(   24) = (   0.2222222   0.1025962   0.2372286), wk =   0.0355556
+        k(   25) = (   0.2222222   0.2051923   0.0000000), wk =   0.0177778
+        k(   26) = (   0.2222222   0.2051923   0.1186143), wk =   0.0355556
+        k(   27) = (   0.2222222   0.2051923   0.2372286), wk =   0.0355556
+        k(   28) = (   0.3333333   0.0000000   0.0000000), wk =   0.0088889
+        k(   29) = (   0.3333333   0.0000000   0.1186143), wk =   0.0177778
+        k(   30) = (   0.3333333   0.0000000   0.2372286), wk =   0.0177778
+        k(   31) = (   0.3333333   0.1025962   0.0000000), wk =   0.0177778
+        k(   32) = (   0.3333333   0.1025962   0.1186143), wk =   0.0355556
+        k(   33) = (   0.3333333   0.1025962   0.2372286), wk =   0.0355556
+        k(   34) = (   0.3333333   0.2051923   0.0000000), wk =   0.0177778
+        k(   35) = (   0.3333333   0.2051923   0.1186143), wk =   0.0355556
+        k(   36) = (   0.3333333   0.2051923   0.2372286), wk =   0.0355556
+        k(   37) = (   0.4444444   0.0000000   0.0000000), wk =   0.0088889
+        k(   38) = (   0.4444444   0.0000000   0.1186143), wk =   0.0177778
+        k(   39) = (   0.4444444   0.0000000   0.2372286), wk =   0.0177778
+        k(   40) = (   0.4444444   0.1025962   0.0000000), wk =   0.0177778
+        k(   41) = (   0.4444444   0.1025962   0.1186143), wk =   0.0355556
+        k(   42) = (   0.4444444   0.1025962   0.2372286), wk =   0.0355556
+        k(   43) = (   0.4444444   0.2051923   0.0000000), wk =   0.0177778
+        k(   44) = (   0.4444444   0.2051923   0.1186143), wk =   0.0355556
+        k(   45) = (   0.4444444   0.2051923   0.2372286), wk =   0.0355556
+
+                       cryst. coord.
+        k(    1) = (   0.0000000   0.0000000   0.0000000), wk =   0.0044444
+        k(    2) = (   0.0000000   0.0000000   0.2000000), wk =   0.0088889
+        k(    3) = (   0.0000000   0.0000000   0.4000000), wk =   0.0088889
+        k(    4) = (   0.0000000   0.2000000   0.0000000), wk =   0.0088889
+        k(    5) = (   0.0000000   0.2000000   0.2000000), wk =   0.0177778
+        k(    6) = (   0.0000000   0.2000000   0.4000000), wk =   0.0177778
+        k(    7) = (   0.0000000   0.4000000   0.0000000), wk =   0.0088889
+        k(    8) = (   0.0000000   0.4000000   0.2000000), wk =   0.0177778
+        k(    9) = (   0.0000000   0.4000000   0.4000000), wk =   0.0177778
+        k(   10) = (   0.1111111   0.0000000   0.0000000), wk =   0.0088889
+        k(   11) = (   0.1111111   0.0000000   0.2000000), wk =   0.0177778
+        k(   12) = (   0.1111111   0.0000000   0.4000000), wk =   0.0177778
+        k(   13) = (   0.1111111   0.2000000   0.0000000), wk =   0.0177778
+        k(   14) = (   0.1111111   0.2000000   0.2000000), wk =   0.0355556
+        k(   15) = (   0.1111111   0.2000000   0.4000000), wk =   0.0355556
+        k(   16) = (   0.1111111   0.4000000   0.0000000), wk =   0.0177778
+        k(   17) = (   0.1111111   0.4000000   0.2000000), wk =   0.0355556
+        k(   18) = (   0.1111111   0.4000000   0.4000000), wk =   0.0355556
+        k(   19) = (   0.2222222   0.0000000   0.0000000), wk =   0.0088889
+        k(   20) = (   0.2222222   0.0000000   0.2000000), wk =   0.0177778
+        k(   21) = (   0.2222222   0.0000000   0.4000000), wk =   0.0177778
+        k(   22) = (   0.2222222   0.2000000   0.0000000), wk =   0.0177778
+        k(   23) = (   0.2222222   0.2000000   0.2000000), wk =   0.0355556
+        k(   24) = (   0.2222222   0.2000000   0.4000000), wk =   0.0355556
+        k(   25) = (   0.2222222   0.4000000   0.0000000), wk =   0.0177778
+        k(   26) = (   0.2222222   0.4000000   0.2000000), wk =   0.0355556
+        k(   27) = (   0.2222222   0.4000000   0.4000000), wk =   0.0355556
+        k(   28) = (   0.3333333   0.0000000   0.0000000), wk =   0.0088889
+        k(   29) = (   0.3333333   0.0000000   0.2000000), wk =   0.0177778
+        k(   30) = (   0.3333333   0.0000000   0.4000000), wk =   0.0177778
+        k(   31) = (   0.3333333   0.2000000   0.0000000), wk =   0.0177778
+        k(   32) = (   0.3333333   0.2000000   0.2000000), wk =   0.0355556
+        k(   33) = (   0.3333333   0.2000000   0.4000000), wk =   0.0355556
+        k(   34) = (   0.3333333   0.4000000   0.0000000), wk =   0.0177778
+        k(   35) = (   0.3333333   0.4000000   0.2000000), wk =   0.0355556
+        k(   36) = (   0.3333333   0.4000000   0.4000000), wk =   0.0355556
+        k(   37) = (   0.4444444   0.0000000   0.0000000), wk =   0.0088889
+        k(   38) = (   0.4444444   0.0000000   0.2000000), wk =   0.0177778
+        k(   39) = (   0.4444444   0.0000000   0.4000000), wk =   0.0177778
+        k(   40) = (   0.4444444   0.2000000   0.0000000), wk =   0.0177778
+        k(   41) = (   0.4444444   0.2000000   0.2000000), wk =   0.0355556
+        k(   42) = (   0.4444444   0.2000000   0.4000000), wk =   0.0355556
+        k(   43) = (   0.4444444   0.4000000   0.0000000), wk =   0.0177778
+        k(   44) = (   0.4444444   0.4000000   0.2000000), wk =   0.0355556
+        k(   45) = (   0.4444444   0.4000000   0.4000000), wk =   0.0355556
+
+     Dense  grid:   503241 G-vectors     FFT dimensions: (  72, 135, 120)
+
+     Smooth grid:   177935 G-vectors     FFT dimensions: (  48,  96,  80)
+
+     Dynamical RAM for                 wfc:      28.51 MB
+
+     Dynamical RAM for     wfc (w. buffer):    2594.27 MB
+
+     Dynamical RAM for           str. fact:      30.72 MB
+
+     Dynamical RAM for           local pot:       0.00 MB
+
+     Dynamical RAM for          nlocal pot:      73.99 MB
+
+     Dynamical RAM for                qrad:       9.37 MB
+
+     Dynamical RAM for          rho,v,vnew:      99.47 MB
+
+     Dynamical RAM for               rhoin:      33.16 MB
+
+     Dynamical RAM for            rho*nmix:     245.72 MB
+
+     Dynamical RAM for           G-vectors:      30.15 MB
+
+     Dynamical RAM for          h,s,v(r/c):       1.29 MB
+
+     Dynamical RAM for          <psi|beta>:       0.28 MB
+
+     Dynamical RAM for                 psi:      57.02 MB
+
+     Dynamical RAM for                hpsi:      57.02 MB
+
+     Dynamical RAM for                spsi:      57.02 MB
+
+     Dynamical RAM for      wfcinit/wfcrot:      65.37 MB
+
+     Dynamical RAM for           addusdens:    1612.56 MB
+
+     Dynamical RAM for          addusforce:    1658.67 MB
+
+     Dynamical RAM for         addusstress:    1700.86 MB
+
+     Estimated static dynamical RAM per process >       2.89 GB
+
+     Estimated max dynamical RAM per process >       4.79 GB
+     Generating pointlists ...
+     new r_m :   0.2827 (alat units)  2.6911 (a.u.) for type    1
+     new r_m :   0.2428 (alat units)  2.3108 (a.u.) for type    2
+     new r_m :   0.2748 (alat units)  2.6156 (a.u.) for type    3
+     new r_m :   0.2428 (alat units)  2.3108 (a.u.) for type    4
+
+     Initial potential from superposition of free atoms
+
+     starting charge     135.8854, renormalised to     140.0000
+     Starting wfcs are   96 randomized atomic wfcs
+     Checking if some PAW data can be deallocated... 
+
+     total cpu time spent up to now is       19.3 secs
+
+     Self-consistent Calculation
+[tb_dev] Currently allocated     9.68E+00 Mbytes, locked:    0 /  10
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration #  1     ecut=    60.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          4151 MiB given to the printing process from OS
+          -527 MiB allocation reported by mallinfo(arena+hblkhd)
+         45975 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 2114 / 14166 / 16280
+------------------
+     ethr =  1.00E-02,  avg # of iterations =  6.3
+
+     negative rho (up, down):  8.263E-01 6.177E-02
+
+     total cpu time spent up to now is       39.5 secs
+
+     total energy              =   -2286.87785571 Ry
+     estimated scf accuracy    <       9.64786388 Ry
+
+     total magnetization       =     0.00 Bohr mag/cell
+     absolute magnetization    =     7.02 Bohr mag/cell
+[tb_dev] Currently allocated     9.68E+00 Mbytes, locked:    0 /   8
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration #  2     ecut=    60.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          4484 MiB given to the printing process from OS
+          -402 MiB allocation reported by mallinfo(arena+hblkhd)
+         45844 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 4630 / 11650 / 16280
+------------------
+     ethr =  6.89E-03,  avg # of iterations =  1.5
+
+     negative rho (up, down):  1.442E+00 3.085E-01
+
+     total cpu time spent up to now is       53.1 secs
+
+     total energy              =   -2286.98999047 Ry
+     estimated scf accuracy    <       3.27778675 Ry
+
+     total magnetization       =     0.01 Bohr mag/cell
+     absolute magnetization    =     8.05 Bohr mag/cell
+[tb_dev] Currently allocated     9.68E+00 Mbytes, locked:    0 /   8
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration #  3     ecut=    60.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          4622 MiB given to the printing process from OS
+          -375 MiB allocation reported by mallinfo(arena+hblkhd)
+         45812 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 4630 / 11650 / 16280
+------------------
+     ethr =  2.34E-03,  avg # of iterations =  2.1
+
+     negative rho (up, down):  1.346E+00 4.036E-01
+
+     total cpu time spent up to now is       67.1 secs
+
+     WARNING: integrated charge=   140.00259849, expected=   140.00000000
+
+     total energy              =   -2287.09165016 Ry
+     estimated scf accuracy    <       1.08261701 Ry
+
+     total magnetization       =     0.00 Bohr mag/cell
+     absolute magnetization    =     5.67 Bohr mag/cell
+[tb_dev] Currently allocated     9.68E+00 Mbytes, locked:    0 /   8
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration #  4     ecut=    60.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          4683 MiB given to the printing process from OS
+          -347 MiB allocation reported by mallinfo(arena+hblkhd)
+         45791 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 4630 / 11650 / 16280
+------------------
+     ethr =  7.73E-04,  avg # of iterations =  2.7
+
+     negative rho (up, down):  1.268E+00 3.086E-01
+
+     total cpu time spent up to now is       81.6 secs
+
+     WARNING: integrated charge=   140.00102836, expected=   140.00000000
+
+     total energy              =   -2287.09014954 Ry
+     estimated scf accuracy    <       0.99485990 Ry
+
+     total magnetization       =     0.01 Bohr mag/cell
+     absolute magnetization    =     4.31 Bohr mag/cell
+[tb_dev] Currently allocated     9.68E+00 Mbytes, locked:    0 /   8
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration #  5     ecut=    60.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          4706 MiB given to the printing process from OS
+          -325 MiB allocation reported by mallinfo(arena+hblkhd)
+         45770 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 4630 / 11650 / 16280
+------------------
+     ethr =  7.11E-04,  avg # of iterations =  3.0
+
+     negative rho (up, down):  1.289E+00 3.208E-01
+
+     total cpu time spent up to now is       96.5 secs
+
+     WARNING: integrated charge=   140.00249471, expected=   140.00000000
+
+     total energy              =   -2287.07879340 Ry
+     estimated scf accuracy    <       1.77665069 Ry
+
+     total magnetization       =     0.00 Bohr mag/cell
+     absolute magnetization    =     5.12 Bohr mag/cell
+[tb_dev] Currently allocated     9.68E+00 Mbytes, locked:    0 /   8
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration #  6     ecut=    60.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          4733 MiB given to the printing process from OS
+          -298 MiB allocation reported by mallinfo(arena+hblkhd)
+         45743 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 4630 / 11650 / 16280
+------------------
+     ethr =  7.11E-04,  avg # of iterations =  3.0
+     Minimization algorithm failed to find Fermi energy: reverting to bisection
+     Possible cause: smearing is larger than the electronic band-gap.
+
+     negative rho (up, down):  1.280E+00 2.942E-01
+
+     total cpu time spent up to now is      111.3 secs
+
+     WARNING: integrated charge=   140.00230059, expected=   140.00000000
+
+     total energy              =   -2287.12259487 Ry
+     estimated scf accuracy    <       0.89389593 Ry
+
+     total magnetization       =     0.01 Bohr mag/cell
+     absolute magnetization    =     4.59 Bohr mag/cell
+[tb_dev] Currently allocated     9.68E+00 Mbytes, locked:    0 /   8
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration #  7     ecut=    60.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          4755 MiB given to the printing process from OS
+          -276 MiB allocation reported by mallinfo(arena+hblkhd)
+         45722 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 4630 / 11650 / 16280
+------------------
+     ethr =  6.38E-04,  avg # of iterations =  2.6
+     Minimization algorithm failed to find Fermi energy: reverting to bisection
+     Possible cause: smearing is larger than the electronic band-gap.
+
+     negative rho (up, down):  1.249E+00 2.742E-01
+
+     total cpu time spent up to now is      125.6 secs
+
+     WARNING: integrated charge=   140.00110472, expected=   140.00000000
+
+     total energy              =   -2287.14002160 Ry
+     estimated scf accuracy    <       0.06552415 Ry
+
+     total magnetization       =     0.01 Bohr mag/cell
+     absolute magnetization    =     4.10 Bohr mag/cell
+[tb_dev] Currently allocated     9.68E+00 Mbytes, locked:    0 /   8
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration #  8     ecut=    60.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          4776 MiB given to the printing process from OS
+          -254 MiB allocation reported by mallinfo(arena+hblkhd)
+         45701 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 4630 / 11650 / 16280
+------------------
+     ethr =  4.68E-05,  avg # of iterations = 10.1
+     Minimization algorithm failed to find Fermi energy: reverting to bisection
+     Possible cause: smearing is larger than the electronic band-gap.
+
+     negative rho (up, down):  1.249E+00 2.746E-01
+
+     total cpu time spent up to now is      146.6 secs
+
+     WARNING: integrated charge=   140.00109980, expected=   140.00000000
+
+     total energy              =   -2287.14475424 Ry
+     estimated scf accuracy    <       0.16465582 Ry
+
+     total magnetization       =     0.01 Bohr mag/cell
+     absolute magnetization    =     4.06 Bohr mag/cell
+[tb_dev] Currently allocated     9.68E+00 Mbytes, locked:    0 /   8
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration #  9     ecut=    60.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          4805 MiB given to the printing process from OS
+          -227 MiB allocation reported by mallinfo(arena+hblkhd)
+         45672 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 4630 / 11650 / 16280
+------------------
+     ethr =  4.68E-05,  avg # of iterations =  1.0
+     Minimization algorithm failed to find Fermi energy: reverting to bisection
+     Possible cause: smearing is larger than the electronic band-gap.
+
+     negative rho (up, down):  1.296E+00 2.954E-01
+
+     total cpu time spent up to now is      159.9 secs
+
+     WARNING: integrated charge=   140.00129382, expected=   140.00000000
+
+     total energy              =   -2287.14089092 Ry
+     estimated scf accuracy    <       0.16480297 Ry
+
+     total magnetization       =     0.01 Bohr mag/cell
+     absolute magnetization    =     4.07 Bohr mag/cell
+[tb_dev] Currently allocated     9.68E+00 Mbytes, locked:    0 /   8
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 10     ecut=    60.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          4832 MiB given to the printing process from OS
+          -199 MiB allocation reported by mallinfo(arena+hblkhd)
+         45647 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 4630 / 11650 / 16280
+------------------
+     ethr =  4.68E-05,  avg # of iterations =  2.3
+     Minimization algorithm failed to find Fermi energy: reverting to bisection
+     Possible cause: smearing is larger than the electronic band-gap.
+
+     negative rho (up, down):  1.338E+00 2.769E-01
+
+     total cpu time spent up to now is      174.1 secs
+
+     WARNING: integrated charge=   140.00027251, expected=   140.00000000
+
+     total energy              =   -2287.15763829 Ry
+     estimated scf accuracy    <       0.26829673 Ry
+
+     total magnetization       =     0.01 Bohr mag/cell
+     absolute magnetization    =     4.38 Bohr mag/cell
+[tb_dev] Currently allocated     9.68E+00 Mbytes, locked:    0 /   8
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 11     ecut=    60.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          4848 MiB given to the printing process from OS
+          -187 MiB allocation reported by mallinfo(arena+hblkhd)
+         45632 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 4630 / 11650 / 16280
+------------------
+     ethr =  4.68E-05,  avg # of iterations =  3.6
+     Minimization algorithm failed to find Fermi energy: reverting to bisection
+     Possible cause: smearing is larger than the electronic band-gap.
+
+     negative rho (up, down):  1.346E+00 2.603E-01
+
+     total cpu time spent up to now is      189.7 secs
+
+     WARNING: integrated charge=   140.00035596, expected=   140.00000000
+
+     total energy              =   -2287.14922649 Ry
+     estimated scf accuracy    <       2.33368166 Ry
+
+     total magnetization       =     0.00 Bohr mag/cell
+     absolute magnetization    =     4.89 Bohr mag/cell
+[tb_dev] Currently allocated     9.68E+00 Mbytes, locked:    0 /   8
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 12     ecut=    60.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          4860 MiB given to the printing process from OS
+          -175 MiB allocation reported by mallinfo(arena+hblkhd)
+         45621 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 4630 / 11650 / 16280
+------------------
+     ethr =  4.68E-05,  avg # of iterations =  3.7
+     Minimization algorithm failed to find Fermi energy: reverting to bisection
+     Possible cause: smearing is larger than the electronic band-gap.
+
+     negative rho (up, down):  1.301E+00 2.307E-01
+
+     total cpu time spent up to now is      205.1 secs
+
+     WARNING: integrated charge=   139.99977288, expected=   140.00000000
+
+     total energy              =   -2287.12436252 Ry
+     estimated scf accuracy    <       1.36077741 Ry
+
+     total magnetization       =     0.00 Bohr mag/cell
+     absolute magnetization    =     3.97 Bohr mag/cell
+[tb_dev] Currently allocated     9.68E+00 Mbytes, locked:    0 /   8
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 13     ecut=    60.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          4873 MiB given to the printing process from OS
+          -163 MiB allocation reported by mallinfo(arena+hblkhd)
+         45605 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 4630 / 11650 / 16280
+------------------
+     ethr =  4.68E-05,  avg # of iterations =  5.0
+     Minimization algorithm failed to find Fermi energy: reverting to bisection
+     Possible cause: smearing is larger than the electronic band-gap.
+
+     negative rho (up, down):  1.331E+00 2.668E-01
+
+     total cpu time spent up to now is      221.8 secs
+
+     WARNING: integrated charge=   140.00002331, expected=   140.00000000
+
+     total energy              =   -2287.13513703 Ry
+     estimated scf accuracy    <       0.38827342 Ry
+
+     total magnetization       =    -0.00 Bohr mag/cell
+     absolute magnetization    =     2.70 Bohr mag/cell
+[tb_dev] Currently allocated     9.68E+00 Mbytes, locked:    0 /   8
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 14     ecut=    60.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          4880 MiB given to the printing process from OS
+          -151 MiB allocation reported by mallinfo(arena+hblkhd)
+         45597 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 4630 / 11650 / 16280
+------------------
+     ethr =  4.68E-05,  avg # of iterations =  3.4
+     Minimization algorithm failed to find Fermi energy: reverting to bisection
+     Possible cause: smearing is larger than the electronic band-gap.
+
+     negative rho (up, down):  1.321E+00 2.470E-01
+
+     total cpu time spent up to now is      237.1 secs
+
+     WARNING: integrated charge=   140.00007124, expected=   140.00000000
+
+     total energy              =   -2287.13714727 Ry
+     estimated scf accuracy    <       0.42267284 Ry
+
+     total magnetization       =    -0.00 Bohr mag/cell
+     absolute magnetization    =     3.32 Bohr mag/cell
+[tb_dev] Currently allocated     9.68E+00 Mbytes, locked:    0 /   8
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 15     ecut=    60.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          4891 MiB given to the printing process from OS
+          -139 MiB allocation reported by mallinfo(arena+hblkhd)
+         45585 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 4630 / 11650 / 16280
+------------------
+     ethr =  4.68E-05,  avg # of iterations =  3.2
+     Minimization algorithm failed to find Fermi energy: reverting to bisection
+     Possible cause: smearing is larger than the electronic band-gap.
+
+     negative rho (up, down):  1.298E+00 2.969E-01
+
+     total cpu time spent up to now is      252.1 secs
+
+     WARNING: integrated charge=   140.00053694, expected=   140.00000000
+
+     total energy              =   -2287.13928410 Ry
+     estimated scf accuracy    <       0.42218265 Ry
+
+     total magnetization       =    -0.00 Bohr mag/cell
+     absolute magnetization    =     2.64 Bohr mag/cell
+[tb_dev] Currently allocated     9.68E+00 Mbytes, locked:    0 /   8
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 16     ecut=    60.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          4903 MiB given to the printing process from OS
+          -127 MiB allocation reported by mallinfo(arena+hblkhd)
+         45577 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 4630 / 11650 / 16280
+------------------
+     ethr =  4.68E-05,  avg # of iterations =  4.2
+
+     negative rho (up, down):  1.276E+00 2.686E-01
+
+     total cpu time spent up to now is      267.9 secs
+
+     WARNING: integrated charge=   139.99938795, expected=   140.00000000
+
+     total energy              =   -2287.13845532 Ry
+     estimated scf accuracy    <       0.65408738 Ry
+
+     total magnetization       =    -0.00 Bohr mag/cell
+     absolute magnetization    =     2.59 Bohr mag/cell
+[tb_dev] Currently allocated     9.68E+00 Mbytes, locked:    0 /   8
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 17     ecut=    60.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          4921 MiB given to the printing process from OS
+          -115 MiB allocation reported by mallinfo(arena+hblkhd)
+         45561 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 4630 / 11650 / 16280
+------------------
+     ethr =  4.68E-05,  avg # of iterations =  1.5
+     Minimization algorithm failed to find Fermi energy: reverting to bisection
+     Possible cause: smearing is larger than the electronic band-gap.
+
+     negative rho (up, down):  1.313E+00 2.320E-01
+
+     total cpu time spent up to now is      281.7 secs
+
+     WARNING: integrated charge=   139.98639449, expected=   140.00000000
+
+     total energy              =   -2287.15500386 Ry
+     estimated scf accuracy    <       0.53387180 Ry
+
+     total magnetization       =     0.00 Bohr mag/cell
+     absolute magnetization    =     2.54 Bohr mag/cell
+[tb_dev] Currently allocated     9.68E+00 Mbytes, locked:    0 /   8
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 18     ecut=    60.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          4933 MiB given to the printing process from OS
+          -103 MiB allocation reported by mallinfo(arena+hblkhd)
+         45549 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 4630 / 11650 / 16280
+------------------
+     ethr =  4.68E-05,  avg # of iterations =  3.3
+     Minimization algorithm failed to find Fermi energy: reverting to bisection
+     Possible cause: smearing is larger than the electronic band-gap.
+
+     negative rho (up, down):  1.309E+00 2.077E-01
+
+     total cpu time spent up to now is      296.9 secs
+
+     WARNING: integrated charge=   139.98419869, expected=   140.00000000
+
+     total energy              =   -2287.14908026 Ry
+     estimated scf accuracy    <       1.44620597 Ry
+
+     total magnetization       =     0.00 Bohr mag/cell
+     absolute magnetization    =     1.60 Bohr mag/cell
+[tb_dev] Currently allocated     9.68E+00 Mbytes, locked:    0 /   8
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 19     ecut=    60.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          4945 MiB given to the printing process from OS
+           -91 MiB allocation reported by mallinfo(arena+hblkhd)
+         45539 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 4630 / 11650 / 16280
+------------------
+     ethr =  4.68E-05,  avg # of iterations =  2.9
+     Minimization algorithm failed to find Fermi energy: reverting to bisection
+     Possible cause: smearing is larger than the electronic band-gap.
+
+     negative rho (up, down):  1.339E+00 2.110E-01
+
+     total cpu time spent up to now is      311.7 secs
+
+     WARNING: integrated charge=   139.98027781, expected=   140.00000000
+
+     total energy              =   -2287.16138632 Ry
+     estimated scf accuracy    <       0.75630873 Ry
+
+     total magnetization       =     0.00 Bohr mag/cell
+     absolute magnetization    =     1.91 Bohr mag/cell
+[tb_dev] Currently allocated     9.68E+00 Mbytes, locked:    0 /   8
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 20     ecut=    60.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          4951 MiB given to the printing process from OS
+           -79 MiB allocation reported by mallinfo(arena+hblkhd)
+         45523 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 4630 / 11650 / 16280
+------------------
+     ethr =  4.68E-05,  avg # of iterations =  2.9
+     Minimization algorithm failed to find Fermi energy: reverting to bisection
+     Possible cause: smearing is larger than the electronic band-gap.
+
+     negative rho (up, down):  1.377E+00 1.964E-01
+
+     total cpu time spent up to now is      326.4 secs
+
+     WARNING: integrated charge=   139.98036715, expected=   140.00000000
+
+     total energy              =   -2287.15129105 Ry
+     estimated scf accuracy    <       1.13269239 Ry
+
+     total magnetization       =     0.00 Bohr mag/cell
+     absolute magnetization    =     1.77 Bohr mag/cell
+[tb_dev] Currently allocated     9.68E+00 Mbytes, locked:    0 /   8
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 21     ecut=    60.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          4969 MiB given to the printing process from OS
+           -67 MiB allocation reported by mallinfo(arena+hblkhd)
+         45515 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 4630 / 11650 / 16280
+------------------
+     ethr =  4.68E-05,  avg # of iterations =  3.4
+     Minimization algorithm failed to find Fermi energy: reverting to bisection
+     Possible cause: smearing is larger than the electronic band-gap.
+
+     negative rho (up, down):  1.724E+00 1.167E-01
+
+     total cpu time spent up to now is      341.8 secs
+
+     WARNING: integrated charge=   139.95915222, expected=   140.00000000
+
+     total energy              =   -2287.18607507 Ry
+     estimated scf accuracy    <       1.67741507 Ry
+
+     total magnetization       =     0.00 Bohr mag/cell
+     absolute magnetization    =     1.95 Bohr mag/cell
+[tb_dev] Currently allocated     9.68E+00 Mbytes, locked:    0 /   8
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 22     ecut=    60.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          4981 MiB given to the printing process from OS
+           -55 MiB allocation reported by mallinfo(arena+hblkhd)
+         45500 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 4630 / 11650 / 16280
+------------------
+     ethr =  4.68E-05,  avg # of iterations =  5.4
+     Minimization algorithm failed to find Fermi energy: reverting to bisection
+     Possible cause: smearing is larger than the electronic band-gap.
+
+     negative rho (up, down):  1.209E+00 2.773E-01
+
+     total cpu time spent up to now is      359.4 secs
+
+     WARNING: integrated charge=   139.99972215, expected=   140.00000000
+
+     total energy              =   -2287.10420884 Ry
+     estimated scf accuracy    <       4.81592926 Ry
+
+     total magnetization       =     0.00 Bohr mag/cell
+     absolute magnetization    =     1.98 Bohr mag/cell
+[tb_dev] Currently allocated     9.68E+00 Mbytes, locked:    0 /   8
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 23     ecut=    60.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          4993 MiB given to the printing process from OS
+           -43 MiB allocation reported by mallinfo(arena+hblkhd)
+         45491 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 4630 / 11650 / 16280
+------------------
+     ethr =  4.68E-05,  avg # of iterations =  4.7
+     Minimization algorithm failed to find Fermi energy: reverting to bisection
+     Possible cause: smearing is larger than the electronic band-gap.
+
+     negative rho (up, down):  1.226E+00 2.738E-01
+
+     total cpu time spent up to now is      376.9 secs
+
+     WARNING: integrated charge=   140.00582950, expected=   140.00000000
+
+     total energy              =   -2287.13527696 Ry
+     estimated scf accuracy    <       0.71728046 Ry
+
+     total magnetization       =     0.00 Bohr mag/cell
+     absolute magnetization    =     2.84 Bohr mag/cell
+[tb_dev] Currently allocated     9.68E+00 Mbytes, locked:    0 /   8
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 24     ecut=    60.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          4999 MiB given to the printing process from OS
+           -31 MiB allocation reported by mallinfo(arena+hblkhd)
+         45477 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 4630 / 11650 / 16280
+------------------
+     ethr =  4.68E-05,  avg # of iterations =  3.3
+
+     negative rho (up, down):  1.162E+00 2.718E-01
+
+     total cpu time spent up to now is      392.1 secs
+
+     WARNING: integrated charge=   140.00219565, expected=   140.00000000
+
+     total energy              =   -2287.14874863 Ry
+     estimated scf accuracy    <       0.12808447 Ry
+
+     total magnetization       =     0.00 Bohr mag/cell
+     absolute magnetization    =     3.41 Bohr mag/cell
+[tb_dev] Currently allocated     9.68E+00 Mbytes, locked:    0 /   8
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 25     ecut=    60.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          5012 MiB given to the printing process from OS
+           -18 MiB allocation reported by mallinfo(arena+hblkhd)
+         45469 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 4630 / 11650 / 16280
+------------------
+     ethr =  4.68E-05,  avg # of iterations =  3.6
+     Minimization algorithm failed to find Fermi energy: reverting to bisection
+     Possible cause: smearing is larger than the electronic band-gap.
+
+     negative rho (up, down):  1.337E+00 3.574E-01
+
+     total cpu time spent up to now is      408.6 secs
+
+     WARNING: integrated charge=   139.99490797, expected=   140.00000000
+
+     total energy              =   -2287.11578178 Ry
+     estimated scf accuracy    <       5.52670442 Ry
+
+     total magnetization       =     0.01 Bohr mag/cell
+     absolute magnetization    =     6.33 Bohr mag/cell
+[tb_dev] Currently allocated     9.68E+00 Mbytes, locked:    0 /   8
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 26     ecut=    60.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          5030 MiB given to the printing process from OS
+            -6 MiB allocation reported by mallinfo(arena+hblkhd)
+         45435 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 4630 / 11650 / 16280
+------------------
+     ethr =  4.68E-05,  avg # of iterations =  5.0
+     Minimization algorithm failed to find Fermi energy: reverting to bisection
+     Possible cause: smearing is larger than the electronic band-gap.
+
+     negative rho (up, down):  1.522E+00 2.399E-01
+
+     total cpu time spent up to now is      426.2 secs
+
+     WARNING: integrated charge=   139.99360278, expected=   140.00000000
+
+     total energy              =   -2287.15816939 Ry
+     estimated scf accuracy    <       5.26568150 Ry
+
+     total magnetization       =     0.00 Bohr mag/cell
+     absolute magnetization    =     2.75 Bohr mag/cell
+[tb_dev] Currently allocated     9.68E+00 Mbytes, locked:    0 /   8
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 27     ecut=    60.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          5041 MiB given to the printing process from OS
+             5 MiB allocation reported by mallinfo(arena+hblkhd)
+         45434 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 4630 / 11650 / 16280
+------------------
+     ethr =  4.68E-05,  avg # of iterations =  3.9
+     Minimization algorithm failed to find Fermi energy: reverting to bisection
+     Possible cause: smearing is larger than the electronic band-gap.
+
+     negative rho (up, down):  1.569E+00 2.066E-01
+
+     total cpu time spent up to now is      442.6 secs
+
+     WARNING: integrated charge=   139.99460094, expected=   140.00000000
+
+     total energy              =   -2287.20800910 Ry
+     estimated scf accuracy    <       3.96564771 Ry
+
+     total magnetization       =     0.00 Bohr mag/cell
+     absolute magnetization    =     4.24 Bohr mag/cell
+[tb_dev] Currently allocated     9.68E+00 Mbytes, locked:    0 /   8
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 28     ecut=    60.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          5053 MiB given to the printing process from OS
+            17 MiB allocation reported by mallinfo(arena+hblkhd)
+         45411 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 4630 / 11650 / 16280
+------------------
+     ethr =  4.68E-05,  avg # of iterations =  5.5
+     Minimization algorithm failed to find Fermi energy: reverting to bisection
+     Possible cause: smearing is larger than the electronic band-gap.
+
+     negative rho (up, down):  1.299E+00 2.313E-01
+
+     total cpu time spent up to now is      459.6 secs
+
+     WARNING: integrated charge=   140.00168989, expected=   140.00000000
+
+     total energy              =   -2287.12227953 Ry
+     estimated scf accuracy    <       5.94178631 Ry
+
+     total magnetization       =     0.00 Bohr mag/cell
+     absolute magnetization    =     4.29 Bohr mag/cell
+[tb_dev] Currently allocated     9.68E+00 Mbytes, locked:    0 /   8
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 29     ecut=    60.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          5065 MiB given to the printing process from OS
+            29 MiB allocation reported by mallinfo(arena+hblkhd)
+         45405 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 4630 / 11650 / 16280
+------------------
+     ethr =  4.68E-05,  avg # of iterations =  5.1
+     Minimization algorithm failed to find Fermi energy: reverting to bisection
+     Possible cause: smearing is larger than the electronic band-gap.
+
+     negative rho (up, down):  1.238E+00 2.683E-01
+
+     total cpu time spent up to now is      477.0 secs
+
+     WARNING: integrated charge=   140.00266286, expected=   140.00000000
+
+     total energy              =   -2287.13062086 Ry
+     estimated scf accuracy    <       1.25683194 Ry
+
+     total magnetization       =     0.00 Bohr mag/cell
+     absolute magnetization    =     2.44 Bohr mag/cell
+[tb_dev] Currently allocated     9.68E+00 Mbytes, locked:    0 /   8
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 30     ecut=    60.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          5078 MiB given to the printing process from OS
+            41 MiB allocation reported by mallinfo(arena+hblkhd)
+         45398 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 4630 / 11650 / 16280
+------------------
+     ethr =  4.68E-05,  avg # of iterations =  3.5
+
+     negative rho (up, down):  1.370E+00 2.244E-01
+
+     total cpu time spent up to now is      492.5 secs
+
+     WARNING: integrated charge=   140.00637050, expected=   140.00000000
+
+     total energy              =   -2287.13404924 Ry
+     estimated scf accuracy    <       0.12081918 Ry
+
+     total magnetization       =    -0.00 Bohr mag/cell
+     absolute magnetization    =     3.52 Bohr mag/cell
+[tb_dev] Currently allocated     9.68E+00 Mbytes, locked:    0 /   8
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 31     ecut=    60.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          5095 MiB given to the printing process from OS
+            53 MiB allocation reported by mallinfo(arena+hblkhd)
+         45383 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 4630 / 11650 / 16280
+------------------
+     ethr =  4.68E-05,  avg # of iterations =  4.0
+     Minimization algorithm failed to find Fermi energy: reverting to bisection
+     Possible cause: smearing is larger than the electronic band-gap.
+
+     negative rho (up, down):  1.470E+00 2.073E-01
+
+     total cpu time spent up to now is      508.5 secs
+
+     WARNING: integrated charge=   140.00875783, expected=   140.00000000
+
+     total energy              =   -2287.16186050 Ry
+     estimated scf accuracy    <       1.64678349 Ry
+
+     total magnetization       =     0.00 Bohr mag/cell
+     absolute magnetization    =     1.70 Bohr mag/cell
+[tb_dev] Currently allocated     9.68E+00 Mbytes, locked:    0 /   8
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 32     ecut=    60.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          5106 MiB given to the printing process from OS
+            65 MiB allocation reported by mallinfo(arena+hblkhd)
+         45373 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 4630 / 11650 / 16280
+------------------
+     ethr =  4.68E-05,  avg # of iterations =  3.9
+     Minimization algorithm failed to find Fermi energy: reverting to bisection
+     Possible cause: smearing is larger than the electronic band-gap.
+
+     negative rho (up, down):  1.269E+00 2.653E-01
+
+     total cpu time spent up to now is      524.2 secs
+
+     WARNING: integrated charge=   140.00925784, expected=   140.00000000
+
+     total energy              =   -2287.11485352 Ry
+     estimated scf accuracy    <       2.80802038 Ry
+
+     total magnetization       =     0.00 Bohr mag/cell
+     absolute magnetization    =     0.96 Bohr mag/cell
+[tb_dev] Currently allocated     9.68E+00 Mbytes, locked:    0 /   8
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 33     ecut=    60.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          5119 MiB given to the printing process from OS
+            77 MiB allocation reported by mallinfo(arena+hblkhd)
+         45362 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 4630 / 11650 / 16280
+------------------
+     ethr =  4.68E-05,  avg # of iterations =  4.0
+     Minimization algorithm failed to find Fermi energy: reverting to bisection
+     Possible cause: smearing is larger than the electronic band-gap.
+
+     negative rho (up, down):  1.321E+00 2.539E-01
+
+     total cpu time spent up to now is      540.5 secs
+
+     WARNING: integrated charge=   140.01044812, expected=   140.00000000
+
+     total energy              =   -2287.14009266 Ry
+     estimated scf accuracy    <       0.17487455 Ry
+
+     total magnetization       =     0.00 Bohr mag/cell
+     absolute magnetization    =     3.16 Bohr mag/cell
+[tb_dev] Currently allocated     9.68E+00 Mbytes, locked:    0 /   8
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 34     ecut=    60.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          5131 MiB given to the printing process from OS
+            89 MiB allocation reported by mallinfo(arena+hblkhd)
+         45350 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 4630 / 11650 / 16280
+------------------
+     ethr =  4.68E-05,  avg # of iterations =  2.5
+     Minimization algorithm failed to find Fermi energy: reverting to bisection
+     Possible cause: smearing is larger than the electronic band-gap.
+
+     negative rho (up, down):  1.412E+00 2.355E-01
+
+     total cpu time spent up to now is      555.0 secs
+
+     WARNING: integrated charge=   140.01008001, expected=   140.00000000
+
+     total energy              =   -2287.14788171 Ry
+     estimated scf accuracy    <       0.34682886 Ry
+
+     total magnetization       =     0.00 Bohr mag/cell
+     absolute magnetization    =     2.68 Bohr mag/cell
+[tb_dev] Currently allocated     9.68E+00 Mbytes, locked:    0 /   8
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 35     ecut=    60.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          5143 MiB given to the printing process from OS
+           101 MiB allocation reported by mallinfo(arena+hblkhd)
+         45340 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 4630 / 11650 / 16280
+------------------
+     ethr =  4.68E-05,  avg # of iterations =  3.3
+     Minimization algorithm failed to find Fermi energy: reverting to bisection
+     Possible cause: smearing is larger than the electronic band-gap.
+
+     negative rho (up, down):  1.363E+00 3.004E-01
+
+     total cpu time spent up to now is      570.2 secs
+
+     WARNING: integrated charge=   140.01516848, expected=   140.00000000
+
+     total energy              =   -2287.14524905 Ry
+     estimated scf accuracy    <       1.64422222 Ry
+
+     total magnetization       =    -0.00 Bohr mag/cell
+     absolute magnetization    =     1.31 Bohr mag/cell
+[tb_dev] Currently allocated     9.68E+00 Mbytes, locked:    0 /   8
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 36     ecut=    60.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          5160 MiB given to the printing process from OS
+           113 MiB allocation reported by mallinfo(arena+hblkhd)
+         45332 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 4630 / 11650 / 16280
+------------------
+     ethr =  4.68E-05,  avg # of iterations =  4.3
+     Minimization algorithm failed to find Fermi energy: reverting to bisection
+     Possible cause: smearing is larger than the electronic band-gap.
+
+     negative rho (up, down):  1.366E+00 1.892E-01
+
+     total cpu time spent up to now is      586.6 secs
+
+     WARNING: integrated charge=   140.00688453, expected=   140.00000000
+
+     total energy              =   -2287.13416711 Ry
+     estimated scf accuracy    <       2.09963855 Ry
+
+     total magnetization       =    -0.00 Bohr mag/cell
+     absolute magnetization    =     2.12 Bohr mag/cell
+[tb_dev] Currently allocated     9.68E+00 Mbytes, locked:    0 /   8
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 37     ecut=    60.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          5173 MiB given to the printing process from OS
+           125 MiB allocation reported by mallinfo(arena+hblkhd)
+         45315 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 4630 / 11650 / 16280
+------------------
+     ethr =  4.68E-05,  avg # of iterations =  4.9
+     Minimization algorithm failed to find Fermi energy: reverting to bisection
+     Possible cause: smearing is larger than the electronic band-gap.
+
+     negative rho (up, down):  1.473E+00 2.226E-01
+
+     total cpu time spent up to now is      603.4 secs
+
+     WARNING: integrated charge=   139.99133422, expected=   140.00000000
+
+     total energy              =   -2287.15914321 Ry
+     estimated scf accuracy    <       1.63836829 Ry
+
+     total magnetization       =     0.00 Bohr mag/cell
+     absolute magnetization    =     1.71 Bohr mag/cell
+[tb_dev] Currently allocated     9.68E+00 Mbytes, locked:    0 /   8
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 38     ecut=    60.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          5185 MiB given to the printing process from OS
+           137 MiB allocation reported by mallinfo(arena+hblkhd)
+         45306 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 4630 / 11650 / 16280
+------------------
+     ethr =  4.68E-05,  avg # of iterations =  3.9
+     Minimization algorithm failed to find Fermi energy: reverting to bisection
+     Possible cause: smearing is larger than the electronic band-gap.
+
+     negative rho (up, down):  1.331E+00 6.275E-01
+
+     total cpu time spent up to now is      619.7 secs
+
+     WARNING: integrated charge=   140.01020500, expected=   140.00000000
+
+     total energy              =   -2287.13302449 Ry
+     estimated scf accuracy    <       1.33797697 Ry
+
+     total magnetization       =     0.01 Bohr mag/cell
+     absolute magnetization    =     4.35 Bohr mag/cell
+[tb_dev] Currently allocated     9.68E+00 Mbytes, locked:    0 /   8
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 39     ecut=    60.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          5197 MiB given to the printing process from OS
+           149 MiB allocation reported by mallinfo(arena+hblkhd)
+         45291 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 4630 / 11650 / 16280
+------------------
+     ethr =  4.68E-05,  avg # of iterations =  5.1
+     Minimization algorithm failed to find Fermi energy: reverting to bisection
+     Possible cause: smearing is larger than the electronic band-gap.
+
+     negative rho (up, down):  1.428E+00 2.524E-01
+
+     total cpu time spent up to now is      638.0 secs
+
+     WARNING: integrated charge=   140.00371782, expected=   140.00000000
+
+     total energy              =   -2287.07571507 Ry
+     estimated scf accuracy    <       5.64183380 Ry
+
+     total magnetization       =    -0.00 Bohr mag/cell
+     absolute magnetization    =     3.33 Bohr mag/cell
+[tb_dev] Currently allocated     9.68E+00 Mbytes, locked:    0 /   8
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 40     ecut=    60.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          5208 MiB given to the printing process from OS
+           161 MiB allocation reported by mallinfo(arena+hblkhd)
+         45279 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 4630 / 11650 / 16280
+------------------
+     ethr =  4.68E-05,  avg # of iterations =  5.7
+
+     negative rho (up, down):  1.667E+00 1.591E-01
+
+     total cpu time spent up to now is      656.7 secs
+
+     WARNING: integrated charge=   140.00435475, expected=   140.00000000
+
+     total energy              =   -2287.15287863 Ry
+     estimated scf accuracy    <       0.27533621 Ry
+
+     total magnetization       =    -0.00 Bohr mag/cell
+     absolute magnetization    =     3.11 Bohr mag/cell
+[tb_dev] Currently allocated     9.68E+00 Mbytes, locked:    0 /   8
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 41     ecut=    60.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          5221 MiB given to the printing process from OS
+           173 MiB allocation reported by mallinfo(arena+hblkhd)
+         45270 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 4630 / 11650 / 16280
+------------------
+     ethr =  4.68E-05,  avg # of iterations =  4.2
+
+     negative rho (up, down):  1.595E+00 2.483E-01
+
+     total cpu time spent up to now is      673.4 secs
+
+     WARNING: integrated charge=   140.01109305, expected=   140.00000000
+
+     total energy              =   -2287.19013655 Ry
+     estimated scf accuracy    <       4.49793291 Ry
+
+     total magnetization       =     0.00 Bohr mag/cell
+     absolute magnetization    =     3.06 Bohr mag/cell
+[tb_dev] Currently allocated     9.68E+00 Mbytes, locked:    0 /   8
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 42     ecut=    60.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          5239 MiB given to the printing process from OS
+           185 MiB allocation reported by mallinfo(arena+hblkhd)
+         45256 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 4630 / 11650 / 16280
+------------------
+     ethr =  4.68E-05,  avg # of iterations =  3.2
+
+     negative rho (up, down):  1.536E+00 2.394E-01
+
+     total cpu time spent up to now is      688.5 secs
+
+     WARNING: integrated charge=   140.00955083, expected=   140.00000000
+
+     total energy              =   -2287.20876049 Ry
+     estimated scf accuracy    <       3.82683102 Ry
+
+     total magnetization       =     0.00 Bohr mag/cell
+     absolute magnetization    =     2.00 Bohr mag/cell
+[tb_dev] Currently allocated     9.68E+00 Mbytes, locked:    0 /   8
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 43     ecut=    60.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          5250 MiB given to the printing process from OS
+           197 MiB allocation reported by mallinfo(arena+hblkhd)
+         45246 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 4630 / 11650 / 16280
+------------------
+     ethr =  4.68E-05,  avg # of iterations =  2.5
+
+     negative rho (up, down):  1.350E+00 1.843E-01
+
+     total cpu time spent up to now is      702.9 secs
+
+     WARNING: integrated charge=   140.00134504, expected=   140.00000000
+
+     total energy              =   -2287.12079305 Ry
+     estimated scf accuracy    <       4.57681501 Ry
+
+     total magnetization       =     0.00 Bohr mag/cell
+     absolute magnetization    =     2.02 Bohr mag/cell
+[tb_dev] Currently allocated     9.68E+00 Mbytes, locked:    0 /   8
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 44     ecut=    60.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          5267 MiB given to the printing process from OS
+           210 MiB allocation reported by mallinfo(arena+hblkhd)
+         45232 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 4630 / 11650 / 16280
+------------------
+     ethr =  4.68E-05,  avg # of iterations =  4.0
+
+     negative rho (up, down):  1.366E+00 2.101E-01
+
+     total cpu time spent up to now is      719.4 secs
+
+     WARNING: integrated charge=   140.00487807, expected=   140.00000000
+
+     total energy              =   -2287.14136341 Ry
+     estimated scf accuracy    <       1.78944516 Ry
+
+     total magnetization       =     0.00 Bohr mag/cell
+     absolute magnetization    =     4.37 Bohr mag/cell
+[tb_dev] Currently allocated     9.68E+00 Mbytes, locked:    0 /   8
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 45     ecut=    60.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          5280 MiB given to the printing process from OS
+           222 MiB allocation reported by mallinfo(arena+hblkhd)
+         45222 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 4630 / 11650 / 16280
+------------------
+     ethr =  4.68E-05,  avg # of iterations =  3.5
+     Minimization algorithm failed to find Fermi energy: reverting to bisection
+     Possible cause: smearing is larger than the electronic band-gap.
+
+     negative rho (up, down):  1.706E+00 2.440E-01
+
+     total cpu time spent up to now is      734.7 secs
+
+     WARNING: integrated charge=   140.01290545, expected=   140.00000000
+
+     total energy              =   -2287.15490489 Ry
+     estimated scf accuracy    <       1.04862998 Ry
+
+     total magnetization       =     0.00 Bohr mag/cell
+     absolute magnetization    =     2.80 Bohr mag/cell
+[tb_dev] Currently allocated     9.68E+00 Mbytes, locked:    0 /   8
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 46     ecut=    60.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          5292 MiB given to the printing process from OS
+           234 MiB allocation reported by mallinfo(arena+hblkhd)
+         45208 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 4630 / 11650 / 16280
+------------------
+     ethr =  4.68E-05,  avg # of iterations =  3.6
+     Minimization algorithm failed to find Fermi energy: reverting to bisection
+     Possible cause: smearing is larger than the electronic band-gap.
+
+     negative rho (up, down):  1.777E+00 2.352E-01
+
+     total cpu time spent up to now is      750.5 secs
+
+     WARNING: integrated charge=   140.01513315, expected=   140.00000000
+
+     total energy              =   -2287.16770118 Ry
+     estimated scf accuracy    <       2.50803589 Ry
+
+     total magnetization       =     0.00 Bohr mag/cell
+     absolute magnetization    =     1.86 Bohr mag/cell
+[tb_dev] Currently allocated     9.68E+00 Mbytes, locked:    0 /   8
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 47     ecut=    60.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          5304 MiB given to the printing process from OS
+           246 MiB allocation reported by mallinfo(arena+hblkhd)
+         45199 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 4630 / 11650 / 16280
+------------------
+     ethr =  4.68E-05,  avg # of iterations =  2.8
+     Minimization algorithm failed to find Fermi energy: reverting to bisection
+     Possible cause: smearing is larger than the electronic band-gap.
+
+     negative rho (up, down):  1.544E+00 2.270E-01
+
+     total cpu time spent up to now is      765.1 secs
+
+     WARNING: integrated charge=   140.00772941, expected=   140.00000000
+
+     total energy              =   -2287.19112008 Ry
+     estimated scf accuracy    <       3.56349940 Ry
+
+     total magnetization       =     0.00 Bohr mag/cell
+     absolute magnetization    =     2.57 Bohr mag/cell
+[tb_dev] Currently allocated     9.68E+00 Mbytes, locked:    0 /   8
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 48     ecut=    60.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          5315 MiB given to the printing process from OS
+           258 MiB allocation reported by mallinfo(arena+hblkhd)
+         45187 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 4630 / 11650 / 16280
+------------------
+     ethr =  4.68E-05,  avg # of iterations =  4.3
+     Minimization algorithm failed to find Fermi energy: reverting to bisection
+     Possible cause: smearing is larger than the electronic band-gap.
+
+     negative rho (up, down):  1.456E+00 2.018E-01
+
+     total cpu time spent up to now is      781.2 secs
+
+     WARNING: integrated charge=   140.00289005, expected=   140.00000000
+
+     total energy              =   -2287.11299274 Ry
+     estimated scf accuracy    <       4.89796627 Ry
+
+     total magnetization       =     0.00 Bohr mag/cell
+     absolute magnetization    =     1.53 Bohr mag/cell
+[tb_dev] Currently allocated     9.68E+00 Mbytes, locked:    0 /   8
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 49     ecut=    60.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          5334 MiB given to the printing process from OS
+           270 MiB allocation reported by mallinfo(arena+hblkhd)
+         45171 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 4630 / 11650 / 16280
+------------------
+     ethr =  4.68E-05,  avg # of iterations =  3.4
+     Minimization algorithm failed to find Fermi energy: reverting to bisection
+     Possible cause: smearing is larger than the electronic band-gap.
+
+     negative rho (up, down):  1.626E+00 1.414E-01
+
+     total cpu time spent up to now is      796.9 secs
+
+     WARNING: integrated charge=   139.99904091, expected=   140.00000000
+
+     total energy              =   -2287.16752307 Ry
+     estimated scf accuracy    <       0.70584546 Ry
+
+     total magnetization       =     0.00 Bohr mag/cell
+     absolute magnetization    =     2.48 Bohr mag/cell
+[tb_dev] Currently allocated     9.68E+00 Mbytes, locked:    0 /   8
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 50     ecut=    60.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          5346 MiB given to the printing process from OS
+           282 MiB allocation reported by mallinfo(arena+hblkhd)
+         49859 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 4630 / 11650 / 16280
+------------------
+     ethr =  4.68E-05,  avg # of iterations =  5.3
+     Minimization algorithm failed to find Fermi energy: reverting to bisection
+     Possible cause: smearing is larger than the electronic band-gap.
+
+     negative rho (up, down):  1.418E+00 2.446E-01
+
+     total cpu time spent up to now is      814.3 secs
+
+     WARNING: integrated charge=   140.00376917, expected=   140.00000000
+
+     total energy              =   -2287.10755930 Ry
+     estimated scf accuracy    <       4.52800871 Ry
+
+     total magnetization       =     0.00 Bohr mag/cell
+     absolute magnetization    =     1.21 Bohr mag/cell
+[tb_dev] Currently allocated     9.68E+00 Mbytes, locked:    0 /   8
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 51     ecut=    60.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          5358 MiB given to the printing process from OS
+           294 MiB allocation reported by mallinfo(arena+hblkhd)
+         49850 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 4630 / 11650 / 16280
+------------------
+     ethr =  4.68E-05,  avg # of iterations =  5.4
+     Minimization algorithm failed to find Fermi energy: reverting to bisection
+     Possible cause: smearing is larger than the electronic band-gap.
+
+     negative rho (up, down):  1.366E+00 2.300E-01
+
+     total cpu time spent up to now is      831.7 secs
+
+     WARNING: integrated charge=   140.00307925, expected=   140.00000000
+
+     total energy              =   -2287.15212825 Ry
+     estimated scf accuracy    <       0.81630158 Ry
+
+     total magnetization       =     0.00 Bohr mag/cell
+     absolute magnetization    =     2.77 Bohr mag/cell
+[tb_dev] Currently allocated     9.68E+00 Mbytes, locked:    0 /   8
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 52     ecut=    60.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          5369 MiB given to the printing process from OS
+           306 MiB allocation reported by mallinfo(arena+hblkhd)
+         49840 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 4630 / 11650 / 16280
+------------------
+     ethr =  4.68E-05,  avg # of iterations =  3.0
+     Minimization algorithm failed to find Fermi energy: reverting to bisection
+     Possible cause: smearing is larger than the electronic band-gap.
+
+     negative rho (up, down):  1.173E+00 2.545E-01
+
+     total cpu time spent up to now is      846.6 secs
+
+     WARNING: integrated charge=   139.99930528, expected=   140.00000000
+
+     total energy              =   -2287.17123685 Ry
+     estimated scf accuracy    <       1.08932521 Ry
+
+     total magnetization       =     0.00 Bohr mag/cell
+     absolute magnetization    =     4.00 Bohr mag/cell
+[tb_dev] Currently allocated     9.68E+00 Mbytes, locked:    0 /   8
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 53     ecut=    60.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          5382 MiB given to the printing process from OS
+           318 MiB allocation reported by mallinfo(arena+hblkhd)
+         49827 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 4630 / 11650 / 16280
+------------------
+     ethr =  4.68E-05,  avg # of iterations =  3.5
+     Minimization algorithm failed to find Fermi energy: reverting to bisection
+     Possible cause: smearing is larger than the electronic band-gap.
+
+     negative rho (up, down):  1.612E+00 1.844E-01
+
+     total cpu time spent up to now is      862.0 secs
+
+     WARNING: integrated charge=   140.00611267, expected=   140.00000000
+
+     total energy              =   -2287.13017565 Ry
+     estimated scf accuracy    <       2.67219050 Ry
+
+     total magnetization       =     0.00 Bohr mag/cell
+     absolute magnetization    =     3.91 Bohr mag/cell
+[tb_dev] Currently allocated     9.68E+00 Mbytes, locked:    0 /   8
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 54     ecut=    60.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          5394 MiB given to the printing process from OS
+           330 MiB allocation reported by mallinfo(arena+hblkhd)
+         49801 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 4630 / 11650 / 16280
+------------------
+     ethr =  4.68E-05,  avg # of iterations =  4.0
+     Minimization algorithm failed to find Fermi energy: reverting to bisection
+     Possible cause: smearing is larger than the electronic band-gap.
+
+     negative rho (up, down):  1.455E+00 2.366E-01
+
+     total cpu time spent up to now is      878.8 secs
+
+     WARNING: integrated charge=   140.00512875, expected=   140.00000000
+
+     total energy              =   -2287.12505521 Ry
+     estimated scf accuracy    <       5.09135886 Ry
+
+     total magnetization       =     0.00 Bohr mag/cell
+     absolute magnetization    =     0.95 Bohr mag/cell
+[tb_dev] Currently allocated     9.68E+00 Mbytes, locked:    0 /   8
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 55     ecut=    60.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          5406 MiB given to the printing process from OS
+           342 MiB allocation reported by mallinfo(arena+hblkhd)
+         49796 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 4630 / 11650 / 16280
+------------------
+     ethr =  4.68E-05,  avg # of iterations =  4.0
+     Minimization algorithm failed to find Fermi energy: reverting to bisection
+     Possible cause: smearing is larger than the electronic band-gap.
+
+     negative rho (up, down):  1.596E+00 4.223E-01
+
+     total cpu time spent up to now is      895.0 secs
+
+     WARNING: integrated charge=   140.01520669, expected=   140.00000000
+
+     total energy              =   -2287.16024373 Ry
+     estimated scf accuracy    <       1.18406729 Ry
+
+     total magnetization       =     0.00 Bohr mag/cell
+     absolute magnetization    =     1.89 Bohr mag/cell
+[tb_dev] Currently allocated     9.68E+00 Mbytes, locked:    0 /   8
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 56     ecut=    60.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          5418 MiB given to the printing process from OS
+           354 MiB allocation reported by mallinfo(arena+hblkhd)
+         49789 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 4630 / 11650 / 16280
+------------------
+     ethr =  4.68E-05,  avg # of iterations =  6.0
+     Minimization algorithm failed to find Fermi energy: reverting to bisection
+     Possible cause: smearing is larger than the electronic band-gap.
+
+     negative rho (up, down):  1.038E+00 9.162E-01
+
+     total cpu time spent up to now is      913.2 secs
+
+     WARNING: integrated charge=   140.02137572, expected=   140.00000000
+
+     total energy              =   -2287.03743883 Ry
+     estimated scf accuracy    <       5.29881631 Ry
+
+     total magnetization       =     0.00 Bohr mag/cell
+     absolute magnetization    =     1.14 Bohr mag/cell
+[tb_dev] Currently allocated     9.68E+00 Mbytes, locked:    0 /   8
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 57     ecut=    60.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          5430 MiB given to the printing process from OS
+           366 MiB allocation reported by mallinfo(arena+hblkhd)
+         49776 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 4630 / 11650 / 16280
+------------------
+     ethr =  4.68E-05,  avg # of iterations =  6.1
+     Minimization algorithm failed to find Fermi energy: reverting to bisection
+     Possible cause: smearing is larger than the electronic band-gap.
+
+     negative rho (up, down):  1.471E+00 1.014E+00
+
+     total cpu time spent up to now is      932.9 secs
+
+     WARNING: integrated charge=   140.03071403, expected=   140.00000000
+
+     total energy              =   -2287.04011003 Ry
+     estimated scf accuracy    <       5.61793051 Ry
+
+     total magnetization       =     0.00 Bohr mag/cell
+     absolute magnetization    =     5.97 Bohr mag/cell
+[tb_dev] Currently allocated     9.68E+00 Mbytes, locked:    0 /   8
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 58     ecut=    60.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          5448 MiB given to the printing process from OS
+           378 MiB allocation reported by mallinfo(arena+hblkhd)
+         49765 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 4630 / 11650 / 16280
+------------------
+     ethr =  4.68E-05,  avg # of iterations =  6.0
+     Minimization algorithm failed to find Fermi energy: reverting to bisection
+     Possible cause: smearing is larger than the electronic band-gap.
+
+     negative rho (up, down):  1.485E+00 2.152E-01
+
+     total cpu time spent up to now is      952.0 secs
+
+     WARNING: integrated charge=   140.00950641, expected=   140.00000000
+
+     total energy              =   -2287.08499575 Ry
+     estimated scf accuracy    <       7.86895574 Ry
+
+     total magnetization       =     0.00 Bohr mag/cell
+     absolute magnetization    =     3.46 Bohr mag/cell
+[tb_dev] Currently allocated     9.68E+00 Mbytes, locked:    0 /   8
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 59     ecut=    60.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          5459 MiB given to the printing process from OS
+           390 MiB allocation reported by mallinfo(arena+hblkhd)
+         49755 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 4630 / 11650 / 16280
+------------------
+     ethr =  4.68E-05,  avg # of iterations =  6.0
+     Minimization algorithm failed to find Fermi energy: reverting to bisection
+     Possible cause: smearing is larger than the electronic band-gap.
+
+     negative rho (up, down):  1.603E+00 1.991E-01
+
+     total cpu time spent up to now is      971.0 secs
+
+     WARNING: integrated charge=   140.00669976, expected=   140.00000000
+
+     total energy              =   -2287.19734287 Ry
+     estimated scf accuracy    <       2.13059677 Ry
+
+     total magnetization       =     0.00 Bohr mag/cell
+     absolute magnetization    =     1.14 Bohr mag/cell
+[tb_dev] Currently allocated     9.68E+00 Mbytes, locked:    0 /   8
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 60     ecut=    60.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          5477 MiB given to the printing process from OS
+           403 MiB allocation reported by mallinfo(arena+hblkhd)
+         49741 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 4630 / 11650 / 16280
+------------------
+     ethr =  4.68E-05,  avg # of iterations =  5.0
+     Minimization algorithm failed to find Fermi energy: reverting to bisection
+     Possible cause: smearing is larger than the electronic band-gap.
+
+     negative rho (up, down):  1.540E+00 1.795E-01
+
+     total cpu time spent up to now is      987.7 secs
+
+     WARNING: integrated charge=   140.00608263, expected=   140.00000000
+
+     total energy              =   -2287.19107700 Ry
+     estimated scf accuracy    <       5.51726365 Ry
+
+     total magnetization       =     0.00 Bohr mag/cell
+     absolute magnetization    =     1.57 Bohr mag/cell
+[tb_dev] Currently allocated     9.68E+00 Mbytes, locked:    0 /   8
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 61     ecut=    60.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          5490 MiB given to the printing process from OS
+           415 MiB allocation reported by mallinfo(arena+hblkhd)
+         49731 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 4630 / 11650 / 16280
+------------------
+     ethr =  4.68E-05,  avg # of iterations =  3.0
+     Minimization algorithm failed to find Fermi energy: reverting to bisection
+     Possible cause: smearing is larger than the electronic band-gap.
+
+     negative rho (up, down):  1.471E+00 2.832E-01
+
+     total cpu time spent up to now is     1002.5 secs
+
+     WARNING: integrated charge=   140.00852776, expected=   140.00000000
+
+     total energy              =   -2287.15317156 Ry
+     estimated scf accuracy    <       4.42488504 Ry
+
+     total magnetization       =     0.00 Bohr mag/cell
+     absolute magnetization    =     1.23 Bohr mag/cell
+[tb_dev] Currently allocated     9.68E+00 Mbytes, locked:    0 /   8
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 62     ecut=    60.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          5502 MiB given to the printing process from OS
+           427 MiB allocation reported by mallinfo(arena+hblkhd)
+         49718 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 4630 / 11650 / 16280
+------------------
+     ethr =  4.68E-05,  avg # of iterations =  4.5
+     Minimization algorithm failed to find Fermi energy: reverting to bisection
+     Possible cause: smearing is larger than the electronic band-gap.
+
+     negative rho (up, down):  1.260E+00 3.460E-01
+
+     total cpu time spent up to now is     1018.8 secs
+
+     WARNING: integrated charge=   140.00598284, expected=   140.00000000
+
+     total energy              =   -2287.13220978 Ry
+     estimated scf accuracy    <       2.18973473 Ry
+
+     total magnetization       =     0.00 Bohr mag/cell
+     absolute magnetization    =     1.23 Bohr mag/cell
+[tb_dev] Currently allocated     9.68E+00 Mbytes, locked:    0 /   8
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 63     ecut=    60.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          5513 MiB given to the printing process from OS
+           439 MiB allocation reported by mallinfo(arena+hblkhd)
+         49708 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 4630 / 11650 / 16280
+------------------
+     ethr =  4.68E-05,  avg # of iterations =  3.9
+     Minimization algorithm failed to find Fermi energy: reverting to bisection
+     Possible cause: smearing is larger than the electronic band-gap.
+
+     negative rho (up, down):  1.219E+00 3.534E-01
+
+     total cpu time spent up to now is     1034.8 secs
+
+     WARNING: integrated charge=   140.00640749, expected=   140.00000000
+
+     total energy              =   -2287.16464376 Ry
+     estimated scf accuracy    <       1.24326140 Ry
+
+     total magnetization       =     0.00 Bohr mag/cell
+     absolute magnetization    =     3.11 Bohr mag/cell
+[tb_dev] Currently allocated     9.68E+00 Mbytes, locked:    0 /   8
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 64     ecut=    60.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          5525 MiB given to the printing process from OS
+           451 MiB allocation reported by mallinfo(arena+hblkhd)
+         49694 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 4630 / 11650 / 16280
+------------------
+     ethr =  4.68E-05,  avg # of iterations =  1.9
+     Minimization algorithm failed to find Fermi energy: reverting to bisection
+     Possible cause: smearing is larger than the electronic band-gap.
+
+     negative rho (up, down):  1.244E+00 3.686E-01
+
+     total cpu time spent up to now is     1048.8 secs
+
+     WARNING: integrated charge=   140.00592024, expected=   140.00000000
+
+     total energy              =   -2287.16164812 Ry
+     estimated scf accuracy    <       1.39837934 Ry
+
+     total magnetization       =     0.00 Bohr mag/cell
+     absolute magnetization    =     3.34 Bohr mag/cell
+[tb_dev] Currently allocated     9.68E+00 Mbytes, locked:    0 /   8
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 65     ecut=    60.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          5538 MiB given to the printing process from OS
+           463 MiB allocation reported by mallinfo(arena+hblkhd)
+         49684 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 4630 / 11650 / 16280
+------------------
+     ethr =  4.68E-05,  avg # of iterations =  3.3
+     Minimization algorithm failed to find Fermi energy: reverting to bisection
+     Possible cause: smearing is larger than the electronic band-gap.
+
+     negative rho (up, down):  1.225E+00 4.099E-01
+
+     total cpu time spent up to now is     1063.9 secs
+
+     WARNING: integrated charge=   140.00684557, expected=   140.00000000
+
+     total energy              =   -2287.16852811 Ry
+     estimated scf accuracy    <       1.58043561 Ry
+
+     total magnetization       =     0.00 Bohr mag/cell
+     absolute magnetization    =     3.20 Bohr mag/cell
+[tb_dev] Currently allocated     9.68E+00 Mbytes, locked:    0 /   8
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 66     ecut=    60.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          5555 MiB given to the printing process from OS
+           475 MiB allocation reported by mallinfo(arena+hblkhd)
+         49671 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 4630 / 11650 / 16280
+------------------
+     ethr =  4.68E-05,  avg # of iterations =  1.7
+     Minimization algorithm failed to find Fermi energy: reverting to bisection
+     Possible cause: smearing is larger than the electronic band-gap.
+
+     negative rho (up, down):  1.245E+00 3.419E-01
+
+     total cpu time spent up to now is     1077.6 secs
+
+     WARNING: integrated charge=   140.00500996, expected=   140.00000000
+
+     total energy              =   -2287.14159461 Ry
+     estimated scf accuracy    <       1.73411114 Ry
+
+     total magnetization       =     0.00 Bohr mag/cell
+     absolute magnetization    =     3.29 Bohr mag/cell
+[tb_dev] Currently allocated     9.68E+00 Mbytes, locked:    0 /   8
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 67     ecut=    60.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          5567 MiB given to the printing process from OS
+           487 MiB allocation reported by mallinfo(arena+hblkhd)
+         49660 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 4630 / 11650 / 16280
+------------------
+     ethr =  4.68E-05,  avg # of iterations =  5.3
+     Minimization algorithm failed to find Fermi energy: reverting to bisection
+     Possible cause: smearing is larger than the electronic band-gap.
+
+     negative rho (up, down):  1.228E+00 3.950E-01
+
+     total cpu time spent up to now is     1094.3 secs
+
+     WARNING: integrated charge=   140.00441243, expected=   140.00000000
+
+     total energy              =   -2287.15760904 Ry
+     estimated scf accuracy    <       0.69018295 Ry
+
+     total magnetization       =     0.00 Bohr mag/cell
+     absolute magnetization    =     2.38 Bohr mag/cell
+[tb_dev] Currently allocated     9.68E+00 Mbytes, locked:    0 /   8
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 68     ecut=    60.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          5579 MiB given to the printing process from OS
+           517 MiB allocation reported by mallinfo(arena+hblkhd)
+         49648 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 4630 / 11650 / 16280
+------------------
+     ethr =  4.68E-05,  avg # of iterations =  3.4
+     Minimization algorithm failed to find Fermi energy: reverting to bisection
+     Possible cause: smearing is larger than the electronic band-gap.
+
+     negative rho (up, down):  1.218E+00 4.509E-01
+
+     total cpu time spent up to now is     1109.5 secs
+
+     WARNING: integrated charge=   140.00270881, expected=   140.00000000
+
+     total energy              =   -2287.11497974 Ry
+     estimated scf accuracy    <       1.27351894 Ry
+
+     total magnetization       =     0.00 Bohr mag/cell
+     absolute magnetization    =     2.13 Bohr mag/cell
+[tb_dev] Currently allocated     9.68E+00 Mbytes, locked:    0 /   8
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 69     ecut=    60.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          5592 MiB given to the printing process from OS
+           529 MiB allocation reported by mallinfo(arena+hblkhd)
+         49636 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 4630 / 11650 / 16280
+------------------
+     ethr =  4.68E-05,  avg # of iterations =  5.4
+     Minimization algorithm failed to find Fermi energy: reverting to bisection
+     Possible cause: smearing is larger than the electronic band-gap.
+
+     negative rho (up, down):  1.232E+00 4.486E-01
+
+     total cpu time spent up to now is     1126.7 secs
+
+     WARNING: integrated charge=   140.00230306, expected=   140.00000000
+
+     total energy              =   -2287.15357715 Ry
+     estimated scf accuracy    <       0.39526161 Ry
+
+     total magnetization       =     0.00 Bohr mag/cell
+     absolute magnetization    =     4.70 Bohr mag/cell
+[tb_dev] Currently allocated     9.68E+00 Mbytes, locked:    0 /   8
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 70     ecut=    60.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          5604 MiB given to the printing process from OS
+           541 MiB allocation reported by mallinfo(arena+hblkhd)
+         49618 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 4630 / 11650 / 16280
+------------------
+     ethr =  4.68E-05,  avg # of iterations =  4.5
+     Minimization algorithm failed to find Fermi energy: reverting to bisection
+     Possible cause: smearing is larger than the electronic band-gap.
+
+     negative rho (up, down):  1.197E+00 4.713E-01
+
+     total cpu time spent up to now is     1142.6 secs
+
+     WARNING: integrated charge=   140.00269466, expected=   140.00000000
+
+     total energy              =   -2287.14899586 Ry
+     estimated scf accuracy    <       1.18556781 Ry
+
+     total magnetization       =     0.00 Bohr mag/cell
+     absolute magnetization    =     4.51 Bohr mag/cell
+[tb_dev] Currently allocated     9.68E+00 Mbytes, locked:    0 /   8
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 71     ecut=    60.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          5621 MiB given to the printing process from OS
+           589 MiB allocation reported by mallinfo(arena+hblkhd)
+         49557 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 4630 / 11650 / 16280
+------------------
+     ethr =  4.68E-05,  avg # of iterations =  3.2
+     Minimization algorithm failed to find Fermi energy: reverting to bisection
+     Possible cause: smearing is larger than the electronic band-gap.
+
+     negative rho (up, down):  1.175E+00 5.078E-01
+
+     total cpu time spent up to now is     1157.5 secs
+
+     WARNING: integrated charge=   140.00048440, expected=   140.00000000
+
+     total energy              =   -2287.12608913 Ry
+     estimated scf accuracy    <       0.79429719 Ry
+
+     total magnetization       =     0.00 Bohr mag/cell
+     absolute magnetization    =     5.42 Bohr mag/cell
+[tb_dev] Currently allocated     9.68E+00 Mbytes, locked:    0 /   8
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 72     ecut=    60.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          5632 MiB given to the printing process from OS
+           601 MiB allocation reported by mallinfo(arena+hblkhd)
+         49547 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 4630 / 11650 / 16280
+------------------
+     ethr =  4.68E-05,  avg # of iterations =  5.5
+     Minimization algorithm failed to find Fermi energy: reverting to bisection
+     Possible cause: smearing is larger than the electronic band-gap.
+
+     negative rho (up, down):  1.149E+00 5.401E-01
+
+     total cpu time spent up to now is     1174.5 secs
+
+     WARNING: integrated charge=   140.00140251, expected=   140.00000000
+
+     total energy              =   -2287.14824380 Ry
+     estimated scf accuracy    <       0.42468587 Ry
+
+     total magnetization       =     0.00 Bohr mag/cell
+     absolute magnetization    =     2.98 Bohr mag/cell
+[tb_dev] Currently allocated     9.68E+00 Mbytes, locked:    0 /   8
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 73     ecut=    60.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          5646 MiB given to the printing process from OS
+           613 MiB allocation reported by mallinfo(arena+hblkhd)
+         49532 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 4630 / 11650 / 16280
+------------------
+     ethr =  4.68E-05,  avg # of iterations =  4.9
+     Minimization algorithm failed to find Fermi energy: reverting to bisection
+     Possible cause: smearing is larger than the electronic band-gap.
+
+     negative rho (up, down):  1.138E+00 5.383E-01
+
+     total cpu time spent up to now is     1191.0 secs
+
+     WARNING: integrated charge=   140.00165553, expected=   140.00000000
+
+     total energy              =   -2287.15189275 Ry
+     estimated scf accuracy    <       1.55568964 Ry
+
+     total magnetization       =     0.00 Bohr mag/cell
+     absolute magnetization    =     2.49 Bohr mag/cell
+[tb_dev] Currently allocated     9.68E+00 Mbytes, locked:    0 /   8
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 74     ecut=    60.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          5657 MiB given to the printing process from OS
+           625 MiB allocation reported by mallinfo(arena+hblkhd)
+         49525 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 4630 / 11650 / 16280
+------------------
+     ethr =  4.68E-05,  avg # of iterations =  3.0
+     Minimization algorithm failed to find Fermi energy: reverting to bisection
+     Possible cause: smearing is larger than the electronic band-gap.
+
+     negative rho (up, down):  1.179E+00 4.794E-01
+
+     total cpu time spent up to now is     1205.8 secs
+
+     WARNING: integrated charge=   140.00031552, expected=   140.00000000
+
+     total energy              =   -2287.10585047 Ry
+     estimated scf accuracy    <       1.14811267 Ry
+
+     total magnetization       =     0.00 Bohr mag/cell
+     absolute magnetization    =     2.45 Bohr mag/cell
+[tb_dev] Currently allocated     9.68E+00 Mbytes, locked:    0 /   8
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 75     ecut=    60.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          5674 MiB given to the printing process from OS
+           637 MiB allocation reported by mallinfo(arena+hblkhd)
+         49508 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 4630 / 11650 / 16280
+------------------
+     ethr =  4.68E-05,  avg # of iterations =  4.0
+     Minimization algorithm failed to find Fermi energy: reverting to bisection
+     Possible cause: smearing is larger than the electronic band-gap.
+
+     negative rho (up, down):  1.178E+00 4.471E-01
+
+     total cpu time spent up to now is     1222.4 secs
+
+     WARNING: integrated charge=   140.00040514, expected=   140.00000000
+
+     total energy              =   -2287.13725663 Ry
+     estimated scf accuracy    <       1.26428567 Ry
+
+     total magnetization       =     0.00 Bohr mag/cell
+     absolute magnetization    =     5.43 Bohr mag/cell
+[tb_dev] Currently allocated     9.68E+00 Mbytes, locked:    0 /   8
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 76     ecut=    60.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          5686 MiB given to the printing process from OS
+           649 MiB allocation reported by mallinfo(arena+hblkhd)
+         49498 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 4630 / 11650 / 16280
+------------------
+     ethr =  4.68E-05,  avg # of iterations =  3.4
+     Minimization algorithm failed to find Fermi energy: reverting to bisection
+     Possible cause: smearing is larger than the electronic band-gap.
+
+     negative rho (up, down):  1.178E+00 4.363E-01
+
+     total cpu time spent up to now is     1237.8 secs
+
+     WARNING: integrated charge=   140.00019189, expected=   140.00000000
+
+     total energy              =   -2287.13656061 Ry
+     estimated scf accuracy    <       0.50542233 Ry
+
+     total magnetization       =     0.00 Bohr mag/cell
+     absolute magnetization    =     4.32 Bohr mag/cell
+[tb_dev] Currently allocated     9.68E+00 Mbytes, locked:    0 /   8
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 77     ecut=    60.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          5700 MiB given to the printing process from OS
+           661 MiB allocation reported by mallinfo(arena+hblkhd)
+         49484 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 4630 / 11650 / 16280
+------------------
+     ethr =  4.68E-05,  avg # of iterations =  4.7
+     Minimization algorithm failed to find Fermi energy: reverting to bisection
+     Possible cause: smearing is larger than the electronic band-gap.
+
+     negative rho (up, down):  1.188E+00 4.754E-01
+
+     total cpu time spent up to now is     1253.9 secs
+
+     WARNING: integrated charge=   139.99987547, expected=   140.00000000
+
+     total energy              =   -2287.13429568 Ry
+     estimated scf accuracy    <       0.28326636 Ry
+
+     total magnetization       =     0.00 Bohr mag/cell
+     absolute magnetization    =     3.99 Bohr mag/cell
+[tb_dev] Currently allocated     9.68E+00 Mbytes, locked:    0 /   8
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 78     ecut=    60.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          5711 MiB given to the printing process from OS
+           673 MiB allocation reported by mallinfo(arena+hblkhd)
+         49475 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 4630 / 11650 / 16280
+------------------
+     ethr =  4.68E-05,  avg # of iterations =  4.7
+     Minimization algorithm failed to find Fermi energy: reverting to bisection
+     Possible cause: smearing is larger than the electronic band-gap.
+
+     negative rho (up, down):  1.201E+00 4.915E-01
+
+     total cpu time spent up to now is     1270.5 secs
+
+     WARNING: integrated charge=   139.99878249, expected=   140.00000000
+
+     total energy              =   -2287.12701988 Ry
+     estimated scf accuracy    <       1.27933227 Ry
+
+     total magnetization       =     0.00 Bohr mag/cell
+     absolute magnetization    =     6.04 Bohr mag/cell
+[tb_dev] Currently allocated     9.68E+00 Mbytes, locked:    0 /   8
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 79     ecut=    60.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          5722 MiB given to the printing process from OS
+           685 MiB allocation reported by mallinfo(arena+hblkhd)
+         49461 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 4630 / 11650 / 16280
+------------------
+     ethr =  4.68E-05,  avg # of iterations =  5.5
+     Minimization algorithm failed to find Fermi energy: reverting to bisection
+     Possible cause: smearing is larger than the electronic band-gap.
+
+     negative rho (up, down):  1.212E+00 4.969E-01
+
+     total cpu time spent up to now is     1287.5 secs
+
+     WARNING: integrated charge=   139.99889506, expected=   140.00000000
+
+     total energy              =   -2287.13924437 Ry
+     estimated scf accuracy    <       0.32294283 Ry
+
+     total magnetization       =     0.00 Bohr mag/cell
+     absolute magnetization    =     4.33 Bohr mag/cell
+[tb_dev] Currently allocated     9.68E+00 Mbytes, locked:    0 /   8
+[tb_pin] Currently allocated     0.00E+00 Mbytes, locked:    0 /   0
+
+     iteration # 80     ecut=    60.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          5734 MiB given to the printing process from OS
+           697 MiB allocation reported by mallinfo(arena+hblkhd)
+         49448 MiB available memory on the node where the printing process lives
+     GPU memory used/free/total (MiB): 4630 / 11650 / 16280
+------------------
+     ethr =  4.68E-05,  avg # of iterations =  1.5
+     Minimization algorithm failed to find Fermi energy: reverting to bisection
+     Possible cause: smearing is larger than the electronic band-gap.
+
+     negative rho (up, down):  1.205E+00 4.797E-01
+
+     total cpu time spent up to now is     1301.2 secs
+
+     WARNING: integrated charge=   139.99877146, expected=   140.00000000
+
+     total energy              =   -2287.13732219 Ry
+     estimated scf accuracy    <       0.41073906 Ry
+
+     total magnetization       =     0.00 Bohr mag/cell
+     absolute magnetization    =     4.23 Bohr mag/cell
+
+     End of self-consistent calculation
+
+     convergence NOT achieved after  80 iterations: stopping
+
+     Writing config to output data dir ./out/aiida.save/
+ 
+     init_run     :     56.09s CPU     17.83s WALL (       1 calls)
+     electrons    :   3180.55s CPU   1281.98s WALL (       1 calls)
+
+     Called by init_run:
+     wfcinit      :      7.72s CPU     10.23s WALL (       1 calls)
+                                       10.23s GPU  (       1 calls)
+     wfcinit:atom :      0.05s CPU      0.14s WALL (      90 calls)
+                                        0.14s GPU  (      90 calls)
+     wfcinit:wfcr :      3.68s CPU      4.38s WALL (      90 calls)
+                                        4.38s GPU  (      90 calls)
+     potinit      :     31.49s CPU      2.87s WALL (       1 calls)
+     hinit0       :      9.69s CPU      3.50s WALL (       1 calls)
+
+     Called by electrons:
+     c_bands      :    831.22s CPU    879.73s WALL (      80 calls)
+     sum_band     :    189.79s CPU    197.92s WALL (      80 calls)
+     v_of_rho     :     75.14s CPU      6.78s WALL (      81 calls)
+     v_h          :     11.40s CPU      1.00s WALL (      81 calls)
+     v_xc         :     63.73s CPU      5.77s WALL (      81 calls)
+     newd         :    182.75s CPU     23.48s WALL (      81 calls)
+                                       23.47s GPU  (      81 calls)
+     PAW_pot      :   1810.00s CPU    164.04s WALL (      81 calls)
+     mix_rho      :     96.24s CPU      9.78s WALL (      80 calls)
+
+     Called by c_bands:
+     init_us_2    :     28.57s CPU     38.32s WALL (   14490 calls)
+     init_us_2:gp :     28.28s CPU     38.02s WALL (   14490 calls)
+     cegterg      :    670.07s CPU    707.26s WALL (    7200 calls)
+
+     Called by sum_band:
+     sum_band:wei :      1.12s CPU      1.13s WALL (      80 calls)
+                                        1.12s GPU  (      80 calls)
+     sum_band:loo :    160.51s CPU    168.32s WALL (      80 calls)
+                                      168.32s GPU  (      80 calls)
+     sum_band:buf :     66.39s CPU     67.19s WALL (    7200 calls)
+                                       67.13s GPU  (    7200 calls)
+     sum_band:ini :     13.95s CPU     17.37s WALL (    7200 calls)
+                                       17.32s GPU  (    7200 calls)
+     sum_band:cal :      0.31s CPU      7.47s WALL (    7200 calls)
+                                        6.86s GPU  (    7200 calls)
+     sum_band:bec :      3.05s CPU      3.24s WALL (    7200 calls)
+                                        3.19s GPU  (    7200 calls)
+     addusdens    :     21.79s CPU     22.10s WALL (      80 calls)
+                                       22.10s GPU  (      80 calls)
+     addusd:skk   :      0.06s CPU      0.07s WALL (     320 calls)
+                                        0.06s GPU  (     320 calls)
+
+     Called by *egterg:
+     cdiaghg      :    193.69s CPU    222.12s WALL (   35669 calls)
+                                      221.87s GPU  (   35669 calls)
+     cegterg:over :     21.28s CPU     21.95s WALL (   28469 calls)
+     cegterg:upda :     21.31s CPU     22.02s WALL (   28469 calls)
+     cegterg:last :     18.46s CPU     18.67s WALL (   13307 calls)
+     h_psi        :    366.13s CPU    373.22s WALL (   35759 calls)
+                                      372.22s GPU  (   35759 calls)
+     s_psi        :      7.39s CPU     29.86s WALL (   35759 calls)
+                                       27.79s GPU  (   35759 calls)
+     g_psi        :      0.21s CPU      2.20s WALL (   28469 calls)
+                                        2.01s GPU  (   28469 calls)
+
+     Called by h_psi:
+     h_psi:calbec :      1.29s CPU     23.30s WALL (   35759 calls)
+                                       23.08s GPU  (   35759 calls)
+     vloc_psi     :    308.68s CPU    314.06s WALL (   35759 calls)
+                                      313.84s GPU  (   35759 calls)
+     add_vuspsi   :     10.43s CPU     30.94s WALL (   35759 calls)
+                                       30.72s GPU  (   35759 calls)
+
+     General routines
+     calbec       :      1.21s CPU      1.26s WALL (   42959 calls)
+     fft          :      3.02s CPU      0.91s WALL (    2023 calls)
+                                        0.71s GPU  (    1861 calls)
+     ffts         :      0.10s CPU      0.08s WALL (     322 calls)
+                                        0.02s GPU  (     160 calls)
+     fftw         :      4.93s CPU    261.31s WALL (  262442 calls)
+                                      258.88s GPU  (  262442 calls)
+     interpolate  :     11.04s CPU      0.97s WALL (     162 calls)
+     davcio       :      0.05s CPU      1.85s WALL (     108 calls)
+ 
+     Parallel routines
+
+     PAW routines
+     PAW_pot      :   1810.00s CPU    164.04s WALL (      81 calls)
+     PAW_symme    :      0.39s CPU      0.06s WALL (     161 calls)
+ 
+     PWSCF        :  54m 0.41s CPU  21m43.67s WALL
+
+ 
+   This run was terminated on:  20:50:15  23Oct2023            
+
+=------------------------------------------------------------------------------=
+   JOB DONE.
+=------------------------------------------------------------------------------=

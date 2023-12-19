@@ -1,0 +1,59 @@
+&CONTROL
+  calculation = 'scf'
+  etot_conv_thr =   1.5000000000d-04
+  forc_conv_thr =   1.0000000000d-04
+  max_seconds =   3.4200000000d+04
+  outdir = './out/'
+  prefix = 'aiida'
+  pseudo_dir = './pseudo/'
+  restart_mode = 'restart'
+  tprnfor = .true.
+  tstress = .true.
+  verbosity = 'high'
+/
+&SYSTEM
+  degauss =   1.0000000000d-02
+  ecutrho =   4.8000000000d+02
+  ecutwfc =   6.0000000000d+01
+  ibrav = 0
+  nat = 15
+  nosym = .false.
+  nspin = 2
+  ntyp = 3
+  occupations = 'smearing'
+  smearing = 'cold'
+  starting_magnetization(1) =   1.0000000000d-01
+  starting_magnetization(2) =   1.0000000000d-01
+  starting_magnetization(3) =   1.0000000000d-01
+/
+&ELECTRONS
+  conv_thr =   3.0000000000d-09
+  electron_maxstep = 80
+  mixing_beta =   2.0000000000d-01
+/
+ATOMIC_SPECIES
+Ba     137.327 Ba.pbesol-spn-kjpaw_psl.1.0.0.UPF
+N      14.0067 N.pbesol-theos.UPF
+Si     28.0855 Si.pbesol-n-rrkjus_psl.1.0.0.UPF
+ATOMIC_POSITIONS angstrom
+Ba           0.0000000000       0.0000000000       0.0000000000
+Si           5.5703626800       7.8449705200       2.3114646000
+Si           5.5703626800       1.4987294800       2.3114646000
+Si           2.3612373200       7.8449705200       2.3114646000
+Si           2.3612373200       1.4987294800       2.3114646000
+Si           3.9658000000       1.1838467900       4.6422720000
+Si           3.9658000000       8.1598532100       4.6422720000
+N            5.3895222000       7.4824349600       0.5802840000
+N            5.3895222000       1.8612650400       0.5802840000
+N            2.5420778000       7.4824349600       0.5802840000
+N            2.5420778000       1.8612650400       0.5802840000
+N            3.9658000000       1.7379282000       3.0174768000
+N            3.9658000000       7.6057718000       3.0174768000
+N            6.2366170800      -0.0000000000       2.2631076000
+N            1.6949829200       0.0000000000       2.2631076000
+K_POINTS automatic
+11 11 11 0 0 0
+CELL_PARAMETERS angstrom
+     -3.9658000000       4.6718500000       2.4178500000
+      3.9658000000      -4.6718500000       2.4178500000
+      3.9658000000       4.6718500000      -2.4178500000
