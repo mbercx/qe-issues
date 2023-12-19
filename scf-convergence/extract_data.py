@@ -104,7 +104,7 @@ def report(reference_pwbase, candidate_pwbase):
     print(f"Can. Total magnetization: {candidate_pwbase.outputs.output_parameters.get_dict()['total_magnetization']}")    
 
 
-def get_files(cj_dir, structure, pw_calc, retrieved):
+def get_files(cj_dir, structure, pw_calc, retrieved, include_pseudos=False):
     """Get the files from a PwCalculation."""
 
     cj_dir.mkdir(exist_ok=True)
@@ -121,12 +121,13 @@ def get_files(cj_dir, structure, pw_calc, retrieved):
             pw_calc.base.repository.get_object_content("_aiidasubmit.sh")
         )
 
-    pseudo_dir = cj_dir / "pseudo"
-    pseudo_dir.mkdir(exist_ok=True)
+    if include_pseudos:
+        pseudo_dir = cj_dir / "pseudo"
+        pseudo_dir.mkdir(exist_ok=True)
 
-    for pseudo in pw_calc.inputs.pseudos.values():
-        with (pseudo_dir / pseudo.filename).open("w") as handle:
-            handle.write(pseudo.get_content())
+        for pseudo in pw_calc.inputs.pseudos.values():
+            with (pseudo_dir / pseudo.filename).open("w") as handle:
+                handle.write(pseudo.get_content())
 
     with (cj_dir / 'pw.out').open("w") as handle:
         handle.write(
@@ -136,7 +137,7 @@ def get_files(cj_dir, structure, pw_calc, retrieved):
 
 @app.command()
 @with_dbenv()
-def failed(scf_group: str, target_directory: Path):
+def failed(scf_group: str, target_directory: Path, all_iterations: bool = False, include_pseudos: bool = False):
     """Extract the non-converging calculations from a group of `PwBaseWorkChain`s."""
 
     target_directory.mkdir(exist_ok=True)
@@ -147,7 +148,8 @@ def failed(scf_group: str, target_directory: Path):
         orm.Group, filters={"label": scf_group}, tag="group"
     ).append(
         orm.WorkChainNode, with_group="group", tag="base",
-        filters={'attributes.exit_status': 401}
+        filters={'attributes.exit_status': 401},
+        project="*",
     ).append(
         orm.CalcJobNode,
         with_incoming="base",
@@ -162,20 +164,26 @@ def failed(scf_group: str, target_directory: Path):
     )
     print(f'[bold blue]Info:[/] Found {query.count()} calculations.')
 
-    for pw_calc, structure, retrieved in track(
+    for base_wc, pw_calc, structure, retrieved in track(
         query.all(), description="Extracting data from query..."
     ):
         source_db = structure.extras['source_db']
         source_id = structure.extras['source_id']
+        structure_dir = target_directory / f'{source_db}-{source_id}'
+        structure_dir.mkdir(exist_ok=True)
     
-        cj_dir = target_directory / f'{source_db}-{source_id}'
-
-        get_files(cj_dir, structure, pw_calc, retrieved)
+        if all_iterations:
+            for link in base_wc.base.links.get_outgoing().all():
+                if isinstance(link.node, orm.CalcJobNode):
+                    cj_dir = structure_dir / link.link_label
+                    get_files(cj_dir, structure, link.node, link.node.outputs.retrieved, include_pseudos)
+        else:
+            get_files(structure_dir, structure, pw_calc, retrieved, include_pseudos)
 
 
 @app.command()
 @with_dbenv()
-def fixed(ref_group: str, cand_group:str, target_directory: Optional[Path] = None):
+def fixed(ref_group: str, cand_group:str, target_directory: Optional[Path] = None, include_pseudos: bool = False):
 
     if target_directory:
         target_directory.mkdir(exist_ok=True)
@@ -250,12 +258,12 @@ def fixed(ref_group: str, cand_group:str, target_directory: Optional[Path] = Non
                 for link in reference_pwbase.base.links.get_outgoing().all():
                     if isinstance(link.node, orm.CalcJobNode):
                         cj_dir = struc_dir / 'reference' / link.link_label
-                        get_files(cj_dir, structure, link.node, link.node.outputs.retrieved)
+                        get_files(cj_dir, structure, link.node, link.node.outputs.retrieved, include_pseudos)
 
                 for link in candidate_pwbase.base.links.get_outgoing().all():
                     if isinstance(link.node, orm.CalcJobNode):
                         cj_dir = struc_dir / 'candidate' / link.link_label
-                        get_files(cj_dir, structure, link.node, link.node.outputs.retrieved)
+                        get_files(cj_dir, structure, link.node, link.node.outputs.retrieved, include_pseudos)
 
                 fig, ax = plt.subplots(2, 1, figsize=(6, 4), sharex=True)
 
